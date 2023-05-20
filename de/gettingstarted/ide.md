@@ -13,7 +13,7 @@ Für die Programmierung der ftSwarm-Controller in c++ gibt es mehere Möglichkei
    ist die verbreiteste IDE für DIY Projekte. 2005 wurde sie in einem Projekt zur Entwicklung eines Open-Source-Mikrocontroller-Boards entwickelt, heute unterstützt die Plattform alle gängigen Mikrocontroller. 
 
 2. [PlattformIO](https://platformio.org)
-   ist ein Plugin für Standard IDEs wie [Visual Studio Code](../vscode) zur Entwicklung von Embedded Systems. Das Einrichten von PlattformIO ist etwas komplizierter, die IDEs sind jedoch deutlich besser und das Compilieren der Software deutlich schneller.
+   ist ein Plugin für Standard IDEs wie [Visual Studio Code](https://code.visualstudio.com/) zur Entwicklung von Embedded Systems. Das Einrichten von PlattformIO ist etwas komplizierter, die IDEs sind jedoch deutlich besser und das Compilieren der Software deutlich schneller. Die Benutzung von VSCode wird im [Advanced-Bereich](/de/advanced/plattformIO) erklärt.
 
 3. [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) wurde von *espressif* selbst für die ESP-Prozessoren entwickelt. Ein sehr mächtiges Framework für den fortgeschrittenen CPP-Entwickler.
 

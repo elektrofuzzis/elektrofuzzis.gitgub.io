@@ -14,8 +14,7 @@ There are different platforms and IDEs to write your C++ code. If you are a begi
    today the platform supports all common types of microcontrollers. The Arduino environment is an IDE with integrated framework for embedded systems.
 
 2. [PlattformIO](https://platformio.org)
-   is a framework to develop embedded systems, too. This framework is not part of an IDE like Arduino and you could choose among different editors/IDEs.
-   In the first time, PlatformIO is a bit more complicated than Arduino IDE, but it has many advantages. See [Visual Studio Code](../vscode) for more information.
+   is a framework to develop embedded systems, too. This framework is not part of an IDE like Arduino and you could choose among different editors/IDEs. In the first time, PlatformIO is a bit more complicated than Arduino IDE, but it has many advantages. See [PlattformIO & VSCode](/en/advanced/PlatformIO.md) in advanced for more information.
 
 3. [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) is the core framework for ESP-microcontrollers, 
    powered by *espressif*. This framework is under the hood on Arduino and PlatformIO. Today, our firmware uses some 3rd party libraries from the 
