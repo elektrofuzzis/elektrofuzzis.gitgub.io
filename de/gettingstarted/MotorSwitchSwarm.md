@@ -7,70 +7,50 @@ sidebar:
     nav: gettingstarted-de
 ---
 
-[Your First Application](../MotorSwitch) zeigt wie eine ftSwarm-Applikation aussieht. Aber es ist auch nur eine einfache "Ein-Controller-Applikation".
+In das "[Das erste Programm](../MotorSwitch)" haben Sie ein einfaches Programm geschrieben uns es auf einem Controller gestartet. Doch wie funktioniert eine Applikation im Schwarm? In diesem Beispiel wird nun die gleiche Aufgabe - die Steuerung eines Motors durch einen Taster - mit zwei Controllern realisiert. 
 
-Es soll nun ein Schwarm aus zwei COntrollern genutzt werden. Die Idee der Anwendung ist die gleiche - die Steuerung eines Motors durch einen Taster. Aber in dieser Anwendung sind Taster und Motor an verschiedene Controller angeschlossen.
-
-Erster Controller:
+Erster Controller (Kelda):
 - Der Taster wird am Eingang A1 angeschlossen.
 - Ein 9V Netzteil wird an PWR angeschlossen.
+- Auf diesem Controller wird Ihr Steuerprogramm laufen.
 
 Zweiter Controller:
 - Ein Motor oder eine Lampe werden am Ausgang M2 angeschlossen.
 - Ein 9V Netzteil wird an PWR angeschlossen.
+- Auf diesem Controller wird die Standardfirmware laufen.
 
+### Einen Swarm bilden
 
-### Einen Schwarm bilden
+Im letzten Beispiel haben Sie bereits einen Controller als Kelda konfiguriert. Dadurch ist bereits ein Swarm entstanden. Ihr zweiter Controller muss diesem Swarm jetzt nur noch beitreten.    
 
-Um das Beispielprogramm auf dem ersten Controller zu starten, müssen zunächst beide Controller zu einem Schwarm verbunden werden. Auf dem zweiten Controller wird nur die Standardfirmware benötigt.
+Wenn Sie den Namen Ihres Swarms nochmals ändern möchten, müssen Sie auf dem Kelda-Controller das Firmware Menü starten. Dazu müssen Sie die Standardfirmware aus **Examples\ftSwarm\firmware** flashen.
 
-Auf dem ersten Controller muss für die Konfiguration die Standardfirmware **Examples\ftSwarm\firmware** geflashed werden**.
-
-Nun wird ein Terminalprogramm gestartet und der Reset-Taster gedrückt. Drücken Sie eine Taste, um in das Firmwaremenü zu wechseln:
-
-```
-ftSwarmOS 0.5.0
-
-(C) Christian Bergschneider & Stefan Fuss
-
-Main Menu
-
-(1) wifi settings
-(2) webserver settings
-(3) swarm settings
-(4) alias names
-(5) factory settings
-
-(0) exit
-main>
-```
-
-Die WLAN-Einstellungen sind bereits erledigt, somit müssen nur Schwarmeinstellungen gemacht werden. Verwenden Sie **(3)**, um das Schwarmmenü aufzurufen:
+Um den zweiten Controller in dem Swarm aufzunehmen, müssen Sie Ihn via USB an Ihrem PC anschließen. Konfigurieren Sie zunächst das WLAN über **(1) wifi & Web UI**. Danach wechseln Sie zu **(2) swarm configuration**:
 
 ```
-swarm menu
+swarm configuration
 
-This device is connected to swarm "ftSwarm1" with 1 member(s) online.
-Swarm PIN is 1.
-(1) swarm communication: wifi
-(2) create a new swarm
+This device is connected to swarm "ftSwarm101" with 1 member(s) online.
+Swarm PIN is 101.
+(1) Kelda:               none
+(2) swarm communication: wifi
 (3) join another swarm
 (4) list swarm members
 
-(0) main
-swarm>
+(0) exit
+swarm configuration>
 ```
 
-Mit **(2)** können sie einen neuen Schwarm mit eigenem Namen und neuer Pin erzeigen. Sie können aber auch die Standardeinstelungen verwenden (Schwarmname ftSwarm1 mit Pin 1 im obigen Beispiel).
+Fügen Sie nun diesen Controller mit **(3) join another swarm** dem Swarm hinzu. Dazu müssen Sie den Swarm Namen, den Sie auf der Kelda vergeben haben und den Swarm Pin eingeben. Der Kelda Controller muss selbstverständlich eingeschaltet sein. 
 
-Verbinden sie sich nun mit dem zweiten Controller. Stellen Sie seine WLAN Einstellungen, so dass er auch in ihrem lokalen WLAN arbeitet. Nun können sie ihn mit dem ersten Controller mit **(3) join another swarm** zu einem Schwarm zusammenschalten. Dabei werden Sie nach dem Schwarmnamen und dem Pin gefragt. 
+Auf der Web-UI der Kelda werden nun beide Controller angezeigt. Der zweite Controller zeigt nur seine eigenen Ein- und Ausgänge an. 
 
 ### Eine verteilte Anwendung
 
-Sobald beide COntroller einen Schwarm gebildet haben, kann das Biespiel **Examples\ftSwarm\MotorSwitchSwarm** gestartet werden:
+Sobald beide Controller einen Schwarm gebildet haben, kann das Biespiel **Examples\ftSwarm\MotorSwitchSwarm** gestartet werden:
 
 ```cpp
-#include <ftSwarm.h>
+#include <ftSwarmRS.h>
 
 // serial number of the second controller - change it to your 2nd device serial number
 #define remote 2
@@ -110,12 +90,8 @@ Das Programm unterscheidet sich kaum vom [ersten Programm](../MotorSwitch). Es g
 - **#define remote 2** definiert die Seriennummer des zweiten Controllers. Ändern Sie diese entsprechend Ihrer Controller ab.
 - **FtSwarmMotor( remote, FTSWARM_M2 );** nutzt nun die Sieriennummer des zweiten Controllers. 
 
-Auf der Statusseite werden nun beide COntroller angezeigt.
-
 ### Was passiert, wenn der zweite Controller nicht online ist?
 
-Verbinden sie ein Terminalprogramm mit dem ersten Controller und trennen Sie am zweiten Controller die Stromversorgung. Starten Sie nun den ersten Controller. Bei **FtSwarmMotor( remote, FTSWARM_M2 );** kommt es nun zu einer Warning: ***Waiting on device***. Beider onboard RGB Leds werden blau. Die Firmware wartet darauf, dass der zweite Controller mit dem Motor online geht.
+Verbinden sie ein Terminalprogramm mit dem ersten Controller und trennen Sie am zweiten Controller die Stromversorgung. Starten Sie nun den ersten Controller. Bei **FtSwarmMotor( remote, FTSWARM_M2 );** kommt es nun zu einer Warning: ***Waiting on device***. Beide onboard RGB Leds werden blau, da die Firmware darauf wartet, dass der zweite Controller mit dem Motor online geht.
 
-Schalten Sie am zweiten Controller die Stromversorgung jetzt wieder ein. Sobald das zweite Device gestartet ist, registriet es sich bei der Kelda und das Prgramm kann fortgesetzt werden.
-
-Dieses Feature vereinfacht den Start Ihres Roboters. Es ist völlig egal, in welche Reihenfolge de Controller gestartet werden
+Schalten Sie am zweiten Controller die Stromversorgung jetzt wieder ein. Sobald der zweite COntroller gestartet ist, registriert es sich bei der Kelda und das Programm kann fortgesetzt werden.

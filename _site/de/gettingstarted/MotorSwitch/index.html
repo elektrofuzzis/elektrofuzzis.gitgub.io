@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Das erste Programm -</title>
-<meta name="description" content="">
+<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
   <meta name="author" content="//The ftSwarm Project">
@@ -23,6 +23,8 @@
 <meta property="og:title" content="Das erste Programm">
 <meta property="og:url" content="http://localhost:4000/de/gettingstarted/MotorSwitch/">
 
+
+  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -199,7 +201,7 @@
         
         <ul>
           
-            <li><a href="/de/gettingstarted/1stftSwarm">ftSwarm</a></li>
+            <li><a href="/de/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
           
             <li><a href="/de/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
           
@@ -215,9 +217,9 @@
           
             <li><a href="/de/gettingstarted/MotorSwitchSwarm">Ein erster Schwarm</a></li>
           
-            <li><a href="/de/gettingstarted/switches">Switches & Buttons</a></li>
-          
             <li><a href="/de/gettingstarted/MotorSwitchAlias">Alias Namen</a></li>
+          
+            <li><a href="/de/gettingstarted/switches">Switches & Buttons</a></li>
           
             <li><a href="/de/gettingstarted/RemoteControl">Fernbedienung</a></li>
           
@@ -256,9 +258,41 @@ Dazu werden ein ftSwarm, ein Taster, ein Motor oder eine Lampe sowie eine 9V-Str
   <li>Der ftSwarm-Controller wird mit einem USB Kabel am PC angeschlossen.</li>
 </ul>
 
-<p>Schreiben Sie den folgenden SKetch oder verwenden Sie die Beispieldatei <em>MotorSwitch</em> und flashen ihn auf Ihrem ftSwarm-Controller. Wird der Taster gedrückt, so startet der Motor. Lässt man den Taster los, stoppt der Motor.</p>
+<p>Damit Ihr Controller Programme ausführen kann, muss zunächst der Kelda-Modus aktiviert werden. Starten Sie über die serielle Schnittstelle in das interaktive Firmware Menu. Wechseln Sie im Main Menu nach <strong>(2) swarm configuration</strong>:</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarm.h&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swarm configuration
+
+This device is connected to swarm "ftSwarm100" with 1 member(s) online.
+Swarm PIN is 100.
+(1) Kelda:               none
+(2) swarm communication: wifi
+(3) join another swarm
+(4) list swarm members
+
+(0) exit
+swarm configuration&gt;
+</code></pre></div></div>
+
+<p>Wählen Sie <strong>(1) Kelda</strong> um den Kelda Modus zu aktivieren. Zum Aktivieren der Änderung bootet Ihr Controller.</p>
+
+<p>Beim Neustart zeigt der Controller nun an, dass er im Kelda-Modus betrieben wird:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftSwarmOS 0.5.0
+
+(C) Christian Bergschneider &amp; Stefan Fuss
+
+Press any key to enter bios settings.
+I am KELDA!
+Boot ftSwarm100 (SN:100).
+</code></pre></div></div>
+
+<p>Da der Controller im Kelda-Modus gestartet wurde, wechselt er nicht mehr automatisch in das interaktive Firmwaremenu. Geben Sie <strong>setup</strong> ein, das Menu wird gestartet. Wechseln Sie erneut zu <strong>(2) swarm configuration</strong>. Geben Sie nun mit <strong>(3) create a new swarm</strong> Ihrem Swarm - auch wenn er erst aus einem Controller besteht - Ihren Liebingsnamen.</p>
+
+<p>Schreiben Sie den folgenden Sketch oder verwenden Sie die Beispieldatei <em>MotorSwitch</em> und flashen ihn auf Ihrem ftSwarm-Controller. Wird der Taster gedrückt, so startet der Motor. Lässt man den Taster los, stoppt der Motor.</p>
+
+<p>Setzen Sie anstatt eines ftSwarmRS einen ftSwarmControl oder einen ftSwarm ein? Tauschen Sie dafür <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarmRS.h&gt;</code> mit <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarmControl.h&gt;</code> oder <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarm.h&gt;</code> aus.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarmRS.h&gt;
 </span>
 <span class="n">FtSwarmSwitch</span> <span class="o">*</span><span class="n">sw</span><span class="p">;</span>
 <span class="n">FtSwarmMotor</span>  <span class="o">*</span><span class="n">mot</span><span class="p">;</span>

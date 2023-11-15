@@ -6,9 +6,7 @@ classes: wide
 sidebar:
     nav: gettingstarted-en
 ---
-Using this feature, you're able to use your ftSwarmControl as a remote control, without writing any code.
-
-This feature is only available on ftSwarmControl. If you don't have one, please read the following explanations - you will need them in our next example about events.
+In this example, we show how to use the Kelda in Swarm as a remote control without writing a single line of code.
 
 The idea of the remote control is quite easy. The sensor - input, button or joystick - is read every 25ms. So the firmware could detect signal changes. Based on a signal change, the firmware could invoke an actor - motor, servo or LED.
 
@@ -35,7 +33,7 @@ ftSwarm:
 - Set M1's alias name to "motor" 
 - Set M2's alias name to "lamp" 
 
-On the ftSwarmControl, the button should now switch the lamp on and off. The joystick controls the motor. For this purpose, the following events must be set in **Remote Control**:
+On the ftSwarmControl, the button should now switch the lamp on and off. The joystick controls the motor. For this purpose, the following events must be set within the firmware using **(5) Remote Control**:
 
 ```
 remote control menu:

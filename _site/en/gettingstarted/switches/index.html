@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Switches &amp; Buttons -</title>
-<meta name="description" content="">
+<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
   <meta name="author" content="//The ftSwarm Project">
@@ -23,6 +23,8 @@
 <meta property="og:title" content="Switches &amp; Buttons">
 <meta property="og:url" content="http://localhost:4000/en/gettingstarted/switches/">
 
+
+  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -199,7 +201,7 @@
         
         <ul>
           
-            <li><a href="/en/gettingstarted/1stftSwarm">ftSwarm</a></li>
+            <li><a href="/en/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
           
             <li><a href="/en/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
           
@@ -215,9 +217,9 @@
           
             <li><a href="/en/gettingstarted/MotorSwitchSwarm">A first Swarm</a></li>
           
-            <li><a href="/en/gettingstarted/switches">Switches & Buttons</a></li>
-          
             <li><a href="/en/gettingstarted/MotorSwitchAlias">Alias Names</a></li>
+          
+            <li><a href="/en/gettingstarted/switches">Switches & Buttons</a></li>
           
             <li><a href="/en/gettingstarted/RemoteControl">Remote Control</a></li>
           
@@ -244,7 +246,7 @@
     
       <h1 id="page-title" class="page__title">Switches & Buttons</h1>
     
-    <p>There is no big difference between buttons and switches. Buttons are built-in switches at ftSwarmControl. Switches are externally connected to the six independent input channels (A1..A6) and have more functionality.</p>
+    <p>The ftSwarm knows switches and buttons, isn’t that the same thing? Switches are external buttons connected to inputs A1 to A6. Buttons are only available with the <em>ftSwarmControl</em> - the permanently installed buttons are addressed via a separate class.</p>
 
 <h3 id="normally-closed--normally-open">Normally closed &amp; normally open</h3>
 
@@ -273,14 +275,19 @@
 
 <p>is smarter, because you’re not blocking your application.</p>
 
-<p>Keep in mind, every call of a <em>Toggle</em> command resets the toggle.</p>
+<p><strong>Attention:</strong> Each call of the <em>Toggle</em> commands resets the toggle status. This is necessary so that only the signal changes are recognized. However, this leads to</p>
 
-<p>Avoid two Toggle-Commands in an if condition.</p>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="k">switch</span><span class="p">.</span><span class="n">getToggle</span><span class="p">()</span> <span class="o">!=</span> <span class="n">FTSWARM_NOTOGGLE</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="k">switch</span><span class="p">.</span><span class="n">hasToggeledUp</span><span class="p">())</span> <span class="p">)</span> <span class="p">...</span>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="k">switch</span><span class="p">.</span><span class="n">hasToggeledDown</span><span class="p">())</span> <span class="o">||</span> <span class="p">(</span><span class="k">switch</span><span class="p">.</span><span class="n">hasToggeledUp</span><span class="p">())</span> <span class="p">)</span> <span class="n">led</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span> <span class="n">CRGB</span><span class="o">:</span><span class="n">Green</span> <span class="p">);</span>
 </code></pre></div></div>
 
-<p>is always false. Even if <strong>switch.getToggle()</strong> returns <strong>FTSWARMTOGGLEUP</strong> or <strong>FTSWARMTOGGLEDOWN</strong>, the internal toggle state is reseted to <strong>FTSWARM_NOTOGGLE</strong>. So <strong>switch.hasToggeledUp()</strong> will be always <strong>false</strong>.</p>
+<p>only reacts to toggle-up events. If the condition is evaluated, <code class="language-plaintext highlighter-rouge">switch.hasToggeledDown()</code> is executed first.</p>
+
+<ul>
+  <li>If there was a toggle-down event, the condition is true and the led turns green.</li>
+  <li>If there was no toggle-down event, however <code class="language-plaintext highlighter-rouge">switch.hasToggeledDown()</code> causes the toggle status to be reset. An existing toggle-up event is therefore deleted, <code class="language-plaintext highlighter-rouge">switch.hasToggeledUp()</code> will always be false.</li>
+</ul>
+
+<p>Pressing the switch will not switch the LED to green.</p>
 
 
 

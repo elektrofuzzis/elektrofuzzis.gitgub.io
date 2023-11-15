@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Eine Fernbedienung ohne eine Zeile Code -</title>
-<meta name="description" content="">
+<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
   <meta name="author" content="//The ftSwarm Project">
@@ -23,6 +23,8 @@
 <meta property="og:title" content="Eine Fernbedienung ohne eine Zeile Code">
 <meta property="og:url" content="http://localhost:4000/de/gettingstarted/RemoteControl/">
 
+
+  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -199,7 +201,7 @@
         
         <ul>
           
-            <li><a href="/de/gettingstarted/1stftSwarm">ftSwarm</a></li>
+            <li><a href="/de/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
           
             <li><a href="/de/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
           
@@ -215,9 +217,9 @@
           
             <li><a href="/de/gettingstarted/MotorSwitchSwarm">Ein erster Schwarm</a></li>
           
-            <li><a href="/de/gettingstarted/switches">Switches & Buttons</a></li>
-          
             <li><a href="/de/gettingstarted/MotorSwitchAlias">Alias Namen</a></li>
+          
+            <li><a href="/de/gettingstarted/switches">Switches & Buttons</a></li>
           
             <li><a href="/de/gettingstarted/RemoteControl">Fernbedienung</a></li>
           
@@ -244,9 +246,7 @@
     
       <h1 id="page-title" class="page__title">Eine Fernbedienung ohne eine Zeile Code</h1>
     
-    <p>In diesem Beispiel zeigen wir, wie man den Swarm als Fernbedienung nutzt, ohne dabei eine einzige Zeile Code zu schreiben.</p>
-
-<p>Diese Funktion ist nur am ftSwarmControl verfügbar. Selbst wenn Sie keinen ftSwarmCOntrol haben, so sollten Sie die folgende Erklärung lesen. Sie brauchen sie für das nächste Beispiel zu eventgesteuerter Programmierung.</p>
+    <p>In diesem Beispiel zeigen wir, wie man die Kelda im Swarm als Fernbedienung nutzt, ohne dabei eine einzige Zeile Code zu schreiben.</p>
 
 <p>Die Idee hinter der Fernbedienung ist sehr einfach. Jeder Sensor - Eingang, Button oder Joystick - wird in der Firmware alle 25ms abgefragt. Die Firmware erkennt Signaländerungen und kann deshalb selbständig Motoren, Servos oder LEDs schalten.</p>
 
@@ -279,7 +279,7 @@
   <li>Den Aliasnamen von M2 auf “lamp” setzen.</li>
 </ul>
 
-<p>Auf dem ftSwarmControl soll nun der Taster die Lampe ein- und ausschalten. Der Joystick soll den Motor steuern. Dazu müssen in <strong>Remote Control</strong> die folgenden Events eingestellt werden:</p>
+<p>Auf dem ftSwarmControl soll nun der Taster die Lampe ein- und ausschalten. Der Joystick soll den Motor steuern. Dazu müssen in der Firmware im Breiech <strong>(5) Remote Control</strong> die folgenden Events eingestellt werden:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>remote control menu:
 
@@ -296,7 +296,7 @@
 
 <p>Nun können Sie die Fernbedienung testen. Der Taster steuert die Lampe und der Joystick den Motor.</p>
 
-<p>DIe EInstellungen werden im NVS-Speicher des fTSwarmControl gespeichert. Nach dem STart versucht der ftSwarmControl die angegebenen Sensoren und Aktoren anzusteuern. Sind diese an einem anderen Controller im Schwarm angeschlossen, so wartet ggf. die Firmware bis der Controller online ist.</p>
+<p>DIe Einstellungen werden im NVS-Speicher des fTSwarmControl gespeichert. Nach dem Start versucht der ftSwarmControl die angegebenen Sensoren und Aktoren anzusteuern. Sind diese an einem anderen Controller im Schwarm angeschlossen, so wartet ggf. die Firmware bis der Controller online ist.</p>
 
 
 

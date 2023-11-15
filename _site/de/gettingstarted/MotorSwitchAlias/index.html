@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Alias Names -</title>
-<meta name="description" content="">
+<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
   <meta name="author" content="//The ftSwarm Project">
@@ -23,6 +23,8 @@
 <meta property="og:title" content="Alias Names">
 <meta property="og:url" content="http://localhost:4000/de/gettingstarted/MotorSwitchAlias/">
 
+
+  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -199,7 +201,7 @@
         
         <ul>
           
-            <li><a href="/de/gettingstarted/1stftSwarm">ftSwarm</a></li>
+            <li><a href="/de/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
           
             <li><a href="/de/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
           
@@ -215,9 +217,9 @@
           
             <li><a href="/de/gettingstarted/MotorSwitchSwarm">Ein erster Schwarm</a></li>
           
-            <li><a href="/de/gettingstarted/switches">Switches & Buttons</a></li>
-          
             <li><a href="/de/gettingstarted/MotorSwitchAlias">Alias Namen</a></li>
+          
+            <li><a href="/de/gettingstarted/switches">Switches & Buttons</a></li>
           
             <li><a href="/de/gettingstarted/RemoteControl">Fernbedienung</a></li>
           
@@ -264,7 +266,7 @@
   <li>Ein 9V Netzteil wird an PWR angeschlossen.</li>
 </ul>
 
-<p>Es müssen nun zunächst Aliasnamen für den Switch und den Motor vergeben werden. Dazu muss die Standradfirmware geladen sein. Über die die Terminalemulation im Hautpmenü <strong>(4) alias names</strong> auswählen:</p>
+<p>Es müssen nun zunächst Aliasnamen für den Switch und den Motor vergeben werden. Dazu muss die Standradfirmware geladen sein. Über die die Terminalemulation im Hautpmenü <strong>(3) alias names</strong> auswählen:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias controler menu:
 
@@ -287,7 +289,7 @@ alias&gt;
 
 <p>Am ersten Controller muss für <strong>A1</strong> der Name <strong>switch</strong> eingestellt werden, am zweiten Controller für <strong>M2</strong> der Name <strong>motor</strong>. Das Beispielprogramm kann von <strong>Example/MotorSwitchAlias</strong> übernommen werden:</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarm.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarmRS.h&gt;
 </span>
 <span class="n">FtSwarmSwitch</span> <span class="o">*</span><span class="n">sw</span><span class="p">;</span>
 <span class="n">FtSwarmMotor</span>  <span class="o">*</span><span class="n">mot</span><span class="p">;</span>

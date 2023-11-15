@@ -62,6 +62,38 @@ led:
  - url: "en/cpp-api/FtSwarmOLED/"
    image_path: "/assets/img/LampLedDisplay/ftSwarmControl.png"
    title: "OLED ftSwarmControl"
+motor:
+ - url: "/de/cpp-api/FtSwarmXMotor"
+   image_path: "/assets/img/motor/motor-xs.png"
+   title: "XS Motor (137096)"
+ - url: "/de/cpp-api/FtSwarmXMotor"
+   image_path: "/assets/img/motor/motor-mini.png"
+   title: "Mini Motor (32293)"
+ - url: "/de/cpp-api/FtSwarmXMMotor"
+   image_path: "/assets/img/motor/motor-xm.png"
+   title: "XM Motor (135485)"
+ - url: "/de/cpp-api/FtSwarmTractorMotor"
+   image_path: "/assets/img/motor/motor-tractor.png"
+   title: "Tractor Motor (151178)"
+ - url: "/de/cpp-api/FtSwarmEncoderMotor"
+   image_path: "/assets/img/motor/motor-encoder.png"
+   title: "Encoder Motor (153422)"
+ - url: "/de/cpp-api/FtSwarmEncoderMotor"
+   image_path: "/assets/img/motor/motor-encoder-competition.png"
+   title: "Encoder Motor (186175)"
+other:
+ - url: "/de/cpp-api/FtSwarmBuzzer"
+   image_path: "/assets/img/otherActors/buzzer.png"
+   title: "Summer (36119)"
+ - url: "/de/cpp-api/FtSwarmCompressor"
+   image_path: "/assets/img/otherActors/compressor.png"
+   title: "Kompressor (121470)"
+ - url: "/de/cpp-api/FtSwarmServo"
+   image_path: "/assets/img/otherActors/motor-servo.png"
+   title: "Micro Servo (132292)"
+ - url: "/de/cpp-api/FtSwarmValve"
+   image_path: "/assets/img/otherActors/valve.png"
+   title: "3/2-Wege Magnetventil (35327)"
 ---
 
 ### analoge Sensoren
@@ -75,5 +107,13 @@ led:
 ### LEDs, Lampen und Displays
 
 {% include gallery id= "led" %}
+
+### Motoren
+
+{% include gallery id= "motor" %}
+
+### Sonstige
+
+{% include gallery id= "other" %}
 
 Bildnachweis: fischertechnik & elektrofuzzis

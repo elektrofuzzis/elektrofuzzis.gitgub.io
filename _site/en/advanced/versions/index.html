@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Version History -</title>
-<meta name="description" content="">
+<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
   <meta name="author" content="//The ftSwarm Project">
@@ -23,6 +23,8 @@
 <meta property="og:title" content="Version History">
 <meta property="og:url" content="http://localhost:4000/en/advanced/versions/">
 
+
+  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -173,60 +175,59 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-      <li>
-        
-          <span class="nav__sub-title">Advanced</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/en/advanced/Configuration">Configuration</a></li>
-          
-            <li><a href="/en/advanced/PlatformIO">PlatformIO & VSCode</a></li>
-          
-            <li><a href="/en/advanced/rs485">RS485</a></li>
-          
-            <li><a href="/en/advanced/debugging">Debugging</a></li>
-          
-            <li><a href="/en/advanced/versions">Version history</a></li>
-          
-        </ul>
-        
-      </li>
-    
-  </ul>
-</nav>
-
-    
-  
-  </div>
-
 
 
   <div class="archive">
     
       <h1 id="page-title" class="page__title">Version History</h1>
     
-    <h3 id="version-042-112022">Version 0.4.2 11/2022</h3>
+    <h3 id="version-050-112023">Version 0.5.0 11/2023</h3>
+
+<p>In the previous versions, the controller on which the control program was started with <code class="language-plaintext highlighter-rouge">ftSwarm.begin</code> was the Kelda.
+However, this led to some communication problems.
+Therefore, the Kelda controller is now already defined at firmware level.</p>
+
+<p>(1) Kelda upgrade</p>
+
+<ul>
+  <li>First carry out the upgrade on your Kelda controller and install the normal firmware there.</li>
+  <li>Switch to the interactive firmware menu. In <strong>(2) swarm configuration</strong>, use the <strong>(1) Kelda</strong> menu item to set this controller to Kelda mode.</li>
+  <li>After restarting the Kelda, it will no longer automatically switch to the configuration menu. Enter the command <code class="language-plaintext highlighter-rouge">setup</code>.</li>
+  <li>Now create a new swarm with <strong>(3) create a new swarm</strong>.</li>
+</ul>
+
+<p>(2) Upgrade swarm members</p>
+
+<ul>
+  <li>Now carry out the upgrade on all Swarm members in turn by installing the new firmware version.</li>
+  <li>In the interactive firmware menu, select <strong>(2) swarm configuration</strong> and join the new swarm with <strong>(3) join to existing swarm</strong>.</li>
+</ul>
+
+<p>(3) Upgrade your existing programs</p>
+
+<ul>
+  <li>Please note that ftSwarm, ftSwarmRS and ftSwarmControl now have their own libraries. Use the corresponding include statements in your project - ftSwarmRS <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarmRS.h&gt;</code>, ftSwarm <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarm.h&gt;</code>, ftSwarmControl <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarmControl.h&gt;</code></li>
+  <li>Previously, the Kelda was defined by starting the swarm with <code class="language-plaintext highlighter-rouge">ftSwarm:begin</code>. This is now done at firmware level, as described above. If you now run your program on a swarm member, you will receive an error message and the swarm will stop.</li>
+  <li>The optional parameter <code class="language-plaintext highlighter-rouge">verbose</code> at <code class="language-plaintext highlighter-rouge">ftSwarm:begin</code> determines whether detailed information is to be output when the swarm is started.</li>
+</ul>
+
+<p>The swarm members in the swarm only “know” their Kelda. This is why the swarm members only display swarms with 2 members.
+The Kelda must of course know all swarm members and displays the correct number of controllers in the swarm in the firmware.</p>
+
+<p>In the Web UI, the entire Swarm is only displayed on the Kelda. The other controllers only show their own status.</p>
+
+<p><strong>New in this version:</strong></p>
+
+<ul>
+  <li>Support for ftSwarmRS.</li>
+  <li>Python integration <a href="https://bloeckchengrafik.de/ftswarm.py/">ftSwarm.py</a></li>
+  <li>Direct control of the IOs in the CLI via the serial interface. For detailed information, type <code class="language-plaintext highlighter-rouge">help</code> in the interactive mode of the serial port.</li>
+  <li>New web UI.</li>
+  <li>The ftSwarm protocol has been improved. Therefore upgrade to version 0.5.0 for all controllers in Swarm!</li>
+  <li>Many stability bug fixes.</li>
+</ul>
+
+<h3 id="version-042-112022">Version 0.4.2 11/2022</h3>
 
 <ul>
   <li>new OLED type support</li>

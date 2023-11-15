@@ -4,8 +4,47 @@ layout: category
 lang: de
 classes: wide
 sidebar:
-    nav: advanced-de
+ nav: advanced-de
 ---
+
+### Version 0.5.0 11/2023
+
+In den bisherigen Versionen war derjenige Controller die Kelda, auf dem das Steuerprogramm mit ``ftSwarm.begin`` gestartet wurde.
+Dies führte jedoch zu einigen Kommunikationsproblemen.
+Deshalb wird nun der Kelda-Controller bereits auf Firmwareebene festgelegt.
+
+(1) Upgrade der Kelda
+
+- Führen Sie zunächst das Upgrade auf Ihrem Kelda-Controller durch und spielen Sie dort die normale Firmware ein.
+- Wechseln Sie in das interaktive Firmwaremenu. In **(2) swarm configuration** stellen Sie mit dem Menüpunkt **(1) Kelda** diesen Controller auf Kelda-Modus.
+- Nach dem Neustart der Kelda wechselt diese nicht mehr automatisch in das Konfigurationsmenü. Geben Sie das Kommando ``setup`` ein.
+- Erzeugen Sie nun mit **(3) create a new swarm** einen neuen Schwarm.
+
+(2) Upgrade der Swarm Member
+
+- Führen Sie nun der Reihe nach den Upgrade auf allen Swarm Membern durch, indem Sie die neue Firmwareversion einspielen.
+- Im interaktiven Firmwaremenü wählen Sie **(2) swarm configuration** und treten mit **(3) join an existing swarm** dem neuen Swarm bei.
+
+
+(3) Upgrade bestehender Programme
+
+- Bitte beachten Sie, dass ftSwarm, ftSwarmRS und ftSwarmControl nun eigene Bibliotheken haben. Nutzen Sie in Ihrem Projekt die entsprechenden include-Anweisungen - ftSwarmRS ``#include <ftSwarmRS.h>``, ftSwarm ``#include <ftSwarm.h>``, ftSwarmControl ``#include <ftSwarmControl.h>``  
+- Bisher wurde die Kelda durch den Start des Swarms mit ``ftSwarm:begin`` festgelegt. Dies geschieht nun, wie oben beschrieben, auf Firmwareebene. Spielen Sie nun auf einem Swarm-Member Ihr Programm ein, so erhalten Sie eine Fehlermeldung und der Swarm stoppt.
+- Der optionale Parameter ``verbose`` bei ``ftSwarm:begin`` legt fest, ob beim Start des Swarms detailierte Informationen ausgegeben werden sollen. 
+
+Die Swarm Member im Swarm "kennen" nur noch Ihre Kelda. Deshalb zeigen die Swarm Member auch nur noch Swarms mit 2 Mitgliedern an.
+Die Kelda muss natürlich alle Swarm Member kennen und zeigt in der Firmware die richtige Anzahl der Controller im Swarm an. 
+
+In der Web-UI wird der komplette Swarm nur auf der Kelda angezeigt. Die anderen Controller zeigen nur ihren eigenen Status an.
+
+**Neu in dieser Version:**
+
+- Unterstützung des ftSwarmRS.
+- Pythonintegration [ftSwarm.py](https://bloeckchengrafik.de/ftswarm.py/)
+- Direkte Steuerung der IOs im CLI über die serielle Schnittstelle. Für detaillierte Informationen ``help`` im interaktiven Modus der seriellen Schnittstelle eingeben.
+- Neues Web-UI.  
+- Das ftSwarm-Protokoll wurde verbessert. Führen Sie deshalb den Upgrade auf die Version 0.5.0 für alle Controller im Swarm durch!
+- Viele Stabilitätsbugfixes.  
 
 ### Version 0.4.2 11/2022
 

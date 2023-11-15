@@ -11,7 +11,7 @@ Es gibt mehrere Möglichkeiten Kelda-Applikation zu debuggen. Die einfachste Var
 Zusätzlich können Debugausgaben auf der seriellen Konsole / Terminal Programm ausgegeben werden. Dazu muss zwar das Programm angepasst werden, die Debugausgaben sind aber viel aussagekräftiger.
 
 
-### Arduino Serial
+### Debugausgaben
 
 In der Arduinoumgebung gibt es zwei einfache Funktionen um Daten auf der seriellen Konsole auszugeben. **Serial.print** gibt das Argument an, **Serial.println** zusätzlich mit CR/LF und wechselt so in die nächste Ausgabezeile. Verwenden Sie printf, wenn die Ausgabe sehr gut formattiert werden muss. 
 

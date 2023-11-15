@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Versionen -</title>
-<meta name="description" content="">
+<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
   <meta name="author" content="//The ftSwarm Project">
@@ -23,6 +23,8 @@
 <meta property="og:title" content="Versionen">
 <meta property="og:url" content="http://localhost:4000/de/advanced/versions/">
 
+
+  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -226,7 +228,53 @@
     
       <h1 id="page-title" class="page__title">Versionen</h1>
     
-    <h3 id="version-042-112022">Version 0.4.2 11/2022</h3>
+    <h3 id="version-050-112023">Version 0.5.0 11/2023</h3>
+
+<p>In den bisherigen Versionen war derjenige Controller die Kelda, auf dem das Steuerprogramm mit <code class="language-plaintext highlighter-rouge">ftSwarm.begin</code> gestartet wurde.
+Dies führte jedoch zu einigen Kommunikationsproblemen.
+Deshalb wird nun der Kelda-Controller bereits auf Firmwareebene festgelegt.</p>
+
+<p>(1) Upgrade der Kelda</p>
+
+<ul>
+  <li>Führen Sie zunächst das Upgrade auf Ihrem Kelda-Controller durch und spielen Sie dort die normale Firmware ein.</li>
+  <li>Wechseln Sie in das interaktive Firmwaremenu. In <strong>(2) swarm configuration</strong> stellen Sie mit dem Menüpunkt <strong>(1) Kelda</strong> diesen Controller auf Kelda-Modus.</li>
+  <li>Nach dem Neustart der Kelda wechselt diese nicht mehr automatisch in das Konfigurationsmenü. Geben Sie das Kommando <code class="language-plaintext highlighter-rouge">setup</code> ein.</li>
+  <li>Erzeugen Sie nun mit <strong>(3) create a new swarm</strong> einen neuen Schwarm.</li>
+</ul>
+
+<p>(2) Upgrade der Swarm Member</p>
+
+<ul>
+  <li>Führen Sie nun der Reihe nach den Upgrade auf allen Swarm Membern durch, indem Sie die neue Firmwareversion einspielen.</li>
+  <li>Im interaktiven Firmwaremenü wählen Sie <strong>(2) swarm configuration</strong> und treten mit <strong>(3) join an existing swarm</strong> dem neuen Swarm bei.</li>
+</ul>
+
+<p>(3) Upgrade bestehender Programme</p>
+
+<ul>
+  <li>Bitte beachten Sie, dass ftSwarm, ftSwarmRS und ftSwarmControl nun eigene Bibliotheken haben. Nutzen Sie in Ihrem Projekt die entsprechenden include-Anweisungen - ftSwarmRS <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarmRS.h&gt;</code>, ftSwarm <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarm.h&gt;</code>, ftSwarmControl <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarmControl.h&gt;</code></li>
+  <li>Bisher wurde die Kelda durch den Start des Swarms mit <code class="language-plaintext highlighter-rouge">ftSwarm:begin</code> festgelegt. Dies geschieht nun, wie oben beschrieben, auf Firmwareebene. Spielen Sie nun auf einem Swarm-Member Ihr Programm ein, so erhalten Sie eine Fehlermeldung und der Swarm stoppt.</li>
+  <li>Der optionale Parameter <code class="language-plaintext highlighter-rouge">verbose</code> bei <code class="language-plaintext highlighter-rouge">ftSwarm:begin</code> legt fest, ob beim Start des Swarms detailierte Informationen ausgegeben werden sollen.</li>
+</ul>
+
+<p>Die Swarm Member im Swarm “kennen” nur noch Ihre Kelda. Deshalb zeigen die Swarm Member auch nur noch Swarms mit 2 Mitgliedern an.
+Die Kelda muss natürlich alle Swarm Member kennen und zeigt in der Firmware die richtige Anzahl der Controller im Swarm an.</p>
+
+<p>In der Web-UI wird der komplette Swarm nur auf der Kelda angezeigt. Die anderen Controller zeigen nur ihren eigenen Status an.</p>
+
+<p><strong>Neu in dieser Version:</strong></p>
+
+<ul>
+  <li>Unterstützung des ftSwarmRS.</li>
+  <li>Pythonintegration <a href="https://bloeckchengrafik.de/ftswarm.py/">ftSwarm.py</a></li>
+  <li>Direkte Steuerung der IOs im CLI über die serielle Schnittstelle. Für detaillierte Informationen <code class="language-plaintext highlighter-rouge">help</code> im interaktiven Modus der seriellen Schnittstelle eingeben.</li>
+  <li>Neues Web-UI.</li>
+  <li>Das ftSwarm-Protokoll wurde verbessert. Führen Sie deshalb den Upgrade auf die Version 0.5.0 für alle Controller im Swarm durch!</li>
+  <li>Viele Stabilitätsbugfixes.</li>
+</ul>
+
+<h3 id="version-042-112022">Version 0.4.2 11/2022</h3>
 
 <ul>
   <li>neu: OLED type support</li>

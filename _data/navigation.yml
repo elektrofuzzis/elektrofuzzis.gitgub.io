@@ -18,7 +18,7 @@ main:
 gettingstarted-en:
   - title: "Tutorial"
     children:
-      - title: "ftSwarm"
+      - title: "ftSwarm & ftSwarmRS"
         url: /en/gettingstarted/1stftSwarm
       - title: "ftSwarmControl"
         url: /en/gettingstarted/1stftSwarmControl
@@ -34,10 +34,10 @@ gettingstarted-en:
         url: /en/gettingstarted/kelda
       - title: "A first Swarm"
         url: /en/gettingstarted/MotorSwitchSwarm
-      - title: "Switches & Buttons"
-        url: /en/gettingstarted/switches
       - title: "Alias Names"
         url: /en/gettingstarted/MotorSwitchAlias
+      - title: "Switches & Buttons"
+        url: /en/gettingstarted/switches
       - title: "Remote Control"
         url: /en/gettingstarted/RemoteControl
       - title: "Events"
@@ -50,7 +50,7 @@ gettingstarted-en:
 gettingstarted-de:
   - title: "Tutorial"
     children:
-      - title: "ftSwarm"
+      - title: "ftSwarm & ftSwarmRS"
         url: /de/gettingstarted/1stftSwarm
       - title: "ftSwarmControl"
         url: /de/gettingstarted/1stftSwarmControl
@@ -66,10 +66,10 @@ gettingstarted-de:
         url: /de/gettingstarted/kelda
       - title: "Ein erster Schwarm"
         url: /de/gettingstarted/MotorSwitchSwarm
-      - title: "Switches & Buttons"
-        url: /de/gettingstarted/switches
       - title: "Alias Namen"
         url: /de/gettingstarted/MotorSwitchAlias
+      - title: "Switches & Buttons"
+        url: /de/gettingstarted/switches
       - title: "Fernbedienung"
         url: /de/gettingstarted/RemoteControl
       - title: "Events"
@@ -109,9 +109,6 @@ advanced-de:
 
 cppapi-en:
   - title: "C++ API"
-    children:
-      - title: "API Overview"
-        url: /en/cpp-api/sensors
   - title: "Analog Sensors"
     children:
       - title: "Overview"
@@ -179,9 +176,6 @@ cppapi-en:
 
 cppapi-de:
   - title: "C++ API"
-    children:
-      - title: "API Übersicht"
-        url: /de/cpp-api/sensors
   - title: "Analoge Sensoren"
     children:
       - title: "Übersicht"

@@ -7,7 +7,7 @@ sidebar:
     nav: gettingstarted-en
 ---
 The first application is not about writing "Hello World" on a display. It's just to control a motor with a simple switch. 
-Therefore you need a ftSwarm, a switch, a motor or lamp and a 9V power supply.
+Therefore you need a ftSwarmRS, a switch, a motor or lamp and a 9V power supply.
 
 The hardware setup is easy:
 
@@ -16,10 +16,45 @@ The hardware setup is easy:
 - Connect a 9V power supply to PWR.
 - Connect the ftSwarm via USB cable with your computer.
 
+To enable your controller to run programs, Kelda mode must be activated first. Open the interactive firmware menu via the serial interface. Change to **(2) swarm configuration** in the main menu:
+
+```
+swarm configuration
+
+This device is connected to swarm "ftSwarm100" with 1 member(s) online.
+Swarm PIN is 100.
+(1) Kelda:               none
+(2) swarm communication: wifi
+(3) create a new swarm
+(4) list swarm members
+
+(0) exit
+swarm configuration>
+```
+
+Select **(1) Kelda** to activate Kelda mode. To activate the change, your controller boots up.
+
+When restarting, the controller now shows that it is being operated in Kelda mode:
+
+```
+ftSwarmOS 0.5.0
+
+(C) Christian Bergschneider & Stefan Fuss
+
+Press any key to enter bios settings.
+I am KELDA!
+Boot ftSwarm100 (SN:100).
+```
+
+Since the controller was started in Kelda mode, it no longer automatically switches to the interactive firmware menu. Enter **setup**, the menu is started. Switch to **(2) swarm configuration** again. Now use **(3) create a new swarm** to give your swarm - even if it only consists of one controller - your favorite name.
+
+
 Write the following sketch or use the example file *MotorSwitch*. Upload it to your device. Whenever you press your switch, the motor starts running. If you release the switch, the motor stops.
 
+You like to use a ftSwarmControl or ftSwarm hardware? Just replace ``#include <ftSwarmRS.h>`` with ``#include <ftSwarmControl.h>`` or ``#include <ftSwarm.h>``.
+
 ```cpp
-#include <ftSwarm.h>
+#include <ftSwarmRS.h> // ftSwarmRS hardware
 
 FtSwarmSwitch *sw;
 FtSwarmMotor  *mot;

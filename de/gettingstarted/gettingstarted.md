@@ -16,16 +16,16 @@ Dieses Tutorial erklärt die grundlegende Benutzung und Programmierung der ftSwa
 5. [Das erste Programm auf einem ftSwarm Controller](../MotorSwitch)
 6. [Das Kelda Prinzip](../kelda)
 7. [Der erste Schwarm](../MotorSwitchSwarm)
-8. [Buttons, Switches und Toggles](../switches)
-9. [Aliasnamen machen das Programm lesbarer](../MotorSwitchAlias)
+8. [Aliasnamen machen das Programm lesbarer](../MotorSwitchAlias)
+9. [Buttons, Switches und Toggles](../switches)
 10. [Eine Fernbedienung ohne eine Zeile Code](../RemoteControl)
 11. [Einfache Programmierung durch Events](../EventControlled)
 12. [RGB LEDs & ftPixel](../FtSwarmPixel)
 13. [OLED Display](../FtSwarmOLED)
 
-### Einsatzgebiet & Gerwährleistung
+### Einsatzgebiet & Gewährleistung
 
-Die fTSwarm Controller sind dafür gedacht kleine vernetzte Steuerungen für DIY- und Spielzeugmodelle zu bauen:
+Die ftSwarm Controller sind dafür gedacht, kleine vernetzte Steuerungen für DIY- und Spielzeugmodelle zu bauen:
 
 - DIY Projekte sollten niemals unbeobachtet laufen.
 - Bauen Sie keine Roboter, die Menschen, Tiere oder Gegenstände schädigen könnten.

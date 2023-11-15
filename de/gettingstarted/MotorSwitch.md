@@ -16,10 +16,46 @@ Der Versuchsaufbau ist einfach:
 - Ein 9V Netzteil wird an PWR angeschlossen.
 - Der ftSwarm-Controller wird mit einem USB Kabel am PC angeschlossen.
 
-Schreiben Sie den folgenden SKetch oder verwenden Sie die Beispieldatei *MotorSwitch* und flashen ihn auf Ihrem ftSwarm-Controller. Wird der Taster gedrückt, so startet der Motor. Lässt man den Taster los, stoppt der Motor.
+Damit Ihr Controller Programme ausführen kann, muss zunächst der Kelda-Modus aktiviert werden. Starten Sie über die serielle Schnittstelle in das interaktive Firmware Menu. Wechseln Sie im Main Menu nach **(2) swarm configuration**:
+
+```
+swarm configuration
+
+This device is connected to swarm "ftSwarm100" with 1 member(s) online.
+Swarm PIN is 100.
+(1) Kelda:               none
+(2) swarm communication: wifi
+(3) join another swarm
+(4) list swarm members
+
+(0) exit
+swarm configuration>
+```
+
+Wählen Sie **(1) Kelda** um den Kelda Modus zu aktivieren. Zum Aktivieren der Änderung bootet Ihr Controller.
+
+Beim Neustart zeigt der Controller nun an, dass er im Kelda-Modus betrieben wird:
+
+```
+ftSwarmOS 0.5.0
+
+(C) Christian Bergschneider & Stefan Fuss
+
+Press any key to enter bios settings.
+I am KELDA!
+Boot ftSwarm100 (SN:100).
+```
+
+Da der Controller im Kelda-Modus gestartet wurde, wechselt er nicht mehr automatisch in das interaktive Firmwaremenu. Geben Sie **setup** ein, das Menu wird gestartet. Wechseln Sie erneut zu **(2) swarm configuration**. Geben Sie nun mit **(3) create a new swarm** Ihrem Swarm - auch wenn er erst aus einem Controller besteht - Ihren Liebingsnamen.
+
+
+
+Schreiben Sie den folgenden Sketch oder verwenden Sie die Beispieldatei *MotorSwitch* und flashen ihn auf Ihrem ftSwarm-Controller. Wird der Taster gedrückt, so startet der Motor. Lässt man den Taster los, stoppt der Motor.
+
+Setzen Sie anstatt eines ftSwarmRS einen ftSwarmControl oder einen ftSwarm ein? Tauschen Sie dafür ``#include <ftSwarmRS.h>`` mit ``#include <ftSwarmControl.h>`` oder ``#include <ftSwarm.h>`` aus.
 
 ```cpp
-#include <ftSwarm.h>
+#include <ftSwarmRS.h>
 
 FtSwarmSwitch *sw;
 FtSwarmMotor  *mot;

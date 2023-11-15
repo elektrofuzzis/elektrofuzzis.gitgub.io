@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>A first Swarm -</title>
-<meta name="description" content="">
+<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
   <meta name="author" content="//The ftSwarm Project">
@@ -23,6 +23,8 @@
 <meta property="og:title" content="A first Swarm">
 <meta property="og:url" content="http://localhost:4000/en/gettingstarted/MotorSwitchSwarm/">
 
+
+  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -199,7 +201,7 @@
         
         <ul>
           
-            <li><a href="/en/gettingstarted/1stftSwarm">ftSwarm</a></li>
+            <li><a href="/en/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
           
             <li><a href="/en/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
           
@@ -215,9 +217,9 @@
           
             <li><a href="/en/gettingstarted/MotorSwitchSwarm">A first Swarm</a></li>
           
-            <li><a href="/en/gettingstarted/switches">Switches & Buttons</a></li>
-          
             <li><a href="/en/gettingstarted/MotorSwitchAlias">Alias Names</a></li>
+          
+            <li><a href="/en/gettingstarted/switches">Switches & Buttons</a></li>
           
             <li><a href="/en/gettingstarted/RemoteControl">Remote Control</a></li>
           
@@ -244,70 +246,52 @@
     
       <h1 id="page-title" class="page__title">A first Swarm</h1>
     
-    <p><a href="../MotorSwitch">Your First Application</a> was nice to show how a ftSwarm application is coded. But it was just a simple “one-controller-application”.</p>
-
-<p>Now it’s time to use the swarm. The application’s idea is the same - control a motor by a switch. But in this application, switch and motor
-are connected to different controllers.</p>
+    <p>In the “<a href="../MotorSwitch">The first program</a>” you have written a simple program and started it on a controller. But how does an application work in a swarm? In this example, the same task - controlling a motor using a pushbutton - is implemented with two controllers.</p>
 
 <p>1st Controller:</p>
 <ul>
   <li>Connect a switch to input A1.</li>
   <li>Connect a 9V power supply to PWR.</li>
+  <li>Your control program will run on this controller.</li>
 </ul>
 
 <p>2nd Controller:</p>
 <ul>
   <li>Connect a motor or a lamp to output M2 of your ftSwarm.</li>
   <li>Connect a 9V power supply to PWR.</li>
+  <li>The standard firmware will run on this controller.</li>
 </ul>
 
 <h3 id="build-a-swarm">Build a swarm</h3>
 
-<p>To run this program at the first controller, both ftSwarm devices need to be connected in a swarm. The second controller runs the standard firmware.</p>
+<p>In the last example, you have already configured a controller as a Kelda. This has already created a swarm. Your second controller now only needs to join this swarm.</p>
 
-<p>Compile and Upload <strong>Examples\ftSwarm\firmware</strong> on the first device</p>
+<p>If you want to change the name of your swarm again, you need to start the firmware menu on the Kelda controller. To do this, you must flash the standard firmware from <strong>Examples\ftSwarm\firmware</strong>.</p>
 
-<p>Start a putty or arduino monitor and reset the device to get some output. Press any key to get into the firmware configuration menu:</p>
+<p>To include the second controller in the Swarm, you must connect it to your PC via USB. First configure the WLAN via <strong>(1) wifi &amp; Web UI</strong>. Then switch to <strong>(2) swarm configuration</strong>:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftSwarmOS 0.5.0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swarm configuration
 
-(C) Christian Bergschneider &amp; Stefan Fuss
-
-Main Menu
-
-(1) wifi settings
-(2) webserver settings
-(3) swarm settings
-(4) alias names
-(5) factory settings
-
-(0) exit
-main&gt;
-</code></pre></div></div>
-
-<p>wifi settings are already done, so we could focus on the swarm settings. Use <strong>(3)</strong> to get into the swarm menu:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swarm menu
-
-This device is connected to swarm "ftSwarm1" with 1 member(s) online.
-Swarm PIN is 1.
-(1) swarm communication: wifi
-(2) create a new swarm
+This device is connected to swarm "ftSwarm101" with 1 member(s) online.
+Swarm PIN is 101.
+(1) Kelda:               none
+(2) swarm communication: wifi
 (3) join another swarm
 (4) list swarm members
 
-(0) main
-swarm&gt;
+(0) exit
+swarm configuration&gt;
 </code></pre></div></div>
-<p>If you like, you could set a swarm name and pin. But you could use the default settings as well (swarm name ftSwarm1 with Pin 1 in my example above).</p>
 
-<p>Keep these settings and connect the second controller to your PC. Connect this controller to your local wifi, too. Now your could join the swarm using <strong>(3) join another swarm</strong>. You’re asked for the swarm’s name and pincode.</p>
+<p>Now add this controller to the swarm with <strong>(3) join another swarm</strong>. To do this, you must enter the swarm name that you have assigned on the Kelda and the swarm pin. The Kelda controller must of course be switched on.</p>
+
+<p>Both controllers are now displayed on the Kelda’s web UI. The second controller only displays its own inputs and outputs.</p>
 
 <h3 id="run-a-swarm-based-program">Run a swarm based program</h3>
 
 <p>If both controllers are connected to the same swarm, you could use “Examples\ftSwarm\MotorSwitchSwarm”:</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarm.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarmRS.h&gt;
 </span>
 <span class="c1">// serial number of the second controller - change it to your 2nd device serial number</span>
 <span class="cp">#define remote 2
@@ -349,16 +333,12 @@ swarm&gt;
   <li><strong>FtSwarmMotor( remote, FTSWARM_M2 );</strong> now uses the remote device serial number instead of the local serial number.</li>
 </ul>
 
-<p>At the monitor page of your first device, you will now see both controllers.</p>
-
 <h3 id="what-happens-if-the-2nd-controller-isnt-online">What happens, if the 2nd controller isn’t online?</h3>
 
 <p>Start the serial monitor and unplug the 9V power supply from the second device. Restart the first one. 
-With <strong>FtSwarmMotor( remote, FTSWARM_M2 );</strong> you will get the debug output <strong>Waiting on device</strong>. Both RGB Leds of this controller will be blue.
-The firmware waits for the motor IO-pin joining the swarm.
+With <strong>FtSwarmMotor( remote, FTSWARM_M2 );</strong> you will get the debug output <strong>Waiting on device</strong>. Both RGB leds of this controller will be blue.
+The firmware waits for the motor joining the swarm.
 Add the 9V power supply again. Once the second device is started, your application will continue.</p>
-
-<p>This feature helps you starting a swarm based roboter. You don’t need to think about the timing or sequence of starting your devices.</p>
 
 
 

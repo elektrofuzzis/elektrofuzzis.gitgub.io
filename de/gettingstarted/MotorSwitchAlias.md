@@ -24,7 +24,7 @@ Zweiter Controller:
 - Ein Motor oder eine Lampe werden am Ausgang M2 angeschlossen.
 - Ein 9V Netzteil wird an PWR angeschlossen.
 
-Es müssen nun zunächst Aliasnamen für den Switch und den Motor vergeben werden. Dazu muss die Standradfirmware geladen sein. Über die die Terminalemulation im Hautpmenü **(4) alias names** auswählen:
+Es müssen nun zunächst Aliasnamen für den Switch und den Motor vergeben werden. Dazu muss die Standradfirmware geladen sein. Über die die Terminalemulation im Hautpmenü **(3) alias names** auswählen:
 
 ```
 alias controler menu:
@@ -49,7 +49,7 @@ alias>
  Am ersten Controller muss für **A1** der Name **switch** eingestellt werden, am zweiten Controller für **M2** der Name **motor**. Das Beispielprogramm kann von **Example/MotorSwitchAlias** übernommen werden:
 
 ```cpp
-#include <ftSwarm.h>
+#include <ftSwarmRS.h>
 
 FtSwarmSwitch *sw;
 FtSwarmMotor  *mot;

@@ -20,27 +20,30 @@ ftSwarmOS 0.5.0
 
 Main Menu
 
-(1) wifi settings
-(2) webserver settings
-(3) swarm settings
-(4) alias names
-(5) factory settings
+(1) wifi & Web UI
+(2) swarm configuration
+(3) alias names
+(4) factory reset
+(5) remoteControl
+(6) extention port
 
 (0) exit
 main>
 ```
 
-Choose  **(1) wifi Settings**. Configure *CLIENT-MODE* and add you wifi's credentials:
+Choose  **(1) Wifi & WebUI**. Configure *CLIENT-MODE* and add you wifi's credentials:
 
 ```
-wifi settings
+Wifi & WebUI
 
-(1) wifi:     CLIENT-MODE
-(2) SSID:     <WLAN-Name/SSID>
-(3) Password: <WLAN-Passwort>
+(1) wifi:           CLIENT-MODE
+(2) SSID:           <WLAN-Name/SSID>
+(3) Password:       <WLAN-Passwort>
+(4) Web UI:         on
+(5) ftPixels in UI: 2
 
 (0) exit
-wifi>
+Wifi & WebUI>
 ```
 
 Use **(0)** to save your changes. The controller will restart and connect to your local wifi..

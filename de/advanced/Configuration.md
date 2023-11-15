@@ -8,12 +8,12 @@ classes: wide
 sidebar:
     nav: advanced-de
 ---
-Die Controller benötigen einige Einstellungen, wie z.B. ein WLAN-Profil oder auch die Konfiguration des Schwarms. Einige Einstellungen wurden bereits im Tutorial verwendet. Dieses Kapitel beschreibt alle Konfigurationsmöglichkeiten im Detail.
+Die Controller benötigen einige Einstellungen, wie z.B. ein WLAN-Profil oder auch die Konfiguration des Swarms. Einige Einstellungen wurden bereits im Tutorial verwendet. Dieses Kapitel beschreibt alle Konfigurationsmöglichkeiten im Detail.
 
 Zur Konfiguration des Controllers kann in der Standardfirmware jederzeit das "Configuration Menu" gestartet werden. Dazu muss nur ein Terminal Programm verbunden werden nur eine Taste gedrückt werden. Das Configuration Menu kann mit
 
 ```cpp
-ftSwarm.setup();
+firmware();
 ```
 
 jederzeit aufgerufen werden.
@@ -23,10 +23,37 @@ jederzeit aufgerufen werden.
 
 Das **Main Menu** ist die oberste Ebene der Konfigurationsmenüs.  **(0) exit** beendet den Konfigurationsmodus, in der Standardfirmware bootet danach der Controller neu. Wurde das **Main Menu** mit **ftSwarm.setup();** aus einem Programm heraus aufgerufen, so werden nun die nächsten Kommandos im Programm ausgeführt.
 
-<hr>
-### Wifi Settings
+```
+Main Menu
 
-Um einen Schwarm zu bilden, müssen die einzelnen Controller miteinander über WLAN oder RS485 kommunizieren. In der Regel kommunizieren sie über WLAN - nur die ftSwarmRS können zusätzlich kabelgebunden über RS485 kommunizieren.
+(1) wifi & Web UI
+(2) swarm configuration
+(3) alias names
+(4) factory reset
+(5) remoteControl
+(6) extention port
+
+(0) exit
+```
+
+Beim *ftSwarmControl* gibt es einen zusätzlichen Menüpunkt um den Displaytyp einzustellen und die Joysticks zu kalibrieren.
+
+<hr>
+### Wifi & Web UI
+
+In diesem Bereich werden die WLAN-Einstellungen vorgenommen und die Statusseite der Controller konfiguriert.
+
+```
+Wifi & WebUI
+
+(1) wifi:           AP-Mode
+(2) SSID:           ftSwarm100
+(3) Password:       *****
+(4) Web UI:         on
+(5) ftPixels in UI: 2
+```
+
+Um einen Swarm zu bilden, müssen die einzelnen Controller miteinander über WLAN oder RS485 kommunizieren. In der Regel kommunizieren sie über WLAN - nur die ftSwarmRS können zusätzlich kabelgebunden über RS485 kommunizieren.
 
 Außerdem kann über WLAN die Statusseite der Controller aufgerufen werden.
 
@@ -44,40 +71,47 @@ Der **AP-MODE** ist ein wenig tricky:
 - Setzen Sie nie die Kelda in den AP-MODE. Wie im Tutorial beschrieben, führt dies zu einigen Problemen beim flushen Ihres Programms.
 - Der AP-MODE hat einen hohen Stromverbrauch, das Netzwerk ist für jeden offen (es hat kein Password) und der Sendebereich ist sehr beschränkt.
 
-Die Option **off** kann nur am ftSwarmRS gesetzt werden. In diesem Fall muss Ihr Schwarm komplett über RS485 kommunizieren.
+Die Option **off** kann nur am ftSwarmRS gesetzt werden. In diesem Fall muss Ihr Swarm komplett über RS485 kommunizieren.
 
 Die WLAN-Kanäle teilen Sie mit anderen WLANs. Deshalb ist es wichtig, den "richtigen" Kanal auszuwählen. Die ESP32-Prozessoren verwenden das 2.4 GHz-Band. Dieser Bereich ist in 11 Kanäle aufgeteilt, dabei überlappen sich benachbarte Kanäle. Werden zwei benachbarte Kanäle durch ein WLAN verwendet, so stören diese sich gegenseitig. Deshalb ist es im 2.4GHz-Band am Besten, wenn alle WLANs nur die Kanäle 1, 6 und 11 verwenden. Optimalerweise gibt es einen nicht verwendeten Kanal. Ist dieser nicht verfügbar, so nutzen Sie einen bereits verwendeten Kanal dessen Nachbarkanäle nicht in Verwendung sind. Welche Kanäle bereits verwendet sind, können Sie sich auf dem meisten Internetroutern anzeigen lassen. Mit der App [wifiman](https://play.google.com/store/apps/details?id=com.ubnt.usurvey&hl=de&gl=US&pli=1) können Sie das auch über Ihr Smartphone analysieren.
 {: .notice--info}
 
-<hr>
-### Web Server Settings
+Die letzten beiden Optionen legen das Verhalten der Statusseite fest.
 
-Dieses Menü hat nur zwei Optionen:
 - **WebUI: on/off** schaltet den WEB-Server für die Statuspage ein bzw aus.
 - **Show X ftPixels in UI** legt die Anzahl der ftPixel fest, die auf der Statuspage angezeigt werden, bzw. die im Menu "Alias Names" einen Namen zugewiesen bekommen können. Für die Programmierung von ftPixel über die Port-Nummer hat dieser Wert keinen Einfluss, es können immer alle Ports **FTSWARM_LED1** bis **FTSWARM_LED18** angesprochen werden.
 
 <hr>
-### Swarm Settings
+### Swarm Configuration
 
-In diesem Menü wird der Schwarm gebildet. Bevor Sie einen Schwarm bilden können, müssen alle Controller untereinander kommunizieren können. Dazu müssen entweder alle Controller im gleichen WLAN angemeldet sein, oder über RS485 verbunden sein.
-
-Im Menü wird die der Name des Schwarms, die Schwarm-Pin und die Anzahl der angemeldeten Controller im Schwarm angezeigt:
+In diesem Menü wird der Swarm gebildet. Bevor Sie einen Swarm bilden können, müssen alle Controller untereinander kommunizieren können. Dazu müssen entweder alle Controller im gleichen WLAN angemeldet sein, oder über RS485 verbunden sein.
 
 ```
-This device is connected to swarm "MeinLieberSchwan" with 10 member(s) online. Swarm PIN is 999.
-```
+swarm configuration
 
-**swarm communication**: Stellt ein, über welches Medium die ftSwarm miteinander kommunizieren.
+This device is connected to swarm "mySwarm" with 1 member(s) online.
+Swarm PIN is 123.
+(1) Kelda:               this controller
+(2) swarm communication: wifi
+(3) create a new swarm
+(4) list swarm members
+```` 
+
+Das Beispiel zeigt das Menü der Kelda.  
+
+**(1) Kelda** stellt ein, ob der Controller als Kelda oder als Swarm Member betrieben wird. Bitte beachten Sie, dass Ihr Steuerprogramm oder die Python-Integration immer auf der Kelda laufen müssen.
+
+**(2) swarm communication** stellt ein, über welches Medium die ftSwarm miteinander kommunizieren.
 - **wifi**: die Controller nutzen WLAN. 
 - **RS485**: die Controller nutzen die RS485-Schnittstelle. Diese Option steht nur am fTSwarmRS zur Verfügung. Ein Mixed-Mode mit WLAN und RS485 ist nicht möglich. 
 
-**create a new swarm**: Erzeugt einen neuen Schwarm. Es werden der Name für den Schwarm und die PIN abgefragt. Anschließend ist dieser Controller der erste und einzige Controller im Schwarm.
+**(3) create a new swarm** ist nur auf der Kelda möglich und erzeugt einen neuen Swarm. Es werden der Name für den Swarm und die PIN abgefragt. Anschließend ist dieser Controller der erste und (noch) einzige Controller im Swarm.
 
-**join another swarm**: Fügt den Controller zu einem Schwarm hinzu. Es werden der Name des Schwarms und die PIN abgefragt. Der Controller versucht sich dann mit dem Schwarm zu verbinden, dazu muss mind. ein weiterer Controller des Schwarms online sein.
+**(3) join another swarm** gibt es nur auf swarm membern und fügt den Controller zu einem existierenden Swarm hinzu. Es werden der Name des Swarms und die PIN abgefragt. Der Controller versucht sich dann mit dem Swarm zu verbinden, dazu muss der Kelda Controller des Swarms online sein.
 
-**list swarm members**: Listet die Mitglieder des Schwarms auf, die online sind.
+**(4) list swarm members** ist nur auf der Kelda möglich und listet alle Mitglieder des Swarms auf, die online sind.
 
-Jeder Controller hat den Namen des Schwarms und die Schwarm-PIN in seinem NVS gespeichert. Die Namen der anderen Controller im Schwarm werden nicht gespeichert, jeder der den Namen des Schwarms und die PIN kennt kann jederzeit dem Schwarm beitreten. Deshalb ist keine Option für das Verlassen eines Schwarms notwendig.
+Jeder Controller hat den Namen des Swarms und die Swarm-PIN in seinem Flash-Speicher gespeichert. Die Namen der anderen Controller im Swarm werden nicht gespeichert, jeder der den Namen des Swarms und die PIN kennt kann jederzeit dem Swarm beitreten. Deshalb ist keine Option für das Verlassen eines Swarms notwendig.
 {: .notice--info}
 
 <hr>
@@ -87,25 +121,51 @@ Mit diesem Menü können Aliasnamen für die Ports eingestellt werden. Anschlie�
 
 Um einen Aliasnamen für einen IO Port zu vergeben, wählen Sie die Nummer des gewüschten IOs aus. Der Name darf bis zu 30 Zeichen lang sein und darf keine Leerzeichen enthalten.
 
-In einem Schwarm muss ein Aliasname eindeutig sein. Dies wird bei der Konfiguration nicht geprüft - es müssen nicht alle Controller im Schwarm online sein. Wird ein Name mehrfach vergeben, so ist es Zufall welcher IO-Port beim Benutzen des Aliasnamens angesprochen wird.
+In einem Swarm muss ein Aliasname eindeutig sein. Dies wird bei der Konfiguration nicht geprüft - es müssen nicht alle Controller im Swarm online sein. Wird ein Name mehrfach vergeben, so ist es Zufall welcher IO-Port beim Benutzen des Aliasnamens angesprochen wird.
 {: .notice--info}
 
 <hr>
-### Factory Settings
+### Factor Reset
 
-Dieser Menüpunkt stellt den Controller auf Werkseinstellungen zurück. Da im NVS evtl. vertrauliche Informationen wie die wifi-Parameter gespeichert sind, sollten Sie einen Controller auf Werkseinstellungen zurücksetzten, bevor sie ihn an Dritte weitergeben.
+Dieser Menüpunkt stellt den Controller auf Werkseinstellungen zurück. Da im Flash evtl. vertrauliche Informationen wie die wifi-Parameter gespeichert sind, sollten Sie einen Controller auf Werkseinstellungen zurücksetzten, bevor sie ihn an Dritte weitergeben.
 
 <hr>
-### I2C Settings
+### Remote Control Settings
 
-In diesem Menü wird das Verhalten des I²C-Busses festgelegt. 
+Mit diesem Menü kann ein Swarm ohne eine Zeile Code programmiert werden. Dazu bekommen die einzelnen IO-Ports Aliasnamen, die dann über den ftSwarmControl angesprochen werden. Dazu werden auf den Buttons und Joysticks des ftSwarmControl EVents definiert, die die IO Ports steuern.
 
-**Mode** legt fest, ob der Controller im Slave- oder Mastermodus arbeiten soll. Werden I²C-Sensoren am Bus angeschlossen, so ist MASTER der richtige Modus. 
+Eine detaillierte Beschreibung ist im Tutorial unter [Fernbedieung](../gettingstarted/RemoteControl/) zu finden.
 
-Nur wenn ein TXT-Controller (s. Seilbahnprojekt) mit dem ftSwarm Daten austauschen soll, ist SLAVE-Modus zu wählen. Da beim **ftSwarm** und **ftSwarmControl** am I²C-Bus auch der optionale Gyro angeschlossen ist, muss der Controller im MASTER-Modus arbeiten wenn der Gyro genutzt werden soll. Der **ftSwarmRS** spricht den internen Gyro über einem zweiten I²C-Bus an, so dass dieser gleichzeitig den Gyro und den SLAVE-Modus verwenden kann.
-{: .notice--info}
+<hr>
+### Extention Port
 
-**Gyro** schaltet die Verwendung des Gyros ein bzw. aus. Schalten Sie den Gyro nur ein, wenn Sie ihn in der Anwendung auch nutzen wollen. Ungenutzte Gyros haben einen unnötigen Stromverbrauch und im Schwarm einen hohen Kommunikationsbearf.
+Die Controller verfügen über einen Extention Port, an den externe Hardware angeschlossen werden kann. 
+
+Der Anschluß ist im Gegensatz zu den anderen Anschlüssen des Controllers nicht gegen Überspannung oder Verpolung geschützt.
+
+**ftSwarm:** Der Extention Port ist die Steckerleiste an der Oberseite des Controllers. 
+- An diesem Port kann der optionale MC6040-Gyro angeschlossen werden. 
+- Alternativ kann der Port als I²C-Bus (als Master oder als Slave) betrieben werden. 
+- Als dritte Möglichkeit können die beiden IO-Pins als logische "Motorausgänge" geschaltet werden. Bitte beachten Sie, dass es reine GPIO-Pins sind die keine Last schalten können. Um Motoren, Relais oder Lampen anzuschließen benötigen Sie zusätzliche externe Leistungstreiber.    
+
+**ftSwarmRS:** Der Extention Port ist die 4-polige Stiftleister an der Oberseite des Controllers.
+- Der Port kann als I²C-Bus (als Master oder als Slave) betrieben werden. 
+- Als zweite Möglichkeit können die beiden IO-Pins als logische "Motorausgänge" geschaltet werden. Bitte beachten Sie, dass es reine GPIO-Pins sind die keine Last schalten können. Um Motoren, Relais oder Lampen anzuschließen benötigen Sie zusätzliche externe Leistungstreiber.    
+
+Der interne Gyro des ftSwarmRS verwendet einen eigenen I²C-Bus.
+
+**ftSwarmControl**: 
+Der Port kann nur als I²C-Bus betrieben werden. Da an diesem Bus auch das OLED-Display und der optionale Gyro angeschlossen sind, kann er nur im Master-Mode betrieben werden. Im Gegensatz zu den beiden anderen Controllern können sowohl 3.3V- als auch 5V-Sensoren angeschlossen werden.
+
+
+**(1) Mode** legt den Betriebsmodus des Extention Ports fest.
+- **off** schaltet den Port aus.
+- **I2C-Master** schaltet den Port als I²C-Bus. Der Controller ist Busmaster. Verwenden Sie diese Option, wenn Sie I²C-Sensoren anschließen wollen.
+- **I2C-Slave** schaltet den Port ebenfalls als I²C-Bus. Der Controller ist in diesem Fall Slave. Diese Funktion kann z.B. dazu verwendet werden um Daten mit einem TXT-Controller auszutauschen.
+- **Gyro MCU6040** aktiviert beim *ftSwarmControl* bzw. beim *ftSwarm* den optionalen Gyro.
+- **Outputs** ist nur beim *ftSwarm* und *ftSwarmRS* möglich. Die beiden IO-Pins des Extention Ports können dann softwareseitig als Motorausgänge angesprochen werden. An den IO-Pins liegt dann ein PWM-Signal entsprechend dem eingestellten Speed-Wert des Motorausgangs an. Bitte beachten Sie, dass der IO-Pin nur ein 3.3V-Logikpegel liefert und ohne Zusatzhardware keine Aktoren schalten kann.
+
+**Gyro** schaltet die Verwendung des Gyros ein bzw. aus. Schalten Sie den Gyro nur ein, wenn Sie ihn in der Anwendung auch nutzen wollen. Ungenutzte Gyros haben einen unnötigen Stromverbrauch und im Swarm einen hohen Kommunikationsbearf.
 
 **I2C Address** legt die I²C-Adresse des Controllers im SLAVE-Modus fest. Diese Option steht im MASTER-Modus nicht zur Verfügung.
 
@@ -118,9 +178,4 @@ Der ftSwarmControl hat zwei spezifische Einstellungen.
 
 **Calibrate Joysticks**: Die Joysticks liefern ein analoges Signal. Mit Calibrate Joysticks kann die mittlere Stellung des Joysticks kalibriert werden.
 
-<hr>
-### Remote Control Settings
 
-Mit diesem Menü kann ein Schwarm ohne eine Zeile Code programmiert werden. Dazu bekommen die einzelnen IO-Ports Aliasnamen, die dann über den ftSwarmControl angesprochen werden. Dazu werden auf den Buttons und Joysticks des ftSwarmControl EVents definiert, die die IO Ports steuern.
-
-Eine detaillierte Beschreibung ist im Tutorial unter [Fernbedieung](../gettingstarted/RemoteControl/) zu finden.

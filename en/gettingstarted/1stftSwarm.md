@@ -1,5 +1,5 @@
 ---
-title: ftSwarm
+title: ftSwarm & ftSwarmRS
 layout: category
 lang: en
 classes: wide

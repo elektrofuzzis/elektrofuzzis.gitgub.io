@@ -7,7 +7,7 @@ sidebar:
     nav: gettingstarted-de
 ---
 
-Es gibt nur einen kleinen Unterschied zwischen Buttons und Switches. Buttons sind die am ftSwarmControl fest verbauten Taster. Switches sind externe, an die Eingänge A1 bis A6 angeschlossene Taster.
+Der ftSwarm kennt Switches und Buttons, ist das nicht das Gleiche? Switches sind externe, an die Eingänge A1 bis A6 angeschlossene Taster. Buttons gibt es nur beim *ftSwarmControl* - die fest verbauten Taster werden über eine eigene Klasse angesprochen.
 
 ### Normally closed & normally open
 
@@ -39,10 +39,16 @@ void loop() {
 
 ist cleverer, da die CPU beim Warten nicht blockiert wird.
 
-Jeder Aufruf der *Toggle* Befehle setzt den Togglestatus zurück. Zwei two Toggle-Befehle in einer Bedingung
+**Achtung:** Jeder Aufruf der *Toggle* Befehle setzt den Togglestatus zurück. Dies ist notwendig, damit nur die Signalwechsel erkannt werden. Die führt aber dazu, dass
 
 ```cpp
-if ( (switch.getToggle() != FTSWARM_NOTOGGLE) && (switch.hasToggeledUp()) ) ...
+if ( (switch.hasToggeledDown()) || (switch.hasToggeledUp()) ) led.setColor( CRGB:Green );
 ```
 
-is always false. Even if `switch.getToggle()` returns `FTSWARMTOGGLEUP` or `FTSWARMTOGGLEDOWN`, the internal toggle state is reseted to `FTSWARM_NOTOGGLE`. So `switch.hasToggeledUp()` will be always `false`.
+nur auf Toggle-Up-Events reagiert. Wird die Bedingung ausgewertet, so wird zunächst ``switch.hasToggeledDown()`` ausgeführt.
+
+- Gab es ein Toggle-Down-Event, so ist die Bedingung wahr und die led wird grün.
+- Gab es kein Toggle-Down-Event, so führt aber ``switch.hasToggeledDown()`` dazu, dass der Toggle-Status zurückgesetzt wird. Ein vorhandenes Toggle-Up-Event wird also gelöscht, ``switch.hasToggeledUp()`` ist deshalb immer false.
+
+Durch das Drücken des Tasters wird die Led nicht auf grün schalten.
+

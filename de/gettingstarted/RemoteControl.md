@@ -6,9 +6,7 @@ classes: wide
 sidebar:
     nav: gettingstarted-de
 ---
-In diesem Beispiel zeigen wir, wie man den Swarm als Fernbedienung nutzt, ohne dabei eine einzige Zeile Code zu schreiben.
-
-Diese Funktion ist nur am ftSwarmControl verfügbar. Selbst wenn Sie keinen ftSwarmCOntrol haben, so sollten Sie die folgende Erklärung lesen. Sie brauchen sie für das nächste Beispiel zu eventgesteuerter Programmierung.
+In diesem Beispiel zeigen wir, wie man die Kelda im Swarm als Fernbedienung nutzt, ohne dabei eine einzige Zeile Code zu schreiben.
 
 Die Idee hinter der Fernbedienung ist sehr einfach. Jeder Sensor - Eingang, Button oder Joystick - wird in der Firmware alle 25ms abgefragt. Die Firmware erkennt Signaländerungen und kann deshalb selbständig Motoren, Servos oder LEDs schalten.
 
@@ -35,7 +33,7 @@ ftSwarm:
 - Den Aliasnamen von M1 auf "motor" setzen. 
 - Den Aliasnamen von M2 auf "lamp" setzen. 
 
-Auf dem ftSwarmControl soll nun der Taster die Lampe ein- und ausschalten. Der Joystick soll den Motor steuern. Dazu müssen in **Remote Control** die folgenden Events eingestellt werden:
+Auf dem ftSwarmControl soll nun der Taster die Lampe ein- und ausschalten. Der Joystick soll den Motor steuern. Dazu müssen in der Firmware im Breiech **(5) Remote Control** die folgenden Events eingestellt werden:
 
 ```
 remote control menu:
@@ -53,4 +51,4 @@ remote control menu:
 
 Nun können Sie die Fernbedienung testen. Der Taster steuert die Lampe und der Joystick den Motor.
 
-DIe EInstellungen werden im NVS-Speicher des fTSwarmControl gespeichert. Nach dem STart versucht der ftSwarmControl die angegebenen Sensoren und Aktoren anzusteuern. Sind diese an einem anderen Controller im Schwarm angeschlossen, so wartet ggf. die Firmware bis der Controller online ist.
+DIe Einstellungen werden im NVS-Speicher des fTSwarmControl gespeichert. Nach dem Start versucht der ftSwarmControl die angegebenen Sensoren und Aktoren anzusteuern. Sind diese an einem anderen Controller im Schwarm angeschlossen, so wartet ggf. die Firmware bis der Controller online ist.

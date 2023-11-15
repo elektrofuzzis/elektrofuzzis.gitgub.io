@@ -23,7 +23,36 @@ Wait for VSCode setting up your project.
 
 Depended on your ftSwarm Hardware, change the content of `platformio.ini` to the following content:
 
-**ftSwarm & ftSwarmControl:**
+**ftSwarmRS:**
+
+```ini
+[env:esp32-s3-devkitc-1]
+platform = espressif32
+board = esp32-s3-devkitc-1
+board_upload.flash_size = 4MB
+framework = arduino
+lib_deps = 
+    bloeckchengrafik/ftSwarm
+	fastled/FastLED@^3.5.0
+	adafruit/Adafruit GFX Library@^1.11.5
+	adafruit/Adafruit SSD1306@^2.5.7
+	stm32duino/STM32duino LSM6DSR@^2.1.0
+	adafruit/Adafruit BusIO@^1.14.1
+
+build_flags = 
+	-DARDUINO_EVENT_RUNNING_CORE=1 
+	-DARDUINO_RUNNING_CORE=0
+	-DBOARD_HAS_PSRAM
+    -mfix-esp32-psram-cache-issue
+	-DCORE_DEBUG_LEVEL=0
+
+monitor_filters = esp32_exception_decoder
+monitor_speed = 115200
+upload_speed = 921600
+board_build.partitions = no_ota.csv
+```
+
+**ftSwarm**
 
 ```ini
 [env:esp32dev]
@@ -44,7 +73,7 @@ build_flags =
 	-DARDUINO_RUNNING_CORE=0
 	-DBOARD_HAS_PSRAM
     -mfix-esp32-psram-cache-issue
-	-DCORE_DEBUG_LEVEL=5
+	-DCORE_DEBUG_LEVEL=0
 
 monitor_filters = esp32_exception_decoder
 monitor_speed = 115200
@@ -52,16 +81,16 @@ upload_speed = 921600
 board_build.partitions = no_ota.csv
 ```
 
-**ftSwarmRS:**
+**ftSwarmControl**
 
 ```ini
-[env:esp32s3box]
+[env:esp32dev]
 platform = espressif32
-board = lolin32
-board_build.mcu = esp32s3
+board = esp32dev
+board_build.mcu = esp32
 framework = arduino
 lib_deps = 
-    bloeckchengrafik/ftSwarm
+    bloeckchengrafik/ftSwarmControl
 	fastled/FastLED@^3.5.0
 	adafruit/Adafruit GFX Library@^1.11.5
 	adafruit/Adafruit SSD1306@^2.5.7
@@ -73,7 +102,7 @@ build_flags =
 	-DARDUINO_RUNNING_CORE=0
 	-DBOARD_HAS_PSRAM
     -mfix-esp32-psram-cache-issue
-	-DCORE_DEBUG_LEVEL=5
+	-DCORE_DEBUG_LEVEL=0
 
 monitor_filters = esp32_exception_decoder
 monitor_speed = 115200

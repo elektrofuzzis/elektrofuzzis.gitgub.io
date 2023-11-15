@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>PlatformIO with VSCode -</title>
-<meta name="description" content="">
+<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
   <meta name="author" content="//The ftSwarm Project">
@@ -23,6 +23,8 @@
 <meta property="og:title" content="PlatformIO with VSCode">
 <meta property="og:url" content="http://localhost:4000/en/advanced/PlatformIO/">
 
+
+  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -243,7 +245,35 @@ Framework: <strong>Arduino Framework</strong></p>
 
 <p>Depended on your ftSwarm Hardware, change the content of <code class="language-plaintext highlighter-rouge">platformio.ini</code> to the following content:</p>
 
-<p><strong>ftSwarm &amp; ftSwarmControl:</strong></p>
+<p><strong>ftSwarmRS:</strong></p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:esp32-s3-devkitc-1]</span>
+<span class="py">platform</span> <span class="p">=</span> <span class="s">espressif32</span>
+<span class="py">board</span> <span class="p">=</span> <span class="s">esp32-s3-devkitc-1</span>
+<span class="py">board_upload.flash_size</span> <span class="p">=</span> <span class="s">4MB</span>
+<span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
+<span class="py">lib_deps</span> <span class="p">=</span> 
+    <span class="s">bloeckchengrafik/ftSwarm</span>
+	<span class="err">fastled/FastLED@^3.5.0</span>
+	<span class="err">adafruit/Adafruit</span> <span class="err">GFX</span> <span class="err">Library@^1.11.5</span>
+	<span class="err">adafruit/Adafruit</span> <span class="err">SSD1306@^2.5.7</span>
+	<span class="err">stm32duino/STM32duino</span> <span class="err">LSM6DSR@^2.1.0</span>
+	<span class="err">adafruit/Adafruit</span> <span class="err">BusIO@^1.14.1</span>
+
+<span class="py">build_flags</span> <span class="p">=</span> 
+	<span class="s">-DARDUINO_EVENT_RUNNING_CORE=1 </span>
+	<span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
+	<span class="err">-DBOARD_HAS_PSRAM</span>
+    <span class="err">-mfix-esp32-psram-cache-issue</span>
+	<span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">0</span>
+
+<span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
+<span class="py">monitor_speed</span> <span class="p">=</span> <span class="s">115200</span>
+<span class="py">upload_speed</span> <span class="p">=</span> <span class="s">921600</span>
+<span class="py">board_build.partitions</span> <span class="p">=</span> <span class="s">no_ota.csv</span>
+</code></pre></div></div>
+
+<p><strong>ftSwarm</strong></p>
 
 <div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:esp32dev]</span>
 <span class="py">platform</span> <span class="p">=</span> <span class="s">espressif32</span>
@@ -263,7 +293,7 @@ Framework: <strong>Arduino Framework</strong></p>
 	<span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
 	<span class="err">-DBOARD_HAS_PSRAM</span>
     <span class="err">-mfix-esp32-psram-cache-issue</span>
-	<span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">5</span>
+	<span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">0</span>
 
 <span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
 <span class="py">monitor_speed</span> <span class="p">=</span> <span class="s">115200</span>
@@ -271,15 +301,15 @@ Framework: <strong>Arduino Framework</strong></p>
 <span class="py">board_build.partitions</span> <span class="p">=</span> <span class="s">no_ota.csv</span>
 </code></pre></div></div>
 
-<p><strong>ftSwarmRS:</strong></p>
+<p><strong>ftSwarmControl</strong></p>
 
-<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:esp32s3box]</span>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:esp32dev]</span>
 <span class="py">platform</span> <span class="p">=</span> <span class="s">espressif32</span>
-<span class="py">board</span> <span class="p">=</span> <span class="s">lolin32</span>
-<span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32s3</span>
+<span class="py">board</span> <span class="p">=</span> <span class="s">esp32dev</span>
+<span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32</span>
 <span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
 <span class="py">lib_deps</span> <span class="p">=</span> 
-    <span class="s">bloeckchengrafik/ftSwarm</span>
+    <span class="s">bloeckchengrafik/ftSwarmControl</span>
 	<span class="err">fastled/FastLED@^3.5.0</span>
 	<span class="err">adafruit/Adafruit</span> <span class="err">GFX</span> <span class="err">Library@^1.11.5</span>
 	<span class="err">adafruit/Adafruit</span> <span class="err">SSD1306@^2.5.7</span>
@@ -291,7 +321,7 @@ Framework: <strong>Arduino Framework</strong></p>
 	<span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
 	<span class="err">-DBOARD_HAS_PSRAM</span>
     <span class="err">-mfix-esp32-psram-cache-issue</span>
-	<span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">5</span>
+	<span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">0</span>
 
 <span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
 <span class="py">monitor_speed</span> <span class="p">=</span> <span class="s">115200</span>

@@ -20,7 +20,7 @@ td, th {
 </style>
 
 |---|---|
-| ![ftSwarm](/assets/img/ftSwarm_small.png) | Although the ftSwam is as small as a matchbox with only 45.0 x 37.5 x 17 mm, it can control two 9V DV motors, up to 16 RGB LEDs, one servo and read out 4 analog or digital sensors.|
+| ![ftSwarm](/assets/img/ftSwarmftSwarmRS.png) | Although the ftSwamRS is as small as a matchbox with only 45.0 x 37.5 x 23 mm, it can control two 9V DV motors, up to 16 RGB LEDs, two servos and read out 6 analog or digital sensors. Its predecessor model - the ftSwarm (left in the picture) - can control two 9V DC motors, up to 16 RGB LEDs and one servo. It has 4 inputs for analog or digital sensors. |
 
 |---|---|
 | As a control panel, the ftSwarmControl has, in addition to 2 joysticks, 8 buttons and an LCD display, the ability to control 2 DC motors and read 4 digital sensors.| ![ftSwarmControl](/assets/img/ftSwarmControl_small.png) | 

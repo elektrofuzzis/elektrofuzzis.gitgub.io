@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>My First Application -</title>
-<meta name="description" content="">
+<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
   <meta name="author" content="//The ftSwarm Project">
@@ -23,6 +23,8 @@
 <meta property="og:title" content="My First Application">
 <meta property="og:url" content="http://localhost:4000/en/gettingstarted/MotorSwitch/">
 
+
+  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -199,7 +201,7 @@
         
         <ul>
           
-            <li><a href="/en/gettingstarted/1stftSwarm">ftSwarm</a></li>
+            <li><a href="/en/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
           
             <li><a href="/en/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
           
@@ -215,9 +217,9 @@
           
             <li><a href="/en/gettingstarted/MotorSwitchSwarm">A first Swarm</a></li>
           
-            <li><a href="/en/gettingstarted/switches">Switches & Buttons</a></li>
-          
             <li><a href="/en/gettingstarted/MotorSwitchAlias">Alias Names</a></li>
+          
+            <li><a href="/en/gettingstarted/switches">Switches & Buttons</a></li>
           
             <li><a href="/en/gettingstarted/RemoteControl">Remote Control</a></li>
           
@@ -245,7 +247,7 @@
       <h1 id="page-title" class="page__title">My First Application</h1>
     
     <p>The first application is not about writing “Hello World” on a display. It’s just to control a motor with a simple switch. 
-Therefore you need a ftSwarm, a switch, a motor or lamp and a 9V power supply.</p>
+Therefore you need a ftSwarmRS, a switch, a motor or lamp and a 9V power supply.</p>
 
 <p>The hardware setup is easy:</p>
 
@@ -256,9 +258,41 @@ Therefore you need a ftSwarm, a switch, a motor or lamp and a 9V power supply.</
   <li>Connect the ftSwarm via USB cable with your computer.</li>
 </ul>
 
+<p>To enable your controller to run programs, Kelda mode must be activated first. Open the interactive firmware menu via the serial interface. Change to <strong>(2) swarm configuration</strong> in the main menu:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swarm configuration
+
+This device is connected to swarm "ftSwarm100" with 1 member(s) online.
+Swarm PIN is 100.
+(1) Kelda:               none
+(2) swarm communication: wifi
+(3) create a new swarm
+(4) list swarm members
+
+(0) exit
+swarm configuration&gt;
+</code></pre></div></div>
+
+<p>Select <strong>(1) Kelda</strong> to activate Kelda mode. To activate the change, your controller boots up.</p>
+
+<p>When restarting, the controller now shows that it is being operated in Kelda mode:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftSwarmOS 0.5.0
+
+(C) Christian Bergschneider &amp; Stefan Fuss
+
+Press any key to enter bios settings.
+I am KELDA!
+Boot ftSwarm100 (SN:100).
+</code></pre></div></div>
+
+<p>Since the controller was started in Kelda mode, it no longer automatically switches to the interactive firmware menu. Enter <strong>setup</strong>, the menu is started. Switch to <strong>(2) swarm configuration</strong> again. Now use <strong>(3) create a new swarm</strong> to give your swarm - even if it only consists of one controller - your favorite name.</p>
+
 <p>Write the following sketch or use the example file <em>MotorSwitch</em>. Upload it to your device. Whenever you press your switch, the motor starts running. If you release the switch, the motor stops.</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarm.h&gt;
+<p>You like to use a ftSwarmControl or ftSwarm hardware? Just replace <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarmRS.h&gt;</code> with <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarmControl.h&gt;</code> or <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarm.h&gt;</code>.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarmRS.h&gt; // ftSwarmRS hardware
 </span>
 <span class="n">FtSwarmSwitch</span> <span class="o">*</span><span class="n">sw</span><span class="p">;</span>
 <span class="n">FtSwarmMotor</span>  <span class="o">*</span><span class="n">mot</span><span class="p">;</span>

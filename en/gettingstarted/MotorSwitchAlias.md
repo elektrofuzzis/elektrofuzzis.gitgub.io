@@ -25,7 +25,7 @@ It's the same hardware setup as used before.
 - Connect a 9V power supply to PWR.
 
 
-First, you need to set the alias names for switch and motor. Therefore you need to upload the standard firmware and enter the firmware menu. Use **(4) alias names** in main menu:
+First, you need to set the alias names for switch and motor. Therefore you need to upload the standard firmware and enter the firmware menu. Use **(3) alias names** in main menu:
 
 ```
 alias controler menu:
@@ -50,7 +50,7 @@ alias>
 Set `A1 - switch` at the 1st controller running the example program and `M2 - motor` at the 2nd controller. Use `Example/MotorSwitchAlias`:
 
 ```cpp
-#include <ftSwarm.h>
+#include <ftSwarmRS.h>
 
 FtSwarmSwitch *sw;
 FtSwarmMotor  *mot;
