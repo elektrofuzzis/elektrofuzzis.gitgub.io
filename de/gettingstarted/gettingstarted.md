@@ -22,6 +22,7 @@ Dieses Tutorial erklärt die grundlegende Benutzung und Programmierung der ftSwa
 11. [Einfache Programmierung durch Events](../EventControlled)
 12. [RGB LEDs & ftPixel](../FtSwarmPixel)
 13. [OLED Display](../FtSwarmOLED)
+14. [Firmware & Updates](../firmware.md)
 
 ### Einsatzgebiet & Gewährleistung
 

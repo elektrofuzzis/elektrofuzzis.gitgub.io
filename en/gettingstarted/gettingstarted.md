@@ -22,6 +22,7 @@ Getting started is a tutorial in using your swarm. To understand ftSwarm program
 11. [Use events to simplfy your code](../EventControlled)
 12. [RGB LEDs & ftPixel](../FtSwarmPixel)
 13. [OLED Display](../FtSwarmOLED)
+14. [Firmware & Updates](../firmware.md)
 
 The tutorial is not intended to explain everything in detail. If you like to have a deep dive into ftSwarm's commands & features please checkout the [API](../cpp-api/index.md) documentation.
 

@@ -46,6 +46,8 @@ gettingstarted-en:
         url: /en/gettingstarted/FtSwarmPixel
       - title: "OLED Display"
         url: /en/gettingstarted/FtSwarmOLED
+      - title: "Firmware & Updates"
+        url: /en/gettingstarted/firmware
 
 gettingstarted-de:
   - title: "Tutorial"
@@ -78,6 +80,8 @@ gettingstarted-de:
         url: /de/gettingstarted/FtSwarmPixel
       - title: "OLED Display"
         url: /de/gettingstarted/FtSwarmOLED
+      - title: "Firmware & Updates"
+        url: /de/gettingstarted/firmware
 
 advanced-en:
   - title: "Advanced"

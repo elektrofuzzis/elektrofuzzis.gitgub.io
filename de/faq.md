@@ -9,7 +9,7 @@ classes: wide
 
 <details>
 <summary>Ich habe auf meinem Controller ein eigenes Programm laufen und möchte nun die Standard-Firmware einspielen.</summary>
-<p>Spielen Sie einfach das letzte <href="../update">firmware update</a> ein.</p>
+<p>Spielen Sie einfach das letzte <a href="../gettingstarted/firmware">Firmware Update</a> ein.</p>
 </details>
 
 <hr>

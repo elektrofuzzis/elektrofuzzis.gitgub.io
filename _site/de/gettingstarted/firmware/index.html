@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Alias Names -</title>
+<!-- begin _includes/seo.html --><title>Firmware &amp; Updates -</title>
 <meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
@@ -20,8 +20,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
-<meta property="og:title" content="Alias Names">
-<meta property="og:url" content="http://localhost:4000/en/gettingstarted/MotorSwitchAlias/">
+<meta property="og:title" content="Firmware &amp; Updates">
+<meta property="og:url" content="http://localhost:4000/de/gettingstarted/firmware/">
 
 
   <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/en/gettingstarted/MotorSwitchAlias/">
+<link rel="canonical" href="http://localhost:4000/de/gettingstarted/firmware/">
 
 
 
@@ -201,35 +201,35 @@
         
         <ul>
           
-            <li><a href="/en/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
+            <li><a href="/de/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
           
-            <li><a href="/en/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
+            <li><a href="/de/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
           
-            <li><a href="/en/gettingstarted/serial">USB/Serial Connection</a></li>
+            <li><a href="/de/gettingstarted/serial">USB Anschluss</a></li>
           
-            <li><a href="/en/gettingstarted/WebUI">wifi & status page</a></li>
+            <li><a href="/de/gettingstarted/WebUI">WLAN & Statusseite</a></li>
           
-            <li><a href="/en/gettingstarted/ide">Install IDE</a></li>
+            <li><a href="/de/gettingstarted/ide">Installation IDE</a></li>
           
-            <li><a href="/en/gettingstarted/MotorSwitch">My First Application</a></li>
+            <li><a href="/de/gettingstarted/MotorSwitch">Das erste Programm</a></li>
           
-            <li><a href="/en/gettingstarted/kelda">The Kelda Principle</a></li>
+            <li><a href="/de/gettingstarted/kelda">Das Kelda Prinzip</a></li>
           
-            <li><a href="/en/gettingstarted/MotorSwitchSwarm">A first Swarm</a></li>
+            <li><a href="/de/gettingstarted/MotorSwitchSwarm">Ein erster Schwarm</a></li>
           
-            <li><a href="/en/gettingstarted/MotorSwitchAlias">Alias Names</a></li>
+            <li><a href="/de/gettingstarted/MotorSwitchAlias">Alias Namen</a></li>
           
-            <li><a href="/en/gettingstarted/switches">Switches & Buttons</a></li>
+            <li><a href="/de/gettingstarted/switches">Switches & Buttons</a></li>
           
-            <li><a href="/en/gettingstarted/RemoteControl">Remote Control</a></li>
+            <li><a href="/de/gettingstarted/RemoteControl">Fernbedienung</a></li>
           
-            <li><a href="/en/gettingstarted/EventControlled">Events</a></li>
+            <li><a href="/de/gettingstarted/EventControlled">Events</a></li>
           
-            <li><a href="/en/gettingstarted/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
+            <li><a href="/de/gettingstarted/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
           
-            <li><a href="/en/gettingstarted/FtSwarmOLED">OLED Display</a></li>
+            <li><a href="/de/gettingstarted/FtSwarmOLED">OLED Display</a></li>
           
-            <li><a href="/en/gettingstarted/firmware">Firmware & Updates</a></li>
+            <li><a href="/de/gettingstarted/firmware">Firmware & Updates</a></li>
           
         </ul>
         
@@ -246,90 +246,47 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Alias Names</h1>
+      <h1 id="page-title" class="page__title">Firmware & Updates</h1>
     
-    <p>Up to now, the IO’s were identified by the serial number and the name of the port. This is nice in a small setup, but it could be confusing in a bigger robot. It would be much easier to identify the IO based on it’s function:</p>
+    <p>Für einen funktionierenden Swarm muss auf allen Swarm Membern und der Kelda die gleiche Softwareversion verwendet werden. Die Kelda erhält ihre Firmwareversion durch die verwendete ftSwarm-Bibliothek. Auf den Swarm Membern müssen Sie die dazu passende Firmware flashen.</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">SwitchWithSN</span>     <span class="o">=</span> <span class="k">new</span> <span class="nf">FtSwarmSwitch</span><span class="p">(</span> <span class="mi">4711</span><span class="p">,</span> <span class="n">FTSWARM_A1</span> <span class="p">);</span>  <span class="c1">// Old style: with serial number and port</span>
-  <span class="n">SwitchWithAlias</span>  <span class="o">=</span> <span class="k">new</span> <span class="nf">FtSwarmSwitch</span><span class="p">(</span> <span class="s">"MotorEndStop"</span> <span class="p">);</span>    <span class="c1">// New style: call my alias name!</span>
-</code></pre></div></div>
+<p>In der Dokumentation zu den ftSwarm Controllern wird häufig auf “die Firmware” verwiesen. Technisch gesehen ist “die Firmware” nur ein kurzes Programm, das einen Swarm Member startet und dabei die aktuelle ftSwarm-Bibliothek verwendet.</p>
 
-<p>It’s the same hardware setup as used before.</p>
+<p>Unter <a href="../../advanced/versions">Versionen</a> finden Sie eine Übersicht der Änderungen in den jeweligen Versionen.</p>
 
-<p>1st Controller:</p>
-<ul>
-  <li>Connect a switch to input A1.</li>
-  <li>Connect a 9V power supply to PWR.</li>
-</ul>
+<h3 id="arduino-ide">Arduino IDE</h3>
 
-<p>2nd Controller:</p>
-<ul>
-  <li>Connect a motor or a lamp to output M2 of your ftSwarm.</li>
-  <li>Connect a 9V power supply to PWR.</li>
-</ul>
+<p>Installieren Sie die neueste Version der ftSwarm-Bibliothek, indem Sie das passende ZIP-File auf github im Bereich Releases herunterladen und installeren. Bitte beachten Sie, dass es mittlerweile für die verschiedenen Gerätetypen jeweils eine eigene Bibliothek gibt. Eine detaillierte Anleitung zur Installation der Bibliothek und der Konfiguration der IDE finden Sie <a href="../ide">hier</a>.</p>
 
-<p>First, you need to set the alias names for switch and motor. Therefore you need to upload the standard firmware and enter the firmware menu. Use <strong>(3) alias names</strong> in main menu:</p>
+<p>Die Firmware für die Swarm Member ist ein Arduino-Sketch. Den passenden Sketch zu Ihrer Hardware können Sie von <a href="https://github.com/elektrofuzzis/ftSwarm/tree/master/src/arduino/firmware">github</a> herunterladen, oder Sie rufen in einem eigenen Sketch das folgende Code-Snippet auf.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias controler menu:
-
-( 1) hostname ftSwarm100 - 
-( 2) A1   - switch                                 
-( 3) A2   -                                 
-( 4) A3   -                                 
-( 5) A4   -                                 
-( 6) A5   -                                 
-( 7) A6   -                                 
-( 8) M1   -                                 
-( 9) M2   -                                 
-(10) LED1 -                                 
-(11) LED2 -                                 
-(12) SERVO -                                 
-
-(0) exit
-alias&gt;
-</code></pre></div></div>
-
-<p>Set <code class="language-plaintext highlighter-rouge">A1 - switch</code> at the 1st controller running the example program and <code class="language-plaintext highlighter-rouge">M2 - motor</code> at the 2nd controller. Use <code class="language-plaintext highlighter-rouge">Example/MotorSwitchAlias</code>:</p>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarmRS.h&gt;
-</span>
-<span class="n">FtSwarmSwitch</span> <span class="o">*</span><span class="n">sw</span><span class="p">;</span>
-<span class="n">FtSwarmMotor</span>  <span class="o">*</span><span class="n">mot</span><span class="p">;</span>
-
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
 
   <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
-  <span class="c1">// start the swarm</span>
-  <span class="n">FtSwarmSerialNumber_t</span> <span class="n">local</span> <span class="o">=</span> <span class="n">ftSwarm</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span> <span class="p">);</span>
-  
-  <span class="c1">// get switch and motor instances</span>
-  <span class="n">sw</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmSwitch</span><span class="p">(</span> <span class="s">"switch"</span> <span class="p">);</span>
-  <span class="n">mot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmMotor</span><span class="p">(</span> <span class="s">"motor"</span> <span class="p">);</span>
-
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">loop</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
-
-  <span class="c1">// check if switch is pressed or released</span>
-  <span class="k">if</span> <span class="p">(</span> <span class="n">sw</span><span class="o">-&gt;</span><span class="n">isPressed</span><span class="p">()</span> <span class="p">)</span>
-    <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-  <span class="k">else</span>
-    <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-  
-  <span class="c1">// wait some time</span>
-  <span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-
+  <span class="n">firmware</span><span class="p">();</span>
+  <span class="n">ESP</span><span class="p">.</span><span class="n">restart</span><span class="p">();</span>
+   
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Let’s look at the monitor page of your swarm. The IO’s show their alias names as well.</p>
+<h3 id="platformio">PlatformIO</h3>
 
-<p>Finally, modify your hardware setup. Move your motor to port <strong>M2</strong> of your first device. Set the alias <strong>motor</strong> at your first device. Start the application again. It’s working without any changes!</p>
+<p>Die ftSwarm-Bibliotheken unter PIO aktualisieren sich selbständig. Das bedeutet, dass Sie mit dem Flashen Ihrer Programme auf der Kelda, automatisch die neueste Version des Frameworks und der Firmware einspielen. Die Swarm Member müssen jedoch manuell upgedatet werden.</p>
 
-<p class="notice--info">But keep in mind, an alias name needs to be unique in your swarm! In this example it doesn’t matter to define <strong>motor</strong> twice. 
-The firmware always checks the local device alias names first. But using multiple remote devices, the result depends on the boot sequence of the remote devices.</p>
+<p><strong>Achtung:</strong> Sollte nach dem Einspielen eines neuen Steuerprogramms auf der Kelda der Swarm nicht mehr funktionieren - Member finden die Kelda nicht, fehlerhaftes Verhalten der Swarm Member - so sollten Sie unbedingt prüfen, ob die Kelda die gleiche Firmwareversion wie die Swarm Member verwendet. Nutzen Sie die “Watch”-Funktion am github-Repro um aktiv über Versionsänderungen informiert zu werden.</p>
 
+<p>Die Firmware für die Swarm Member ist ein PIO-Projekt. Das passende Projekt zu Ihrer Hardware finden Sie auf <a href="https://github.com/elektrofuzzis/ftSwarm/tree/master/src">github</a> oder Sie rufen in einem eigenen Sketch das folgende Code-Snippet auf.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+
+  <span class="n">firmware</span><span class="p">();</span>
+  <span class="n">ESP</span><span class="p">.</span><span class="n">restart</span><span class="p">();</span>
+   
+<span class="p">}</span>
+</code></pre></div></div>
 
 
 
