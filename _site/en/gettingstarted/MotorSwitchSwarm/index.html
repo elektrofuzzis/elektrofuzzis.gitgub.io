@@ -13,7 +13,7 @@
 <meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
-  <meta name="author" content="//The ftSwarm Project">
+  <meta name="author" content="The ftSwarm Project">
   
 
 
@@ -152,11 +152,6 @@
         <!-- language picker -->
 
         
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
-          <i class="fas fa-search"></i>
-        </button>
-        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
@@ -199,6 +194,14 @@
         
 
         
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Gettting started</span>
+        
+
+        
         <ul>
           
             <li><a href="/en/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
@@ -210,6 +213,18 @@
             <li><a href="/en/gettingstarted/WebUI">wifi & status page</a></li>
           
             <li><a href="/en/gettingstarted/ide">Install IDE</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programming</span>
+        
+
+        
+        <ul>
           
             <li><a href="/en/gettingstarted/MotorSwitch">My First Application</a></li>
           
@@ -229,7 +244,21 @@
           
             <li><a href="/en/gettingstarted/FtSwarmOLED">OLED Display</a></li>
           
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Firmware</span>
+        
+
+        
+        <ul>
+          
             <li><a href="/en/gettingstarted/firmware">Firmware & Updates</a></li>
+          
+            <li><a href="/en/gettingstarted/versions">Version history</a></li>
           
         </ul>
         
@@ -268,7 +297,7 @@
 
 <p>In the last example, you have already configured a controller as a Kelda. This has already created a swarm. Your second controller now only needs to join this swarm.</p>
 
-<p>If you want to change the name of your swarm again, you need to start the firmware menu on the Kelda controller. To do this, you must flash the standard firmware from <strong>Examples\ftSwarm\firmware</strong>.</p>
+<p>If you want to change the name of your swarm again, you need to start the firmware menu on the Kelda controller. To do this, you must flash the <a href="../firmware">standard firmware</a>.</p>
 
 <p>To include the second controller in the Swarm, you must connect it to your PC via USB. First configure the WLAN via <strong>(1) wifi &amp; Web UI</strong>. Then switch to <strong>(2) swarm configuration</strong>:</p>
 
@@ -353,17 +382,6 @@ Add the 9V power supply again. Once the second device is started, your applicati
     </div>
 
     
-      <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
-    <label class="sr-only" for="search">
-      Enter your search term...
-    </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
-  </form>
-  <div id="results" class="results"></div></div>
-
-      </div>
-    
 
     <div id="footer" class="page__footer">
       <footer>
@@ -416,10 +434,6 @@ Add the 9V power supply again. Once the second device is started, your applicati
 
 
 
-
-<script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js"></script>
-<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 

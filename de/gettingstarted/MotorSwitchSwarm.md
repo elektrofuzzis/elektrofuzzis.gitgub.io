@@ -23,7 +23,7 @@ Zweiter Controller:
 
 Im letzten Beispiel haben Sie bereits einen Controller als Kelda konfiguriert. Dadurch ist bereits ein Swarm entstanden. Ihr zweiter Controller muss diesem Swarm jetzt nur noch beitreten.    
 
-Wenn Sie den Namen Ihres Swarms nochmals ändern möchten, müssen Sie auf dem Kelda-Controller das Firmware Menü starten. Dazu müssen Sie die Standardfirmware aus **Examples\ftSwarm\firmware** flashen.
+Wenn Sie den Namen Ihres Swarms nochmals ändern möchten, müssen Sie auf dem Kelda-Controller das Firmware Menü starten. Dazu müssen Sie die [Standardfirmware](../firmware) flashen.
 
 Um den zweiten Controller in dem Swarm aufzunehmen, müssen Sie Ihn via USB an Ihrem PC anschließen. Konfigurieren Sie zunächst das WLAN über **(1) wifi & Web UI**. Danach wechseln Sie zu **(2) swarm configuration**:
 

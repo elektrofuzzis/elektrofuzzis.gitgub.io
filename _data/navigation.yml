@@ -17,6 +17,7 @@ main:
 
 gettingstarted-en:
   - title: "Tutorial"
+  - title: "Gettting started"
     children:
       - title: "ftSwarm & ftSwarmRS"
         url: /en/gettingstarted/1stftSwarm
@@ -28,6 +29,8 @@ gettingstarted-en:
         url: /en/gettingstarted/WebUI
       - title: "Install IDE"
         url: /en/gettingstarted/ide
+  - title: "Programming"
+    children:
       - title: "My First Application"
         url: /en/gettingstarted/MotorSwitch
       - title: "The Kelda Principle"
@@ -46,11 +49,16 @@ gettingstarted-en:
         url: /en/gettingstarted/FtSwarmPixel
       - title: "OLED Display"
         url: /en/gettingstarted/FtSwarmOLED
+  - title: "Firmware"
+    children:
       - title: "Firmware & Updates"
         url: /en/gettingstarted/firmware
+      - title: "Version history"
+        url: /en/gettingstarted/versions
 
 gettingstarted-de:
   - title: "Tutorial"
+  - title: "Inbetriebnahme"
     children:
       - title: "ftSwarm & ftSwarmRS"
         url: /de/gettingstarted/1stftSwarm
@@ -62,6 +70,8 @@ gettingstarted-de:
         url: /de/gettingstarted/WebUI
       - title: "Installation IDE"
         url: /de/gettingstarted/ide
+  - title: "Programmierung"
+    children:
       - title: "Das erste Programm"
         url: /de/gettingstarted/MotorSwitch
       - title: "Das Kelda Prinzip"
@@ -80,8 +90,12 @@ gettingstarted-de:
         url: /de/gettingstarted/FtSwarmPixel
       - title: "OLED Display"
         url: /de/gettingstarted/FtSwarmOLED
+  - title: "Firmware"
+    children:
       - title: "Firmware & Updates"
         url: /de/gettingstarted/firmware
+      - title: "Versionen"
+        url: /de/gettingstarted/versions
 
 advanced-en:
   - title: "Advanced"
@@ -94,8 +108,14 @@ advanced-en:
         url: /en/advanced/rs485
       - title: "Debugging"
         url: /en/advanced/debugging
-      - title: "Version history"
-        url: /en/advanced/versions
+  - title: "Schematic"
+    children:
+      - title: "ftSwarm"
+        url: /en/advanced/ftSwarmJST
+      - title: "ftSwarmRS"
+        url: /en/advanced/ftSwarmRS
+      - title: "ftSwarmControl"
+        url: /en/advanced/ftSwarmControl
 
 advanced-de:
   - title: "Advanced"
@@ -108,11 +128,22 @@ advanced-de:
         url: /de/advanced/rs485
       - title: "Debugging"
         url: /de/advanced/debugging
-      - title: "Versionen"
-        url: /de/advanced/versions
+  - title: "Schaltpläne"
+    children:
+      - title: "ftSwarm"
+        url: /de/advanced/ftSwarmJST
+      - title: "ftSwarmRS"
+        url: /de/advanced/ftSwarmRS
+      - title: "ftSwarmControl"
+        url: /de/advanced/ftSwarmControl
 
 cppapi-en:
   - title: "C++ API"
+    children:
+      - title: "Overview"
+        url: /en/cpp-api/index
+      - title: "class diagram"
+        url: /en/cpp-api/classDiagram
   - title: "Analog Sensors"
     children:
       - title: "Overview"
@@ -180,6 +211,11 @@ cppapi-en:
 
 cppapi-de:
   - title: "C++ API"
+    children:
+      - title: "Übersicht"
+        url: /de/cpp-api/index
+      - title: "Klassendiagram"
+        url: /de/cpp-api/classDiagram
   - title: "Analoge Sensoren"
     children:
       - title: "Übersicht"
@@ -244,3 +280,11 @@ cppapi-de:
         url: /de/cpp-api/FtSwarmServo
       - title: "Ventil"
         url: /de/cpp-api/FtSwarmValve
+
+sidebar-de:
+  - title: "Title"
+    image: http://placehold.it/350x250
+    image_alt: "image"
+    text: "Some text here."
+  - title: "Another Title"
+    text: "More text here."

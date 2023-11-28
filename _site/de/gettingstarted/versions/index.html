@@ -13,7 +13,7 @@
 <meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
-  <meta name="author" content="//The ftSwarm Project">
+  <meta name="author" content="The ftSwarm Project">
   
 
 
@@ -21,7 +21,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
 <meta property="og:title" content="Versionen">
-<meta property="og:url" content="http://localhost:4000/de/advanced/versions/">
+<meta property="og:url" content="http://localhost:4000/de/gettingstarted/versions/">
 
 
   <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/de/advanced/versions/">
+<link rel="canonical" href="http://localhost:4000/de/gettingstarted/versions/">
 
 
 
@@ -152,11 +152,6 @@
         <!-- language picker -->
 
         
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
-          <i class="fas fa-search"></i>
-        </button>
-        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
@@ -195,21 +190,75 @@
     
       <li>
         
-          <span class="nav__sub-title">Advanced</span>
+          <span class="nav__sub-title">Tutorial</span>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Inbetriebnahme</span>
         
 
         
         <ul>
           
-            <li><a href="/de/advanced/Configuration">Konfiguration</a></li>
+            <li><a href="/de/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
           
-            <li><a href="/de/advanced/PlatformIO">PlatformIO & VSCode</a></li>
+            <li><a href="/de/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
           
-            <li><a href="/de/advanced/rs485">RS485</a></li>
+            <li><a href="/de/gettingstarted/serial">USB Anschluss</a></li>
           
-            <li><a href="/de/advanced/debugging">Debugging</a></li>
+            <li><a href="/de/gettingstarted/WebUI">WLAN & Statusseite</a></li>
           
-            <li><a href="/de/advanced/versions">Versionen</a></li>
+            <li><a href="/de/gettingstarted/ide">Installation IDE</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programmierung</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/de/gettingstarted/MotorSwitch">Das erste Programm</a></li>
+          
+            <li><a href="/de/gettingstarted/kelda">Das Kelda Prinzip</a></li>
+          
+            <li><a href="/de/gettingstarted/MotorSwitchSwarm">Ein erster Schwarm</a></li>
+          
+            <li><a href="/de/gettingstarted/MotorSwitchAlias">Alias Namen</a></li>
+          
+            <li><a href="/de/gettingstarted/switches">Switches & Buttons</a></li>
+          
+            <li><a href="/de/gettingstarted/RemoteControl">Fernbedienung</a></li>
+          
+            <li><a href="/de/gettingstarted/EventControlled">Events</a></li>
+          
+            <li><a href="/de/gettingstarted/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
+          
+            <li><a href="/de/gettingstarted/FtSwarmOLED">OLED Display</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Firmware</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/de/gettingstarted/firmware">Firmware & Updates</a></li>
+          
+            <li><a href="/de/gettingstarted/versions">Versionen</a></li>
           
         </ul>
         
@@ -228,7 +277,11 @@
     
       <h1 id="page-title" class="page__title">Versionen</h1>
     
-    <h3 id="version-050-112023">Version 0.5.0 11/2023</h3>
+    <h3 id="version-052-112023">Version 0.5.2 11/2023</h3>
+
+<p>Diese Version enthält Bugfixes aufgrund einiger Hardware-Probleme für den ftSwarmControl. Bitte beachten Sie die Upgrade-Anweisungen der Version 0.5.0!</p>
+
+<h3 id="version-050-112023">Version 0.5.0 11/2023</h3>
 
 <p>In den bisherigen Versionen war derjenige Controller die Kelda, auf dem das Steuerprogramm mit <code class="language-plaintext highlighter-rouge">ftSwarm.begin</code> gestartet wurde.
 Dies führte jedoch zu einigen Kommunikationsproblemen.
@@ -346,17 +399,6 @@ Die Kelda muss natürlich alle Swarm Member kennen und zeigt in der Firmware die
     </div>
 
     
-      <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
-    <label class="sr-only" for="search">
-      Enter your search term...
-    </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
-  </form>
-  <div id="results" class="results"></div></div>
-
-      </div>
-    
 
     <div id="footer" class="page__footer">
       <footer>
@@ -409,10 +451,6 @@ Die Kelda muss natürlich alle Swarm Member kennen und zeigt in der Firmware die
 
 
 
-
-<script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js"></script>
-<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 

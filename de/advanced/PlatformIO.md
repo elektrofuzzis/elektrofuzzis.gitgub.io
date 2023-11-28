@@ -32,18 +32,13 @@ board = esp32-s3-devkitc-1
 board_upload.flash_size = 4MB
 framework = arduino
 lib_deps = 
-    bloeckchengrafik/ftSwarm
-	fastled/FastLED@^3.5.0
-	adafruit/Adafruit GFX Library@^1.11.5
-	adafruit/Adafruit SSD1306@^2.5.7
-	stm32duino/STM32duino LSM6DSR@^2.1.0
-	adafruit/Adafruit BusIO@^1.14.1
+	elektrofuzzis/ftSwarm-rs
 
 build_flags = 
 	-DARDUINO_EVENT_RUNNING_CORE=1 
 	-DARDUINO_RUNNING_CORE=0
 	-DBOARD_HAS_PSRAM
-    -mfix-esp32-psram-cache-issue
+	-mfix-esp32-psram-cache-issue
 	-DCORE_DEBUG_LEVEL=0
 
 monitor_filters = esp32_exception_decoder
@@ -61,18 +56,13 @@ board = esp32dev
 board_build.mcu = esp32
 framework = arduino
 lib_deps = 
-    bloeckchengrafik/ftSwarm
-	fastled/FastLED@^3.5.0
-	adafruit/Adafruit GFX Library@^1.11.5
-	adafruit/Adafruit SSD1306@^2.5.7
-	stm32duino/STM32duino LSM6DSR@^2.1.0
-	adafruit/Adafruit BusIO@^1.14.1
+	elektrofuzzis/ftSwarm-jst
 
 build_flags = 
 	-DARDUINO_EVENT_RUNNING_CORE=1 
 	-DARDUINO_RUNNING_CORE=0
 	-DBOARD_HAS_PSRAM
-    -mfix-esp32-psram-cache-issue
+	-mfix-esp32-psram-cache-issue
 	-DCORE_DEBUG_LEVEL=0
 
 monitor_filters = esp32_exception_decoder
@@ -90,18 +80,13 @@ board = esp32dev
 board_build.mcu = esp32
 framework = arduino
 lib_deps = 
-    bloeckchengrafik/ftSwarmControl
-	fastled/FastLED@^3.5.0
-	adafruit/Adafruit GFX Library@^1.11.5
-	adafruit/Adafruit SSD1306@^2.5.7
-	stm32duino/STM32duino LSM6DSR@^2.1.0
-	adafruit/Adafruit BusIO@^1.14.1
+	elektrofuzzis/ftSwarm-control
 
 build_flags = 
 	-DARDUINO_EVENT_RUNNING_CORE=1 
 	-DARDUINO_RUNNING_CORE=0
 	-DBOARD_HAS_PSRAM
-    -mfix-esp32-psram-cache-issue
+	-mfix-esp32-psram-cache-issue
 	-DCORE_DEBUG_LEVEL=0
 
 monitor_filters = esp32_exception_decoder

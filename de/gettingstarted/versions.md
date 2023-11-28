@@ -1,11 +1,14 @@
 ---
 title: Versionen
 layout: category
-lang: de
+lang: en
 classes: wide
 sidebar:
- nav: advanced-de
+    nav: gettingstarted-de
 ---
+### Version 0.5.2 11/2023
+
+Diese Version enthält Bugfixes aufgrund einiger Hardware-Probleme für den ftSwarmControl. Bitte beachten Sie die Upgrade-Anweisungen der Version 0.5.0!
 
 ### Version 0.5.0 11/2023
 

@@ -13,7 +13,7 @@
 <meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
-  <meta name="author" content="//The ftSwarm Project">
+  <meta name="author" content="The ftSwarm Project">
   
 
 
@@ -21,7 +21,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
 <meta property="og:title" content="Version History">
-<meta property="og:url" content="http://localhost:4000/en/advanced/versions/">
+<meta property="og:url" content="http://localhost:4000/en/gettingstarted/versions/">
 
 
   <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/en/advanced/versions/">
+<link rel="canonical" href="http://localhost:4000/en/gettingstarted/versions/">
 
 
 
@@ -152,11 +152,6 @@
         <!-- language picker -->
 
         
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
-          <i class="fas fa-search"></i>
-        </button>
-        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
@@ -175,13 +170,118 @@
 
 <div id="main" role="main">
   
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Tutorial</span>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Gettting started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
+          
+            <li><a href="/en/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
+          
+            <li><a href="/en/gettingstarted/serial">USB/Serial Connection</a></li>
+          
+            <li><a href="/en/gettingstarted/WebUI">wifi & status page</a></li>
+          
+            <li><a href="/en/gettingstarted/ide">Install IDE</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programming</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/gettingstarted/MotorSwitch">My First Application</a></li>
+          
+            <li><a href="/en/gettingstarted/kelda">The Kelda Principle</a></li>
+          
+            <li><a href="/en/gettingstarted/MotorSwitchSwarm">A first Swarm</a></li>
+          
+            <li><a href="/en/gettingstarted/MotorSwitchAlias">Alias Names</a></li>
+          
+            <li><a href="/en/gettingstarted/switches">Switches & Buttons</a></li>
+          
+            <li><a href="/en/gettingstarted/RemoteControl">Remote Control</a></li>
+          
+            <li><a href="/en/gettingstarted/EventControlled">Events</a></li>
+          
+            <li><a href="/en/gettingstarted/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
+          
+            <li><a href="/en/gettingstarted/FtSwarmOLED">OLED Display</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Firmware</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/gettingstarted/firmware">Firmware & Updates</a></li>
+          
+            <li><a href="/en/gettingstarted/versions">Version history</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
 
 
   <div class="archive">
     
       <h1 id="page-title" class="page__title">Version History</h1>
     
-    <h3 id="version-050-112023">Version 0.5.0 11/2023</h3>
+    <h3 id="version-052-112023">Version 0.5.2 11/2023</h3>
+
+<p>This is a bugfix versions due to some hardware issues with ftSwarmControl. Be sure to follow the upgrade instructions of version 0.5.0!</p>
+
+<h3 id="version-050-112023">Version 0.5.0 11/2023</h3>
 
 <p>In the previous versions, the controller on which the control program was started with <code class="language-plaintext highlighter-rouge">ftSwarm.begin</code> was the Kelda.
 However, this led to some communication problems.
@@ -299,17 +399,6 @@ The Kelda must of course know all swarm members and displays the correct number 
     </div>
 
     
-      <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
-    <label class="sr-only" for="search">
-      Enter your search term...
-    </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
-  </form>
-  <div id="results" class="results"></div></div>
-
-      </div>
-    
 
     <div id="footer" class="page__footer">
       <footer>
@@ -362,10 +451,6 @@ The Kelda must of course know all swarm members and displays the correct number 
 
 
 
-
-<script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js"></script>
-<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 

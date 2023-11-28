@@ -23,7 +23,7 @@ In the "[The first program](../MotorSwitch)" you have written a simple program a
 
 In the last example, you have already configured a controller as a Kelda. This has already created a swarm. Your second controller now only needs to join this swarm.    
 
-If you want to change the name of your swarm again, you need to start the firmware menu on the Kelda controller. To do this, you must flash the standard firmware from **Examples\ftSwarm\firmware**.
+If you want to change the name of your swarm again, you need to start the firmware menu on the Kelda controller. To do this, you must flash the [standard firmware](../firmware).
 
 To include the second controller in the Swarm, you must connect it to your PC via USB. First configure the WLAN via **(1) wifi & Web UI**. Then switch to **(2) swarm configuration**:
 

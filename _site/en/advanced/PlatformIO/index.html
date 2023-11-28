@@ -13,7 +13,7 @@
 <meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
-  <meta name="author" content="//The ftSwarm Project">
+  <meta name="author" content="The ftSwarm Project">
   
 
 
@@ -152,11 +152,6 @@
         <!-- language picker -->
 
         
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
-          <i class="fas fa-search"></i>
-        </button>
-        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
@@ -209,7 +204,23 @@
           
             <li><a href="/en/advanced/debugging">Debugging</a></li>
           
-            <li><a href="/en/advanced/versions">Version history</a></li>
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Schematic</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/advanced/ftSwarmJST">ftSwarm</a></li>
+          
+            <li><a href="/en/advanced/ftSwarmRS">ftSwarmRS</a></li>
+          
+            <li><a href="/en/advanced/ftSwarmControl">ftSwarmControl</a></li>
           
         </ul>
         
@@ -253,18 +264,13 @@ Framework: <strong>Arduino Framework</strong></p>
 <span class="py">board_upload.flash_size</span> <span class="p">=</span> <span class="s">4MB</span>
 <span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
 <span class="py">lib_deps</span> <span class="p">=</span> 
-    <span class="s">bloeckchengrafik/ftSwarm</span>
-	<span class="err">fastled/FastLED@^3.5.0</span>
-	<span class="err">adafruit/Adafruit</span> <span class="err">GFX</span> <span class="err">Library@^1.11.5</span>
-	<span class="err">adafruit/Adafruit</span> <span class="err">SSD1306@^2.5.7</span>
-	<span class="err">stm32duino/STM32duino</span> <span class="err">LSM6DSR@^2.1.0</span>
-	<span class="err">adafruit/Adafruit</span> <span class="err">BusIO@^1.14.1</span>
+	<span class="s">elektrofuzzis/ftSwarm-rs</span>
 
 <span class="py">build_flags</span> <span class="p">=</span> 
 	<span class="s">-DARDUINO_EVENT_RUNNING_CORE=1 </span>
 	<span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
 	<span class="err">-DBOARD_HAS_PSRAM</span>
-    <span class="err">-mfix-esp32-psram-cache-issue</span>
+	<span class="err">-mfix-esp32-psram-cache-issue</span>
 	<span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">0</span>
 
 <span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
@@ -273,7 +279,7 @@ Framework: <strong>Arduino Framework</strong></p>
 <span class="py">board_build.partitions</span> <span class="p">=</span> <span class="s">no_ota.csv</span>
 </code></pre></div></div>
 
-<p><strong>ftSwarm</strong></p>
+<p><strong>ftSwarm:</strong></p>
 
 <div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:esp32dev]</span>
 <span class="py">platform</span> <span class="p">=</span> <span class="s">espressif32</span>
@@ -281,18 +287,13 @@ Framework: <strong>Arduino Framework</strong></p>
 <span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32</span>
 <span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
 <span class="py">lib_deps</span> <span class="p">=</span> 
-    <span class="s">bloeckchengrafik/ftSwarm</span>
-	<span class="err">fastled/FastLED@^3.5.0</span>
-	<span class="err">adafruit/Adafruit</span> <span class="err">GFX</span> <span class="err">Library@^1.11.5</span>
-	<span class="err">adafruit/Adafruit</span> <span class="err">SSD1306@^2.5.7</span>
-	<span class="err">stm32duino/STM32duino</span> <span class="err">LSM6DSR@^2.1.0</span>
-	<span class="err">adafruit/Adafruit</span> <span class="err">BusIO@^1.14.1</span>
+	<span class="s">elektrofuzzis/ftSwarm-jst</span>
 
 <span class="py">build_flags</span> <span class="p">=</span> 
 	<span class="s">-DARDUINO_EVENT_RUNNING_CORE=1 </span>
 	<span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
 	<span class="err">-DBOARD_HAS_PSRAM</span>
-    <span class="err">-mfix-esp32-psram-cache-issue</span>
+	<span class="err">-mfix-esp32-psram-cache-issue</span>
 	<span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">0</span>
 
 <span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
@@ -301,7 +302,7 @@ Framework: <strong>Arduino Framework</strong></p>
 <span class="py">board_build.partitions</span> <span class="p">=</span> <span class="s">no_ota.csv</span>
 </code></pre></div></div>
 
-<p><strong>ftSwarmControl</strong></p>
+<p><strong>ftSwarmControl:</strong></p>
 
 <div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:esp32dev]</span>
 <span class="py">platform</span> <span class="p">=</span> <span class="s">espressif32</span>
@@ -309,18 +310,13 @@ Framework: <strong>Arduino Framework</strong></p>
 <span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32</span>
 <span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
 <span class="py">lib_deps</span> <span class="p">=</span> 
-    <span class="s">bloeckchengrafik/ftSwarmControl</span>
-	<span class="err">fastled/FastLED@^3.5.0</span>
-	<span class="err">adafruit/Adafruit</span> <span class="err">GFX</span> <span class="err">Library@^1.11.5</span>
-	<span class="err">adafruit/Adafruit</span> <span class="err">SSD1306@^2.5.7</span>
-	<span class="err">stm32duino/STM32duino</span> <span class="err">LSM6DSR@^2.1.0</span>
-	<span class="err">adafruit/Adafruit</span> <span class="err">BusIO@^1.14.1</span>
+	<span class="s">elektrofuzzis/ftSwarm-control</span>
 
 <span class="py">build_flags</span> <span class="p">=</span> 
 	<span class="s">-DARDUINO_EVENT_RUNNING_CORE=1 </span>
 	<span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
 	<span class="err">-DBOARD_HAS_PSRAM</span>
-    <span class="err">-mfix-esp32-psram-cache-issue</span>
+	<span class="err">-mfix-esp32-psram-cache-issue</span>
 	<span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">0</span>
 
 <span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
@@ -357,17 +353,6 @@ img { vertical-align: middle;important! }
 </div>
     </div>
 
-    
-      <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
-    <label class="sr-only" for="search">
-      Enter your search term...
-    </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
-  </form>
-  <div id="results" class="results"></div></div>
-
-      </div>
     
 
     <div id="footer" class="page__footer">
@@ -421,10 +406,6 @@ img { vertical-align: middle;important! }
 
 
 
-
-<script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js"></script>
-<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 

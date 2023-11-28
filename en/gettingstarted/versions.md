@@ -4,8 +4,12 @@ layout: category
 lang: en
 classes: wide
 sidebar:
-nav: advanced-en
+    nav: gettingstarted-en
 ---
+### Version 0.5.2 11/2023
+
+This is a bugfix versions due to some hardware issues with ftSwarmControl. Be sure to follow the upgrade instructions of version 0.5.0!
+
 ### Version 0.5.0 11/2023
 
 In the previous versions, the controller on which the control program was started with ``ftSwarm.begin`` was the Kelda.

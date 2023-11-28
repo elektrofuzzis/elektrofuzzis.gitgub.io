@@ -13,7 +13,7 @@
 <meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
-  <meta name="author" content="//The ftSwarm Project">
+  <meta name="author" content="The ftSwarm Project">
   
 
 
@@ -152,11 +152,6 @@
         <!-- language picker -->
 
         
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
-          <i class="fas fa-search"></i>
-        </button>
-        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
@@ -209,7 +204,23 @@
           
             <li><a href="/en/advanced/debugging">Debugging</a></li>
           
-            <li><a href="/en/advanced/versions">Version history</a></li>
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Schematic</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/advanced/ftSwarmJST">ftSwarm</a></li>
+          
+            <li><a href="/en/advanced/ftSwarmRS">ftSwarmRS</a></li>
+          
+            <li><a href="/en/advanced/ftSwarmControl">ftSwarmControl</a></li>
           
         </ul>
         
@@ -424,17 +435,6 @@ The port can only be operated as an I²C bus. As the OLED display and the option
     </div>
 
     
-      <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
-    <label class="sr-only" for="search">
-      Enter your search term...
-    </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
-  </form>
-  <div id="results" class="results"></div></div>
-
-      </div>
-    
 
     <div id="footer" class="page__footer">
       <footer>
@@ -487,10 +487,6 @@ The port can only be operated as an I²C bus. As the OLED display and the option
 
 
 
-
-<script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js"></script>
-<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
