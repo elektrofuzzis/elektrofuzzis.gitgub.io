@@ -125,7 +125,7 @@ In einem Swarm muss ein Aliasname eindeutig sein. Dies wird bei der Konfiguratio
 {: .notice--info}
 
 <hr>
-### Factor Reset
+### Factory Reset
 
 Dieser Menüpunkt stellt den Controller auf Werkseinstellungen zurück. Da im Flash evtl. vertrauliche Informationen wie die wifi-Parameter gespeichert sind, sollten Sie einen Controller auf Werkseinstellungen zurücksetzten, bevor sie ihn an Dritte weitergeben.
 
