@@ -16,7 +16,7 @@ sidebar:
 
 
 
-#### FtSwarmOLED(FtSwarmSerialNumber_t serialNumber, FtSwarmPort_t port)
+#### FtSwarmOLED(FtSwarmSerialNumber_t serialNumber)
 
 Constructor um ein FtSwarmOLED Objekt zu erzeugen. Ist der angesprochene Controller nicht online, so wartet die Firmware solange bis der entsprechende Controller gestartet wird.
 

@@ -16,7 +16,7 @@ sidebar:
 
 
 
-#### FtSwarmOLED(FtSwarmSerialNumber_t serialNumber, FtSwarmPort_t port)
+#### FtSwarmOLED(FtSwarmSerialNumber_t serialNumber)
 
 Constructor to create a FtSwarmOLED object. If the referenced controller isn't connected to the swarm yet, the firmware will waits until the controller gets online.
 
