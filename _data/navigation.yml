@@ -189,13 +189,13 @@ cppapi-en:
       - title: "Encoder Motor"
         url: /en/cpp-api/FtSwarmEncoderMotor
       - title: "Mini-Motor"
-        url: /en/cpp-api/FtSwarmXMotor
+        url: /en/cpp-api/FtSwarmMotor
       - title: "Tractor Motor"
         url: /en/cpp-api/FtSwarmTractorMotor
       - title: "XM-Motor"
         url: /en/cpp-api/FtSwarmXMMotor
       - title: "XS-Motor"
-        url: /en/cpp-api/FtSwarmXMotor
+        url: /en/cpp-api/FtSwarmMotor
   - title: "Other Actors"
     children:
       - title: "Overview"
@@ -261,13 +261,13 @@ cppapi-de:
       - title: "Encoder Motor"
         url: /de/cpp-api/FtSwarmEncoderMotor
       - title: "Mini-Motor"
-        url: /de/cpp-api/FtSwarmXMotor
+        url: /de/cpp-api/FtSwarmMotor
       - title: "Traktor Motor"
         url: /de/cpp-api/FtSwarmTractorMotor
       - title: "XM-Motor"
         url: /de/cpp-api/FtSwarmXMMotor
       - title: "XS-Motor"
-        url: /de/cpp-api/FtSwarmXMotor
+        url: /de/cpp-api/FtSwarmMotor
   - title: "Sonstige Aktoren"
     children:
       - title: "Übersicht"

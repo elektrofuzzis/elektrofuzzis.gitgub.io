@@ -1,5 +1,5 @@
 ---
-title: FtSwarmXMotor
+title: FtSwarmMotor
 layout: category
 lang: de
 classes: wide
@@ -32,7 +32,7 @@ Constructor um ein FtSwarmEncoderMotor Objekt zu erzeugen. Ist der angesprochene
 
 Setzt die Motorgeschwindigkeit.
 
-- speed: Geschwindigkeit im Bereich von -256 bis 256.
+- speed: Geschwindigkeit im Bereich von -255 bis 255.
 
 #### uint16_t getSpeed()
 

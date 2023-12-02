@@ -6,10 +6,10 @@ classes: wide
 sidebar:
     nav: cppapi-de
 gallery:
- - url: "/de/cpp-api/FtSwarmXMotor"
+ - url: "/de/cpp-api/FtSwarmMotor"
    image_path: "/assets/img/motor/motor-xs.png"
    title: "XS Motor (137096)"
- - url: "/de/cpp-api/FtSwarmXMotor"
+ - url: "/de/cpp-api/FtSwarmMotor"
    image_path: "/assets/img/motor/motor-mini.png"
    title: "Mini Motor (32293)"
  - url: "/de/cpp-api/FtSwarmXMMotor"

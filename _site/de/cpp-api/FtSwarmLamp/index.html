@@ -284,13 +284,13 @@
           
             <li><a href="/de/cpp-api/FtSwarmEncoderMotor">Encoder Motor</a></li>
           
-            <li><a href="/de/cpp-api/FtSwarmXMotor">Mini-Motor</a></li>
+            <li><a href="/de/cpp-api/FtSwarmMotor">Mini-Motor</a></li>
           
             <li><a href="/de/cpp-api/FtSwarmTractorMotor">Traktor Motor</a></li>
           
             <li><a href="/de/cpp-api/FtSwarmXMMotor">XM-Motor</a></li>
           
-            <li><a href="/de/cpp-api/FtSwarmXMotor">XS-Motor</a></li>
+            <li><a href="/de/cpp-api/FtSwarmMotor">XS-Motor</a></li>
           
         </ul>
         
@@ -340,7 +340,7 @@
 
 <p>Wird eine LED an einen Motorausgang mit beiden Kabeln angeschlossen, so muss die Polung getestet werden. Leuchtet die LED nicht werden, so vertauschen Sie die Anschlüsse an der LED.</p>
 
-<p class="notice--info">Bei den <em>fischertechnik</em>-TX und TXT-Controllern können die Ausgänge auf acht unabhängige Ports (O1..O8) erweitert werden. Dies ist bei den ftSwarm-Controllern nur bedingt möglich. Es können an M1 oder M2 zwei LEDs auf GND geschaltet werden. Diese können abwechselnd aber nicht gleichzeitig eingeschaltet werden. Verwenden Sie n diesem Fall eine Instanz der Klasse FtSwarmXMotor für beide LEDs. <strong>setSpeed(255)</strong> schaltet eine der beiden LEDs ein, <strong>setSpeed(-255)</strong> die andere LED. <strong>setSpeed(0)</strong> schaltet beide LEDs aus.</p>
+<p class="notice--info">Bei den <em>fischertechnik</em>-TX und TXT-Controllern können die Ausgänge auf acht unabhängige Ports (O1..O8) erweitert werden. Dies ist bei den ftSwarm-Controllern nur bedingt möglich. Es können an M1 oder M2 zwei LEDs auf GND geschaltet werden. Diese können abwechselnd aber nicht gleichzeitig eingeschaltet werden. Verwenden Sie n diesem Fall eine Instanz der Klasse FtSwarmMotor für beide LEDs. <strong>setSpeed(255)</strong> schaltet eine der beiden LEDs ein, <strong>setSpeed(-255)</strong> die andere LED. <strong>setSpeed(0)</strong> schaltet beide LEDs aus.</p>
 
 <h4 id="ftswarmlampftswarmserialnumber_t-serialnumber-ftswarmport_t-port">FtSwarmLamp(FtSwarmSerialNumber_t serialNumber, FtSwarmPort_t port)</h4>
 

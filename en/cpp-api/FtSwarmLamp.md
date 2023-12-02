@@ -15,7 +15,7 @@ sidebar:
 
 If an LED is connected to a motor output with both cables, the polarity must be tested. If the LED does not light up, reverse the connections to the LED.
 
-With the *fischertechnik* TX and TXT controllers the outputs can be extended to eight independent ports (O1..O8). This is only conditionally possible with the ftSwarm controllers. Two LEDs can be switched to GND at M1 or M2. These can be switched on alternately but not simultaneously. In this case use one instance of the class FtSwarmXMotor for both LEDs. **setSpeed(255)** switches on one of the two LEDs, **setSpeed(-255)** the other LED. **setSpeed(0)** turns off both LEDs.
+With the *fischertechnik* TX and TXT controllers the outputs can be extended to eight independent ports (O1..O8). This is only conditionally possible with the ftSwarm controllers. Two LEDs can be switched to GND at M1 or M2. These can be switched on alternately but not simultaneously. In this case use one instance of the class FtSwarmMotor for both LEDs. **setSpeed(255)** switches on one of the two LEDs, **setSpeed(-255)** the other LED. **setSpeed(0)** turns off both LEDs.
 {: .notice--info}
 
 #### FtSwarmLamp(FtSwarmSerialNumber_t serialNumber, FtSwarmPort_t port)

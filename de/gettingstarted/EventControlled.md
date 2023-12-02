@@ -36,7 +36,7 @@ void setup() {
   // define needed IOs
   FtSwarmButton   button   = new FtSwarmButton( "button" );
   FtSwarmJoystick joystick = new FtSwarmJoystick( "joystick" );
-  FtSwarmXMotor   motor    = new FtSwarmXMotor( "motor" );
+  FtSwarmMotor    motor    = new FtSwarmMotor( "motor" );
   FtSwarmLamp     lamp     = new FtSwarmLamp( "lamp" );
   
   // button S1 controls the lamp

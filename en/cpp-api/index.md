@@ -63,10 +63,10 @@ led:
    image_path: "/assets/img/LampLedDisplay/ftSwarmControl.png"
    title: "OLED ftSwarmControl"
 motor:
- - url: "/en/cpp-api/FtSwarmXMotor/"
+ - url: "/en/cpp-api/FtSwarmMotor/"
    image_path: "/assets/img/motor/motor-xs.png"
    title: "XS Motor (137096)"
- - url: "/en/cpp-api/FtSwarmXMotor/"
+ - url: "/en/cpp-api/FtSwarmMotor/"
    image_path: "/assets/img/motor/motor-mini.png"
    title: "Mini Motor (32293)"
  - url: "/en/cpp-api/FtSwarmXMMotor/"

@@ -1,5 +1,5 @@
 ---
-title: FtSwarmXMotor
+title: FtSwarmMotor
 layout: category
 lang: en
 classes: wide
@@ -32,7 +32,7 @@ Constructor to create a FtSwarmMotor object. If the referenced controller isn't 
 
 Sets the motors speed.
 
-- speed: speed value in the range from -256 to 256
+- speed: speed value in the range from -255 to 255
 
 #### uint16_t getSpeed()
 

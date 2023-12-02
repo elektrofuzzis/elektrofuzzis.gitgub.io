@@ -259,19 +259,23 @@ Framework: <strong>Arduino Framework</strong></p>
 <p><strong>ftSwarmRS:</strong></p>
 
 <div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:esp32-s3-devkitc-1]</span>
-<span class="py">platform</span> <span class="p">=</span> <span class="s">espressif32</span>
+<span class="nn">[env:firmware-rs]</span>
+<span class="py">platform</span> <span class="p">=</span><span class="s">espressif32</span>
 <span class="py">board</span> <span class="p">=</span> <span class="s">esp32-s3-devkitc-1</span>
+<span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32s3</span>
+
+<span class="py">lib_deps</span> <span class="p">=</span>
+    <span class="py">ftswarm-rs</span><span class="p">=</span><span class="s">symlink://../ftswarm-rs</span>
+
 <span class="py">board_upload.flash_size</span> <span class="p">=</span> <span class="s">4MB</span>
 <span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
-<span class="py">lib_deps</span> <span class="p">=</span> 
-	<span class="s">elektrofuzzis/ftSwarm-rs</span>
 
-<span class="py">build_flags</span> <span class="p">=</span> 
-	<span class="s">-DARDUINO_EVENT_RUNNING_CORE=1 </span>
-	<span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
-	<span class="err">-DBOARD_HAS_PSRAM</span>
-	<span class="err">-mfix-esp32-psram-cache-issue</span>
-	<span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">0</span>
+<span class="py">build_flags</span> <span class="p">=</span>
+    <span class="py">-DARDUINO_EVENT_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
+    <span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">1</span>
+    <span class="err">-DBOARD_HAS_PSRAM</span>
+    <span class="err">-mfix-esp32-psram-cache-issue</span>
+    <span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">1</span>
 
 <span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
 <span class="py">monitor_speed</span> <span class="p">=</span> <span class="s">115200</span>

@@ -27,19 +27,23 @@ Depended on your ftSwarm Hardware, change the content of `platformio.ini` to the
 
 ```ini
 [env:esp32-s3-devkitc-1]
-platform = espressif32
+[env:firmware-rs]
+platform =espressif32
 board = esp32-s3-devkitc-1
+board_build.mcu = esp32s3
+
+lib_deps =
+    ftswarm-rs=symlink://../ftswarm-rs
+
 board_upload.flash_size = 4MB
 framework = arduino
-lib_deps = 
-	elektrofuzzis/ftSwarm-rs
 
-build_flags = 
-	-DARDUINO_EVENT_RUNNING_CORE=1 
-	-DARDUINO_RUNNING_CORE=0
-	-DBOARD_HAS_PSRAM
-	-mfix-esp32-psram-cache-issue
-	-DCORE_DEBUG_LEVEL=0
+build_flags =
+    -DARDUINO_EVENT_RUNNING_CORE=0
+    -DARDUINO_RUNNING_CORE=1
+    -DBOARD_HAS_PSRAM
+    -mfix-esp32-psram-cache-issue
+    -DCORE_DEBUG_LEVEL=1
 
 monitor_filters = esp32_exception_decoder
 monitor_speed = 115200
