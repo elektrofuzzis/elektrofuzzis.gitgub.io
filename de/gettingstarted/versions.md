@@ -6,9 +6,14 @@ classes: wide
 sidebar:
     nav: gettingstarted-de
 ---
-### Version 0.5.2 11/2023
 
-Diese Version enthält Bugfixes aufgrund einiger Hardware-Probleme für den ftSwarmControl. Bitte beachten Sie die Upgrade-Anweisungen der Version 0.5.0!
+### Version 0.5.4 12/2023
+
+Diese Version enthält Bugfixes beim ANsprechen von remote IOs über Alias Namen. Bitte beachten Sie die Upgrade-Anweisungen der Version 0.5.0!
+
+### Version 0.5.3 11/2023
+
+Diese Version enthält Bugfixes für die Ansteuerung von Motorausgängen. Bitte beachten Sie die Upgrade-Anweisungen der Version 0.5.0!
 
 ### Version 0.5.0 11/2023
 

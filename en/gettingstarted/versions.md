@@ -6,6 +6,14 @@ classes: wide
 sidebar:
     nav: gettingstarted-en
 ---
+### Version 0.5.4 12/2023
+
+This version contains bugfixes when addressing remote IOs via alias names. Please note the upgrade instructions for version 0.5.0!
+
+### Version 0.5.3 11/2023
+
+This version contains bugfixes for the control of motor outputs. Please note the upgrade instructions for version 0.5.0!
+
 ### Version 0.5.2 11/2023
 
 This is a bugfix versions due to some hardware issues with ftSwarmControl. Be sure to follow the upgrade instructions of version 0.5.0!
