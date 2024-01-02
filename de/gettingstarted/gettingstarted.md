@@ -1,5 +1,5 @@
 ---
-title: Tutorial
+title: Manual
 Lang:  de
 layout: category
 classes: wide
@@ -7,22 +7,36 @@ sidebar:
     nav: gettingstarted-de
 ---
 
-Dieses Tutorial erklärt die grundlegende Benutzung und Programmierung der ftSwarm-Controller. Wir empfehlen deshalb, zunächst das Tutorial Kapitel für Kapitel zu lesen und die Beispiele nachzustellen. In der [API-Referenz](../cpp-api/index.md) werden die verschiedenen Klassen im Detail sowie das Anschlussschema der verschiedenen Sensoren und Aktoren erklärt.
+Dieses Manual erklärt die grundlegende Benutzung und Programmierung der ftSwarm-Controller. Wir empfehlen deshalb, zunächst das Manual Kapitel für Kapitel zu lesen und die Beispiele nachzustellen. In der [API-Referenz](../cpp-api/index) werden die verschiedenen Klassen im Detail sowie das Anschlussschema der verschiedenen Sensoren und Aktoren erklärt.
 
-1. Pinout und technische Daten von [ftSwarm](../1stftSwarm) und [ftSwarmControl](../1stftSwarmControl)
-2. [Den ftSwarm-Controller über USB mit dem PC verbinden](../serial)
-3. [Das WLAN konfigurieren und die Statusseite benutzen](../WebUI)
-4. [Installation der IDE](../ide)
-5. [Das erste Programm auf einem ftSwarm Controller](../MotorSwitch)
-6. [Das Kelda Prinzip](../kelda)
-7. [Der erste Schwarm](../MotorSwitchSwarm)
-8. [Aliasnamen machen das Programm lesbarer](../MotorSwitchAlias)
-9. [Buttons, Switches und Toggles](../switches)
-10. [Eine Fernbedienung ohne eine Zeile Code](../RemoteControl)
-11. [Einfache Programmierung durch Events](../EventControlled)
-12. [RGB LEDs & ftPixel](../FtSwarmPixel)
-13. [OLED Display](../FtSwarmOLED)
-14. [Firmware & Updates](../firmware.md)
+1. Inbetriebnahme
+- [Lerne die Anschlüsse der ftSwarm-Familie kennen.](../pinout)
+- [Den ftSwarm-Controller über USB mit dem PC verbinden](../serial)
+- [Das WLAN konfigurieren und die Statusseite benutzen](../WebUI)
+
+
+2. Programmierung in C++
+- [Installation der IDE](../ide)
+- [Das erste Programm auf einem ftSwarm Controller](../MotorSwitch)
+- [Das Kelda Prinzip](../kelda)
+- [Der erste Schwarm](../MotorSwitchSwarm)
+- [Aliasnamen machen das Programm lesbarer](../MotorSwitchAlias)
+- [Buttons, Switches und Toggles](../switches)
+- [Eine Fernbedienung ohne eine Zeile Code](../RemoteControl)
+- [Einfache Programmierung durch Events](../EventControlled)
+- [RGB LEDs & ftPixel](../FtSwarmPixel)
+- [OLED Display](../FtSwarmOLED)
+
+
+3. Firmware & Versionen
+- [Firmware & Updates](../firmware)
+- [Versionen](../versions)
+
+4. Advanced
+- [Konfiguration komplett](../Configuration)
+- [Programmierung mit PlatformIO & VSCode](../PlatformIO)
+- [Den Swarm über RS485 verbinden](../rs485)
+- [Programme auf dem ftSwarm debuggen](../debugging)
 
 ### Einsatzgebiet & Gewährleistung
 

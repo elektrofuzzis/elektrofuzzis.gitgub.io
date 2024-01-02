@@ -130,13 +130,13 @@
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Tutorial">Tutorial</a>
-          </li>
-          <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('advanced/Configuration')" title="Advanced">Advanced</a>
+            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
           </li>
           <li class="masthead__menu-item">
             <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
           </li>
           <li class="masthead__menu-item">
             <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
@@ -202,8 +202,9 @@
       <h1 id="page-title" class="page__title">The ftSwarm Project</h1>
     
     <p>The goal of the ftSwarm project is to build small networked controllers for DIY and toy applications. 
-Since they are networked with each other, they can act like a swarm. For example, they can act as several independent robots to solve a task together. 
-In larger models, the controllers can be installed at different positions close to actuators and sensors - together they control the complete model.</p>
+Since they are networked with each other, they can act like a swarm. For example, they can act as several independent robots to solve a task together.</p>
+
+<p>In larger models, the controllers can be installed at different positions close to actuators and sensors - together they control the complete model.</p>
 
 <p>Originally, the project was designed to use with <em>fischertechnik</em>. Since the mounting grooves are compatible with Makerbeam profiles, ftSwarms could be used in many DIY projects.</p>
 
@@ -214,21 +215,48 @@ td, th {
 </style>
 
 <table>
-  <tbody>
     <tr>
-      <td><img src="/assets/img/ftSwarmftSwarmRS.png" alt="ftSwarm" /></td>
-      <td>Although the ftSwamRS is as small as a matchbox with only 45.0 x 37.5 x 23 mm, it can control two 9V DV motors, up to 16 RGB LEDs, two servos and read out 6 analog or digital sensors. Its predecessor model - the ftSwarm (left in the picture) - can control two 9V DC motors, up to 16 RGB LEDs and one servo. It has 4 inputs for analog or digital sensors.</td>
+        <td style="text-align: center;"><img src="/assets/img/ftSwarmRS.png" width="200" /></td>
+        <td style="text-align: center;"><img src="/assets/img/ftSwarmXL.png" width="250" /></td>
+        <td style="text-align: center;"><img src="/assets/img/ftSwarmCAM.png" width="150" /></td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>As a control panel, the ftSwarmControl has, in addition to 2 joysticks, 8 buttons and an LCD display, the ability to control 2 DC motors and read 4 digital sensors.</td>
-      <td><img src="/assets/img/ftSwarmControl_small.png" alt="ftSwarmControl" /></td>
+        <td style="text-align: center; font-weight: bold;">ftSwarmRS</td>
+        <td style="text-align: center; font-weight: bold;">ftSwarmXL</td>
+        <td style="text-align: center; font-weight: bold;">ftSwarmCAM</td>
     </tr>
-  </tbody>
+    <tr>
+        <td style="vertical-align: top; text-align: justify;">
+            Although the ftSwarmRS (pictured right) is almost as small as a matchbox at just 45.0 x 37.5 x 23.0 mm, it can control two 9V DC motors, up to sixteen RGB LEDs, two servos and read out six analog or digital sensors.
+        </td>
+        <td style="vertical-align: top; text-align: justify;">
+            The ftSwarmXL is designed for the really big projects. With its 8 inputs for analog and digital sensors and 8 outputs for 9V DC motors, it has an extremely high port density in a housing measuring just 75 x 45 x 14 mm.
+        </td>
+        <td style="vertical-align: top; text-align: justify;">
+            The ftSwarmCAM can be used to transmit images and videos from the model. It also controls two motors, a servo and has three digital inputs. Two directly connectable LiPo batteries mobilizes the controller.
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="/assets/img/ftSwarmControl.png" width="200" /></td>
+        <td style="text-align: center;"><img src="/assets/img/ftSwarmPwrDrive.png" width="200" /></td>
+        <td style="text-align: center;"><img src="/assets/img/ftSwarmDuino.png" width="200" /></td>
+    </tr>
+    <tr>
+        <td style="text-align: center; font-weight: bold;">ftSwarmControl</td>
+        <td style="text-align: center; font-weight: bold;">ftSwarmPwrDrive</td>
+        <td style="text-align: center; font-weight: bold;">ftSwarmDuino</td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top; text-align: justify;">
+            In addition to two joysticks, eight buttons and an LCD display, the ftSwarmControl control panel can control two DC motors and read out four digital sensors. In remote control mode, simple models can be simple models can be controlled without any line of code.
+        </td>
+        <td style="vertical-align: top; text-align: justify;">
+            With the ftSwarmPwrDrive, stepper motors can be integrated into the Swarm. The controller is plugged onto an ftPwrDrive controller and thus integrates the four stepper motors and five limit switches of the ftPwrDrive into the Swarm.
+        </td>
+        <td style="vertical-align: top; text-align: justify;">
+            Upcycling for the ftDuino. The ftSwarmDuino is plugged into the I²C connector of the ftDuino controller and the eight inputs and four outputs of the ftDuino controller can be used in the Swarm.
+        </td>
+    </tr>
 </table>
 
 <p>Since building this hardware on your own is a little bit tricky, we offer ready to use devices at <a href="https://gundermann-software.de/">gundermann-software.de</a>.
@@ -288,7 +316,7 @@ For all who wants to build their own pcb, we provide the needed schematic files 
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2024 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Tutorial -</title>
+<!-- begin _includes/seo.html --><title>Manual -</title>
 <meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
@@ -20,7 +20,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
-<meta property="og:title" content="Tutorial">
+<meta property="og:title" content="Manual">
 <meta property="og:url" content="http://localhost:4000/de/gettingstarted/gettingstarted/">
 
 
@@ -130,13 +130,13 @@
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Tutorial">Tutorial</a>
-          </li>
-          <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('advanced/Configuration')" title="Advanced">Advanced</a>
+            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
           </li>
           <li class="masthead__menu-item">
             <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
           </li>
           <li class="masthead__menu-item">
             <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
@@ -190,7 +190,7 @@
     
       <li>
         
-          <span class="nav__sub-title">Tutorial</span>
+          <span class="nav__sub-title">Manual</span>
         
 
         
@@ -204,9 +204,7 @@
         
         <ul>
           
-            <li><a href="/de/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
-          
-            <li><a href="/de/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
+            <li><a href="/de/gettingstarted/Pinout">Anschlüsse</a></li>
           
             <li><a href="/de/gettingstarted/serial">USB Anschluss</a></li>
           
@@ -264,6 +262,26 @@
         
       </li>
     
+      <li>
+        
+          <span class="nav__sub-title">Advanced</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/de/gettingstarted/Configuration">Konfiguration</a></li>
+          
+            <li><a href="/de/gettingstarted/PlatformIO">PlatformIO & VSCode</a></li>
+          
+            <li><a href="/de/gettingstarted/rs485">RS485</a></li>
+          
+            <li><a href="/de/gettingstarted/debugging">Debugging</a></li>
+          
+        </ul>
+        
+      </li>
+    
   </ul>
 </nav>
 
@@ -275,25 +293,46 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Tutorial</h1>
+      <h1 id="page-title" class="page__title">Manual</h1>
     
-    <p>Dieses Tutorial erklärt die grundlegende Benutzung und Programmierung der ftSwarm-Controller. Wir empfehlen deshalb, zunächst das Tutorial Kapitel für Kapitel zu lesen und die Beispiele nachzustellen. In der <a href="/de/cpp-api/">API-Referenz</a> werden die verschiedenen Klassen im Detail sowie das Anschlussschema der verschiedenen Sensoren und Aktoren erklärt.</p>
+    <p>Dieses Manual erklärt die grundlegende Benutzung und Programmierung der ftSwarm-Controller. Wir empfehlen deshalb, zunächst das Manual Kapitel für Kapitel zu lesen und die Beispiele nachzustellen. In der <a href="../cpp-api/index">API-Referenz</a> werden die verschiedenen Klassen im Detail sowie das Anschlussschema der verschiedenen Sensoren und Aktoren erklärt.</p>
 
 <ol>
-  <li>Pinout und technische Daten von <a href="../1stftSwarm">ftSwarm</a> und <a href="../1stftSwarmControl">ftSwarmControl</a></li>
-  <li><a href="../serial">Den ftSwarm-Controller über USB mit dem PC verbinden</a></li>
-  <li><a href="../WebUI">Das WLAN konfigurieren und die Statusseite benutzen</a></li>
-  <li><a href="../ide">Installation der IDE</a></li>
-  <li><a href="../MotorSwitch">Das erste Programm auf einem ftSwarm Controller</a></li>
-  <li><a href="../kelda">Das Kelda Prinzip</a></li>
-  <li><a href="../MotorSwitchSwarm">Der erste Schwarm</a></li>
-  <li><a href="../MotorSwitchAlias">Aliasnamen machen das Programm lesbarer</a></li>
-  <li><a href="../switches">Buttons, Switches und Toggles</a></li>
-  <li><a href="../RemoteControl">Eine Fernbedienung ohne eine Zeile Code</a></li>
-  <li><a href="../EventControlled">Einfache Programmierung durch Events</a></li>
-  <li><a href="../FtSwarmPixel">RGB LEDs &amp; ftPixel</a></li>
-  <li><a href="../FtSwarmOLED">OLED Display</a></li>
-  <li><a href="../firmware.md">Firmware &amp; Updates</a></li>
+  <li>Inbetriebnahme
+    <ul>
+      <li><a href="../pinout">Lerne die Anschlüsse der ftSwarm-Familie kennen.</a></li>
+      <li><a href="../serial">Den ftSwarm-Controller über USB mit dem PC verbinden</a></li>
+      <li><a href="../WebUI">Das WLAN konfigurieren und die Statusseite benutzen</a></li>
+    </ul>
+  </li>
+  <li>Programmierung in C++
+    <ul>
+      <li><a href="../ide">Installation der IDE</a></li>
+      <li><a href="../MotorSwitch">Das erste Programm auf einem ftSwarm Controller</a></li>
+      <li><a href="../kelda">Das Kelda Prinzip</a></li>
+      <li><a href="../MotorSwitchSwarm">Der erste Schwarm</a></li>
+      <li><a href="../MotorSwitchAlias">Aliasnamen machen das Programm lesbarer</a></li>
+      <li><a href="../switches">Buttons, Switches und Toggles</a></li>
+      <li><a href="../RemoteControl">Eine Fernbedienung ohne eine Zeile Code</a></li>
+      <li><a href="../EventControlled">Einfache Programmierung durch Events</a></li>
+      <li><a href="../FtSwarmPixel">RGB LEDs &amp; ftPixel</a></li>
+      <li><a href="../FtSwarmOLED">OLED Display</a></li>
+    </ul>
+  </li>
+  <li>Firmware &amp; Versionen
+    <ul>
+      <li><a href="../firmware">Firmware &amp; Updates</a></li>
+      <li><a href="../versions">Versionen</a></li>
+    </ul>
+  </li>
+  <li>Advanced
+    <ul>
+      <li><a href="../Configuration">Konfiguration komplett</a></li>
+      <li><a href="../PlatformIO">Programmierung mit PlatformIO &amp; VSCode</a></li>
+      <li><a href="../rs485">Den Swarm über RS485 verbinden</a></li>
+      <li><a href="../debugging">Programme auf dem ftSwarm debuggen</a></li>
+    </ul>
+  </li>
 </ol>
 
 <h3 id="einsatzgebiet--gewährleistung">Einsatzgebiet &amp; Gewährleistung</h3>
@@ -362,7 +401,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2024 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

@@ -7,22 +7,35 @@ sidebar:
     nav: gettingstarted-en
 ---
 
-Getting started is a tutorial in using your swarm. To understand ftSwarm programming and principles, you should read this tutorial step by step: 
+This manual explains the basic use and programming of the ftSwarm controller. We therefore recommend that you first read the manual chapter by chapter and reproduce the examples. The [API reference](../cpp-api/index) explains the various classes in detail as well as the connection diagram for the various sensors and actuators.
 
-1. Learn about pinout & tech specs of [ftSwarm](../1stftSwarm) and [ftSwarmControl](../1stftSwarmControl)
-2. [Connect your ftSwarm controller with your PC](../serial)
-3. [Configure wifi and use the status page](../WebUI)
-4. [Install IDE to run the examples](../ide)
-5. [Run your first program on a singular controller](../MotorSwitch)
-6. [Understand the kelda principle to run a swarm](../kelda)
-7. [The first swarm](../MotorSwitchSwarm)
-8. [Use alias names to structure your code](../MotorSwitchAlias)
-9. [How to use buttons, switches and toggles](../switches)
-10. [Remote control without a line of code](../RemoteControl)
-11. [Use events to simplfy your code](../EventControlled)
-12. [RGB LEDs & ftPixel](../FtSwarmPixel)
-13. [OLED Display](../FtSwarmOLED)
-14. [Firmware & Updates](../firmware.md)
+1. Getting started
+- [Learn about the connectors of the ftSwarm family.](../pinout)
+- [Connect your ftSwarm controller with your PC](../serial)
+- [Configure wifi and use the status page](../WebUI)
+- [Install IDE to run the examples](../ide)
+
+
+2. Programming in C++
+- [Run your first program on a singular controller](../MotorSwitch)
+- [Understand the kelda principle to run a swarm](../kelda)
+- [The first swarm](../MotorSwitchSwarm)
+- [Use alias names to structure your code](../MotorSwitchAlias)
+- [How to use buttons, switches and toggles](../switches)
+- [Remote control without a line of code](../RemoteControl)
+- [Use events to simplfy your code](../EventControlled)
+- [RGB LEDs & ftPixel](../FtSwarmPixel)
+- [OLED Display](../FtSwarmOLED)
+
+3. Firmware & Versions
+- [Firmware & Updates](../firmware)
+- [Versions](../versions)
+
+4. Advanced
+- [The complete configuration](../Configuration)
+- [Using PlatformIO & VSCode](../PlatformIO)
+- [Connect your swarm using RS485](../rs485)
+- [Debug your code](../debugging)
 
 The tutorial is not intended to explain everything in detail. If you like to have a deep dive into ftSwarm's commands & features please checkout the [API](../cpp-api/index.md) documentation.
 

@@ -1,28 +1,43 @@
-# main links
-main:
-  #- title: "Tutorial"
-  #  url: /en/gettingstarted/gettingstarted
-  #- title: "API"
-  #  url: /en/cpp-api/index
-  #- title: "FAQ"
-  #  url: /en/faq/faq
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+products-en:
+  - title: "Products"
+  - title: "ftSwarm Family"
+    children:
+      - title: "ftSwarm"
+        url: /en/products/ftSwarm
+      - title: "ftSwarmRS"
+        url: /en/products/ftSwarmRS
+      - title: "ftSwarmXL"
+        url: /en/products/ftSwarmXL
+      - title: "ftSwarmControl"
+        url: /en/products/ftSwarmControl
+      - title: "ftSwarmPwrDrive"
+        url: /en/products/ftSwarmPwrDrive
+      - title: "ftSwarmDuino"
+        url: /en/products/ftSwarmDuino
+
+products-de:
+  - title: "Produkte"
+  - title: "ftSwarm Familie"
+    children:
+      - title: "ftSwarm"
+        url: /de/products/ftSwarm
+      - title: "ftSwarmRS"
+        url: /de/products/ftSwarmRS
+      - title: "ftSwarmXL"
+        url: /de/products/ftSwarmXL
+      - title: "ftSwarmControl"
+        url: /de/products/ftSwarmControl
+      - title: "ftSwarmPwrDrive"
+        url: /de/products/ftSwarmPwrDrive
+      - title: "ftSwarmDuino"
+        url: /de/products/ftSwarmDuino
 
 gettingstarted-en:
-  - title: "Tutorial"
+  - title: "Manual"
   - title: "Gettting started"
     children:
-      - title: "ftSwarm & ftSwarmRS"
-        url: /en/gettingstarted/1stftSwarm
-      - title: "ftSwarmControl"
-        url: /en/gettingstarted/1stftSwarmControl
+      - title: "Connectors"
+        url: /en/gettingstarted/Pinout
       - title: "USB/Serial Connection"
         url: /en/gettingstarted/serial
       - title: "wifi & status page"
@@ -55,15 +70,23 @@ gettingstarted-en:
         url: /en/gettingstarted/firmware
       - title: "Version history"
         url: /en/gettingstarted/versions
+  - title: "Advanced"
+    children:
+      - title: "Configuration"
+        url: /en/advanced/Configuration
+      - title: "PlatformIO & VSCode"
+        url: /en/advanced/PlatformIO
+      - title: "RS485"
+        url: /en/advanced/rs485
+      - title: "Debugging"
+        url: /en/advanced/debugging
 
 gettingstarted-de:
-  - title: "Tutorial"
+  - title: "Manual"
   - title: "Inbetriebnahme"
     children:
-      - title: "ftSwarm & ftSwarmRS"
-        url: /de/gettingstarted/1stftSwarm
-      - title: "ftSwarmControl"
-        url: /de/gettingstarted/1stftSwarmControl
+      - title: "Anschlüsse"
+        url: /de/gettingstarted/Pinout
       - title: "USB Anschluss"
         url: /de/gettingstarted/serial
       - title: "WLAN & Statusseite"
@@ -96,46 +119,16 @@ gettingstarted-de:
         url: /de/gettingstarted/firmware
       - title: "Versionen"
         url: /de/gettingstarted/versions
-
-advanced-en:
-  - title: "Advanced"
-    children:
-      - title: "Configuration"
-        url: /en/advanced/Configuration
-      - title: "PlatformIO & VSCode"
-        url: /en/advanced/PlatformIO
-      - title: "RS485"
-        url: /en/advanced/rs485
-      - title: "Debugging"
-        url: /en/advanced/debugging
-  - title: "Schematic"
-    children:
-      - title: "ftSwarm"
-        url: /en/advanced/ftSwarmJST
-      - title: "ftSwarmRS"
-        url: /en/advanced/ftSwarmRS
-      - title: "ftSwarmControl"
-        url: /en/advanced/ftSwarmControl
-
-advanced-de:
   - title: "Advanced"
     children:
       - title: "Konfiguration"
-        url: /de/advanced/Configuration
+        url: /de/gettingstarted/Configuration
       - title: "PlatformIO & VSCode"
-        url: /de/advanced/PlatformIO
+        url: /de/gettingstarted/PlatformIO
       - title: "RS485"
-        url: /de/advanced/rs485
+        url: /de/gettingstarted/rs485
       - title: "Debugging"
-        url: /de/advanced/debugging
-  - title: "Schaltpläne"
-    children:
-      - title: "ftSwarm"
-        url: /de/advanced/ftSwarmJST
-      - title: "ftSwarmRS"
-        url: /de/advanced/ftSwarmRS
-      - title: "ftSwarmControl"
-        url: /de/advanced/ftSwarmControl
+        url: /de/gettingstarted/debugging
 
 cppapi-en:
   - title: "C++ API"
@@ -170,6 +163,10 @@ cppapi-en:
         url: /en/cpp-api/FtSwarmReedSwitch
       - title: "Switch"
         url: /en/cpp-api/FtSwarmSwitch
+      - title: "Counter"
+        url: /en/cpp-api/FtSwarmCounter/
+      - title: "Frequency"
+        url: /en/cpp-api/FtSwarmFrequencyMeter/
   - title: "LEDs, Lamps & Displays"
     children:
       - title: "Overview"
@@ -242,6 +239,10 @@ cppapi-de:
         url: /de/cpp-api/FtSwarmReedSwitch
       - title: "Taster"
         url: /de/cpp-api/FtSwarmSwitch
+      - title: "Zähler"
+        url: /de/cpp-api/FtSwarmCounter/
+      - title: "Frequenzmeter"
+        url: /de/cpp-api/FtSwarmFrequencyMeter/
   - title: "LEDs, Lampen & Displays"
     children:
       - title: "Übersicht"

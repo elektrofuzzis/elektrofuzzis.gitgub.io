@@ -12,15 +12,21 @@ gallery:
  - url: "/en/cpp-api/FtSwarmSwitch/"
    image_path: "/assets/img/switches/switch-reversing.png"
    title: "Reversing switch (36708)"
- - url: "/en/cpp-api/photo-transistor/"
+ - url: "/en/cpp-api/FtSwarmLDR/"
    image_path: "/assets/img/switches/photo-transistor.png"
    title: "Photo Transistor (36134)"
- - url: "/en/cpp-api/switch-reed/"
+ - url: "/en/cpp-api/FtSwarmReedSwitch/"
    image_path: "/assets/img/switches/switch-reed.png"
    title: "Reed contact (36120)"
  - url: "/en/cpp-api/FtSwarmButton/"
    image_path: "/assets/img/switches/ftSwarmControl.png"
    title: "Buttons ftSwarmControl"
+ - url: "/de/cpp-api/FtSwarmCounter/"
+   image_path: "/assets/img/switches/counter.png"
+   title: "Counter"
+ - url: "/de/cpp-api/FtSwarmFrequencyMeter/"
+   image_path: "/assets/img/switches/frequency.png"
+   title: "Frequency"
 ---
 Digital sensors are switches, they only know two values: on and off.
 

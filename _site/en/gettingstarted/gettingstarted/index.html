@@ -130,13 +130,13 @@
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Tutorial">Tutorial</a>
-          </li>
-          <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('advanced/Configuration')" title="Advanced">Advanced</a>
+            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
           </li>
           <li class="masthead__menu-item">
             <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
           </li>
           <li class="masthead__menu-item">
             <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
@@ -190,7 +190,7 @@
     
       <li>
         
-          <span class="nav__sub-title">Tutorial</span>
+          <span class="nav__sub-title">Manual</span>
         
 
         
@@ -204,9 +204,7 @@
         
         <ul>
           
-            <li><a href="/en/gettingstarted/1stftSwarm">ftSwarm & ftSwarmRS</a></li>
-          
-            <li><a href="/en/gettingstarted/1stftSwarmControl">ftSwarmControl</a></li>
+            <li><a href="/en/gettingstarted/Pinout">Connectors</a></li>
           
             <li><a href="/en/gettingstarted/serial">USB/Serial Connection</a></li>
           
@@ -264,6 +262,26 @@
         
       </li>
     
+      <li>
+        
+          <span class="nav__sub-title">Advanced</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/advanced/Configuration">Configuration</a></li>
+          
+            <li><a href="/en/advanced/PlatformIO">PlatformIO & VSCode</a></li>
+          
+            <li><a href="/en/advanced/rs485">RS485</a></li>
+          
+            <li><a href="/en/advanced/debugging">Debugging</a></li>
+          
+        </ul>
+        
+      </li>
+    
   </ul>
 </nav>
 
@@ -277,23 +295,44 @@
     
       <h1 id="page-title" class="page__title">Tutorial</h1>
     
-    <p>Getting started is a tutorial in using your swarm. To understand ftSwarm programming and principles, you should read this tutorial step by step:</p>
+    <p>This manual explains the basic use and programming of the ftSwarm controller. We therefore recommend that you first read the manual chapter by chapter and reproduce the examples. The <a href="../cpp-api/index">API reference</a> explains the various classes in detail as well as the connection diagram for the various sensors and actuators.</p>
 
 <ol>
-  <li>Learn about pinout &amp; tech specs of <a href="../1stftSwarm">ftSwarm</a> and <a href="../1stftSwarmControl">ftSwarmControl</a></li>
-  <li><a href="../serial">Connect your ftSwarm controller with your PC</a></li>
-  <li><a href="../WebUI">Configure wifi and use the status page</a></li>
-  <li><a href="../ide">Install IDE to run the examples</a></li>
-  <li><a href="../MotorSwitch">Run your first program on a singular controller</a></li>
-  <li><a href="../kelda">Understand the kelda principle to run a swarm</a></li>
-  <li><a href="../MotorSwitchSwarm">The first swarm</a></li>
-  <li><a href="../MotorSwitchAlias">Use alias names to structure your code</a></li>
-  <li><a href="../switches">How to use buttons, switches and toggles</a></li>
-  <li><a href="../RemoteControl">Remote control without a line of code</a></li>
-  <li><a href="../EventControlled">Use events to simplfy your code</a></li>
-  <li><a href="../FtSwarmPixel">RGB LEDs &amp; ftPixel</a></li>
-  <li><a href="../FtSwarmOLED">OLED Display</a></li>
-  <li><a href="../firmware.md">Firmware &amp; Updates</a></li>
+  <li>Getting started
+    <ul>
+      <li><a href="../pinout">Learn about the connectors of the ftSwarm family.</a></li>
+      <li><a href="../serial">Connect your ftSwarm controller with your PC</a></li>
+      <li><a href="../WebUI">Configure wifi and use the status page</a></li>
+      <li><a href="../ide">Install IDE to run the examples</a></li>
+    </ul>
+  </li>
+  <li>Programming in C++
+    <ul>
+      <li><a href="../MotorSwitch">Run your first program on a singular controller</a></li>
+      <li><a href="../kelda">Understand the kelda principle to run a swarm</a></li>
+      <li><a href="../MotorSwitchSwarm">The first swarm</a></li>
+      <li><a href="../MotorSwitchAlias">Use alias names to structure your code</a></li>
+      <li><a href="../switches">How to use buttons, switches and toggles</a></li>
+      <li><a href="../RemoteControl">Remote control without a line of code</a></li>
+      <li><a href="../EventControlled">Use events to simplfy your code</a></li>
+      <li><a href="../FtSwarmPixel">RGB LEDs &amp; ftPixel</a></li>
+      <li><a href="../FtSwarmOLED">OLED Display</a></li>
+    </ul>
+  </li>
+  <li>Firmware &amp; Versions
+    <ul>
+      <li><a href="../firmware">Firmware &amp; Updates</a></li>
+      <li><a href="../versions">Versions</a></li>
+    </ul>
+  </li>
+  <li>Advanced
+    <ul>
+      <li><a href="../Configuration">The complete configuration</a></li>
+      <li><a href="../PlatformIO">Using PlatformIO &amp; VSCode</a></li>
+      <li><a href="../rs485">Connect your swarm using RS485</a></li>
+      <li><a href="../debugging">Debug your code</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p>The tutorial is not intended to explain everything in detail. If you like to have a deep dive into ftSwarm’s commands &amp; features please checkout the <a href="/en/cpp-api/">API</a> documentation.</p>
@@ -366,7 +405,7 @@ Therefore we exclude any warranty on the hardware and software presented here.</
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2024 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
