@@ -1,9 +1,9 @@
 ---
 title: The ftSwarm Project
-Lang: en
+Lang: de
 layout: category
 sidebar:
-    nav: sitebar-en
+    nav: sitebar-de
 ---
 
 <script type="text/javascript">
