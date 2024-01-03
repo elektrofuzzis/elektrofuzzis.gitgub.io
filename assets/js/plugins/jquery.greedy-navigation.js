@@ -71,7 +71,8 @@ $(function() {
                    - /* logo */ ($logo.length !== 0 ? $logo.outerWidth(true) : 0)
                    - /* title */ $title.outerWidth(true)
                    - /* search */ ($search.length !== 0 ? $search.outerWidth(true) : 0)
-                   - /* toggle */ (numOfVisibleItems !== breakWidths.length ? $btn.outerWidth(true) : 0);
+                   - /* toggle */ (numOfVisibleItems !== breakWidths.length ? $btn.outerWidth(true) : 0)
+                   - /* bad hack for elektrofuzzis */ 120;
     requiredSpace = breakWidths[numOfVisibleItems - 1];
 
     // There is not enought space
