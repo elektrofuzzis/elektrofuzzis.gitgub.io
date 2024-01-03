@@ -16,7 +16,7 @@ Die meisten Sensoren können an allen Eingängen angeschlossen werden. Je nach C
 
 Normale Aktoren (z.B. DC-Motoren, Lampen, Elektroventile) werden an die Motorausgänge M1 bis M8 angeschlossen. Für Servo-Motoren gibt es eigene Stecker.
 
-Einige Controller verfügen über einen RS485-Anschluss um die Swarm-Kommunikation alternativ über Kabel abzubilden. Das Anschlussschema ist in einem eigenenen [RS485-Kapitel](../../advanced/rs485) beschrieben.
+Einige Controller verfügen über einen RS485-Anschluss um die Swarm-Kommunikation alternativ über Kabel abzubilden. Das Anschlussschema ist in einem eigenenen [RS485-Kapitel](../rs485) beschrieben.
 
 <div class="flex-container">
   <div>

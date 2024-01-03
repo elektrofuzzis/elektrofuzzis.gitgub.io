@@ -16,7 +16,7 @@ Most sensors can be connected to all inputs. Depending on the controller and inp
 
 Normal actuators (e.g. DC motors, lamps, solenoid valves) are connected to the motor outputs M1 to M8. There are separate plugs for servo motors.
 
-Some controllers have an RS485 connection to map Swarm communication via cable as an alternative. The connection diagram is described in a separate [RS485 chapter](../../advanced/rs485).
+Some controllers have an RS485 connection to map Swarm communication via cable as an alternative. The connection diagram is described in a separate [RS485 chapter](../rs485).
 
 <div class="flex-container">
   <div>
