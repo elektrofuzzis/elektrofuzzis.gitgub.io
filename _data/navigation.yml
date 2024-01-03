@@ -37,7 +37,7 @@ gettingstarted-en:
   - title: "Gettting started"
     children:
       - title: "Connectors"
-        url: /en/gettingstarted/Pinout
+        url: /en/gettingstarted/pinout
       - title: "USB/Serial Connection"
         url: /en/gettingstarted/serial
       - title: "wifi & status page"
@@ -86,7 +86,7 @@ gettingstarted-de:
   - title: "Inbetriebnahme"
     children:
       - title: "Anschlüsse"
-        url: /de/gettingstarted/Pinout
+        url: /de/gettingstarted/pinout
       - title: "USB Anschluss"
         url: /de/gettingstarted/serial
       - title: "WLAN & Statusseite"
