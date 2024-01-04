@@ -22,22 +22,42 @@ Einige Controller verfügen über einen RS485-Anschluss um die Swarm-Kommunikati
   <div>
     <div><a href="../../products/ftSwarm">ftSwarm</a></div>
     <div><img class="zoom" src="/assets/img/ftSwarmJSTPinout.png"></div>
-    <div><p class="pdetail">An dem I²C/Gyro-Stecker kann ein MPU6050-Gyro angeschlossen werden.<br><br>Für den Anschluß von ftPixel gibt es einen eigenen Adapter der die Stiftleiste auf einen fischertechnik-Buchse umsetzt.<br><br>SD-Karten können in den seitlichen Schlitz am Gehäuse gesteckt werden.</p></div>
+    <div>
+      <p class="pdetail">
+        An dem I²C/Gyro-Stecker kann ein MPU6050-Gyro angeschlossen werden.<br><br>Für den Anschluß von ftPixeln gibt es einen eigenen Adapter der die Stiftleiste auf einen fischertechnik-Buchse umsetzt.<br><br>
+        SD-Karten können in den seitlichen Schlitz am Gehäuse gesteckt werden.
+      </p>
+    </div>
   </div>
   <div>
     <div><a href="../../products/ftSwarmRS">ftSwarmRS</a></div>
     <div><img class="zoom" src="/assets/img/ftSwarmRSPinout.png"></div>
-    <div><p class="pdetail">Im Gegensatz zum Vorgängermodell können ftPixel direkt an der Klemmleiste ohne Adapter angeschlossen werden.<br><br>SD-Karten können in den seitlichen Schlitz am Gehäuse gesteckt werden.</p></div>
+    <div>
+      <p class="pdetail">
+        Im Gegensatz zum Vorgängermodell können ftPixel direkt an der Klemmleiste ohne Adapter angeschlossen werden.<br><br>
+        SD-Karten können in den seitlichen Schlitz am Gehäuse gesteckt werden.</p></div>
   </div>
   <div>
     <div><a href="../../products/ftSwarmXL">ftSwarmXL</a></div>
     <div><img class="zoom" src="/assets/img/ftSwarmXLPinout.png"></div>
-    <div><p class="pdetail">Um genügend Leistung für die 8 Motorausgänge zur Verfügung zu stellen, gibt es drei 9V-Spannungsversorgungen, die alle angeschlossen werden müssen. Je nach Strombedarfkann dies über ein oder über mehrere Netzteile erfolgen.<br><br>Bitte beachten Sie in Ihrem Modell, dass der Motorausgang M7 beim Bootenund beim Flashen der Firmware eingeschaltet ist.</p></div>
+    <div>
+      <p class="pdetail">
+        Um genügend Leistung für die 8 Motorausgänge zur Verfügung zu stellen, gibt es drei 9V-Spannungsversorgungen, die alle angeschlossen werden müssen. Je nach Strombedarf kann dies über ein oder über mehrere Netzteile erfolgen.<br><br>
+        Bitte beachten Sie in Ihrem Modell, dass der Motorausgang M7 beim Booten und beim Flashen der Firmware eingeschaltet ist.
+      </p>
+    </div>
   </div>
   <div>
     <div><a href="../../products/ftSwarmControl">ftSwarmControl</a></div>
     <div><img class="zoom" src="/assets/img/ftSwarmControlPinout.png"></div>
-    <div><p class="pdetail">Neben den normalen Eingängen hat der ftSwarmControl zusätzlich die beiden Joysticks J1 und J2 sowie die Buttons S1 bis S4.<br><br>Um die Batterie zu schonen, hat der ftSwarmControl einen Einschalter. Als Batterie können sowohl 9V-Blöcke als auch Akkus eingesetzt werden.<br><br>Um eine SD-Karte zu stecken, muss der untere Gehäuseteil aufgeschraubt werden.</p></div>
+    <div>
+      <p class="pdetail">
+        Neben den normalen Eingängen hat der ftSwarmControl zusätzlich die beiden Joysticks (J1, J2) sowie sechs Taster (F1, F2, S1 bis S4).<br><br>
+        Da der ftSwarmControl hat einen Ein- und Ausschalter (On), um die Batterie im Batteriefach zu schonen. Es können sowohl 9V-Blöcke als auch Akkus eingesetzt werden.<br><br>
+        Der Controller kann auch ohne Batterie über den 9V-Stecker versorgt werden.<br><br>
+        Die SD-Karte ist im unteren Gehäuse versteckt, zum Wechseln der Karte muss das Gehäuse aufgeschraubt werden.
+      </p>
+    </div>
   </div>
   <div>
     <div><a href="../../products/ftSwarmPwrDrive">ftSwarmPwrDrive</a></div>
