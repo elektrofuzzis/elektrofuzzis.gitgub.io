@@ -7,7 +7,9 @@ sidebar:
     nav: products-de
 ---
 
-Dieser Controller ist die Urfassung des ftSwarm und ist nicht mehr Verfügbar. Sein Nachfolger ist der leistungsfähigere ftSwarmRS. Alle Anschlüsse an den JST-Steckern sind gegen Verpolung geschützt. Ein Verpolungsschutz ist bei den Signalen der beiden Stiftleisten nicht möglich.
+Dieser Controller ist die Urfassung des ftSwarm und ist nicht mehr verfügbar. Sein Nachfolger ist der leistungsfähigere ftSwarmRS.
+
+Die Ein- und Ausgänge sind gegen Verpolung und Überspannung geschützt. Ein Verpolungsschutz ist bei den Stiftleisten (I²C-, Servo- und ftPixel-Stecker) nicht möglich.
 
 ### Technische Daten
 

@@ -8,7 +8,7 @@ sidebar:
 ---
 Der ftSwarmControl ist ein fertiges Steuerpult für den Schwarm. Mit der Standardfirmware kann der ftSwarmControl auch als Fernbedienung genutzt werden, ohne dabei eine Zeile Code schreiben zu müssen. Er kann aber auch als Kelda mit einem eigenen Programm verwendet werden.
 
-Alle Anschlüsse auf den JST-Steckern sind gegen Verpolung geschützt. Die Anschlüsse auf den Steckerleisten sind nicht geschützt.
+Die Ein- und Ausgänge sind gegen Verpolung und Überspannung geschützt. Ein Verpolungsschutz ist beim I²C-Stecker nicht möglich.
 
 |---------------|------|
 | **ftSwarmControl** | | 
