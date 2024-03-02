@@ -73,13 +73,13 @@ gettingstarted-en:
   - title: "Advanced"
     children:
       - title: "Configuration"
-        url: /en/advanced/Configuration
+        url: /en/gettingstarted/Configuration
       - title: "PlatformIO & VSCode"
-        url: /en/advanced/PlatformIO
+        url: /en/gettingstarted/PlatformIO
       - title: "RS485"
-        url: /en/advanced/rs485
+        url: /en/gettingstarted/rs485
       - title: "Debugging"
-        url: /en/advanced/debugging
+        url: /en/gettingstarted/debugging
 
 gettingstarted-de:
   - title: "Manual"

@@ -270,13 +270,13 @@
         
         <ul>
           
-            <li><a href="/en/advanced/Configuration">Configuration</a></li>
+            <li><a href="/en/gettingstarted/Configuration">Configuration</a></li>
           
-            <li><a href="/en/advanced/PlatformIO">PlatformIO & VSCode</a></li>
+            <li><a href="/en/gettingstarted/PlatformIO">PlatformIO & VSCode</a></li>
           
-            <li><a href="/en/advanced/rs485">RS485</a></li>
+            <li><a href="/en/gettingstarted/rs485">RS485</a></li>
           
-            <li><a href="/en/advanced/debugging">Debugging</a></li>
+            <li><a href="/en/gettingstarted/debugging">Debugging</a></li>
           
         </ul>
         
@@ -310,16 +310,16 @@
 
 <p><strong>Main Menu</strong> is the top level of the configuration menus. <strong>(0) exit</strong> terminates the configuration mode, using the standard firmware the controller will reboot afterwards. If the <strong>Main Menu</strong> was called with <strong>ftSwarm.setup();</strong> from a program, program will just continue.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Main Menu
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** Main Menu *****
 
-(1) wifi &amp; Web UI
-(2) swarm configuration
-(3) alias names
-(4) factory reset
-(5) remoteControl
-(6) extention port
+( 1) wifi &amp; Web UI
+( 2) swarm configuration
+( 3) alias names
+( 4) factory reset
+( 5) remoteControl
+( 6) extention port
 
-(0) exit
+( 0) exit
 </code></pre></div></div>
 
 <p>The <em>ftSwarmControl</em> has an additional menu item for setting the display type and calibrating the joysticks.</p>
@@ -330,7 +330,10 @@
 
 <p>In this area, the WLAN settings are made and the status page of the controller is configured.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Wifi &amp; WebUI
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** Wifi &amp; WebUI *****
+
+hostname:           ftSwarm100
+ip-address:         192.168.4.1
 
 (1) wifi:           AP-Mode
 (2) SSID:           ftSwarm100
@@ -378,33 +381,61 @@
 
 <p>Within this menu, your swarm is formed. Before you can form a swarm, all controllers need be able to communicate with each other. For this purpose, all controllers need either be logged into the same wifi profile or connected via RS485.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swarm configuration
+<p>The shown information depends on the controllers mode. A Kelda screen will be like:</p>
 
-This device is connected to swarm "mySwarm" with 1 member(s) online.
-Swarm PIN is 123.
-(1) Kelda:               this controller
-(2) swarm communication: wifi
-(3) create a new swarm
-(4) list swarm members
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** swarm configuration *****
+
+ftSwarm100 is Kelda running swarm "mySwarm" using Pin 666:
+
+SN  NW Age Hostname
+100 000014 ftSwarm100
+101 000012 ftSwarm101
+
+( 1) swarm communication: wifi
+( 2) swarm speed:         4
+( 3) create a new swarm
+( 4) join another swarm
+( 5) invite a controller to my swarm
+( 6) reject a controller from my swarm
+
+( 0) exit
+</code></pre></div></div>
+<p>In the Kelda mode, the Kelda shows all swarm members including herself. This list is stored in the Kelda’s NVS storage. “NW Age” shows the time difference in ms, since the Kelda received the last status of a remote controller.</p>
+
+<p>Every controller sends its status every 25 ms. Since there could be dropped packets, everyting less than 100ms is “online”.</p>
+
+<p>The Kelda’s NW age value shows the elapsed time since the last reading of her sensors.</p>
+
+<p>A swarm member shows less options:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** swarm configuration *****
+
+ftSwarm101 is connected to swarm "mySwarm".
+Swarm PIN is 66.
+
+( 1) swarm communication: wifi
+( 2) swarm speed:         4
+( 3) create a new swarm
+( 4) join another swarm
+
+( 0) exit
 </code></pre></div></div>
 
-<p>The example shows the Kelda menu.</p>
-
-<p><strong>(1) Kelda</strong> is used to set whether the controller is operated as a Kelda or as a swarm member. Please note that your control program or the Python integration must always run on the Kelda.</p>
-
-<p><strong>(2) swarm communication</strong> sets the medium which the swarm uses to communicate.</p>
+<p><strong>swarm communication</strong> sets the medium which the swarm uses to communicate.</p>
 <ul>
   <li><strong>wifi</strong>: all controllers use wifi.</li>
   <li><strong>RS485</strong>: all controllers user RS485. This option is available on ftSwarmRS only. A mixed mode wifi/RS485 isn’t possible.</li>
 </ul>
 
-<p><strong>(3) create a new swarm</strong> is only available on your Kelda and creates a new swarm. The new swarm’s name and PIN are requested. Subsequently, this controller is the first and only controller within the new swarm.</p>
+<p><strong>swarm speed</strong> sets the communication speed in RS485 mode. 4 is the highest speed, allowing up to 32 controllers and a max. of 50 m cabling. If you’re running into cable length problems, reduce the speed value step by step. 0 can drive up to 4.000m, but with a max. of 4 controllers.</p>
 
-<p><strong>(3) join another swarm</strong> is available on swarm members und is used to join an existing swarm. Swarm’s name and PIN are requested. Since the controller will try to connect to the swarm, the Kelda of the swarm must be online.</p>
+<p><strong>create a new swarm</strong> is creates a new swarm and invokes Kelda mode at this controller . The new swarm’s name and PIN are requested. Subsequently, this controller is the first and only controller within the new swarm.</p>
 
-<p><strong>(4) list swarm members</strong> is only available on your Kelda and lists members of the swarm who are online.</p>
+<p><strong>join another swarm</strong> is used to join an existing swarm. Swarm’s name and PIN are requested. Since the controller will try to connect to the swarm, the Kelda of the swarm must be online. If you choose this option on a Kelda, it will destroy it’s own swarm and join the new one.</p>
 
-<p class="notice--info">Each controller stores the swarm’s name and PIN in its flash memory. The names of other controllers in the swarm are not stored, anyone who knows the name of the swarm and the PIN can join the swarm at any time. Therefore no option for leaving a swarm is necessary.</p>
+<p><strong>invite a controller to my swarm</strong> asks another controller to join my swarm. The asked controller will accept the request, if the controller is not connected to other controllers in a swarm.</p>
+
+<p><strong>reject a controller from my swarm</strong> will kick the listed controller out of my swarm.</p>
 
 <hr />
 
@@ -456,7 +487,7 @@ Swarm PIN is 123.
 <p><strong>ftSwarmControl</strong>: 
 The port can only be operated as an I²C bus. As the OLED display and the optional gyro are also connected to this bus, it can only be operated in master mode. In contrast to the other two controllers, both 3.3V and 5V sensors can be connected.</p>
 
-<p><strong>(1) Mode</strong> defines the operating mode of the extension port.</p>
+<p><strong>Mode</strong> defines the operating mode of the extension port.</p>
 <ul>
   <li><strong>off</strong> switches the port off.</li>
   <li><strong>I2C master</strong> switches the port as an I²C bus. The controller is the bus master. Use this option if you want to connect I²C sensors.</li>

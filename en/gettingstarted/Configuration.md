@@ -22,16 +22,16 @@ at any time in your own code.
 **Main Menu** is the top level of the configuration menus. **(0) exit** terminates the configuration mode, using the standard firmware the controller will reboot afterwards. If the **Main Menu** was called with **ftSwarm.setup();** from a program, program will just continue.
 
 ```
-Main Menu
+***** Main Menu *****
 
-(1) wifi & Web UI
-(2) swarm configuration
-(3) alias names
-(4) factory reset
-(5) remoteControl
-(6) extention port
+( 1) wifi & Web UI
+( 2) swarm configuration
+( 3) alias names
+( 4) factory reset
+( 5) remoteControl
+( 6) extention port
 
-(0) exit
+( 0) exit
 ```
 
 The *ftSwarmControl* has an additional menu item for setting the display type and calibrating the joysticks.
@@ -42,7 +42,10 @@ The *ftSwarmControl* has an additional menu item for setting the display type an
 In this area, the WLAN settings are made and the status page of the controller is configured.
 
 ```
-Wifi & WebUI
+***** Wifi & WebUI *****
+
+hostname:           ftSwarm100
+ip-address:         192.168.4.1
 
 (1) wifi:           AP-Mode
 (2) SSID:           ftSwarm100
@@ -84,33 +87,61 @@ The last two options define the behavior of the status page.
 
 Within this menu, your swarm is formed. Before you can form a swarm, all controllers need be able to communicate with each other. For this purpose, all controllers need either be logged into the same wifi profile or connected via RS485.
 
-```
-swarm configuration
+The shown information depends on the controllers mode. A Kelda screen will be like:
 
-This device is connected to swarm "mySwarm" with 1 member(s) online.
-Swarm PIN is 123.
-(1) Kelda:               this controller
-(2) swarm communication: wifi
-(3) create a new swarm
-(4) list swarm members
+```
+***** swarm configuration *****
+
+ftSwarm100 is Kelda running swarm "mySwarm" using Pin 666:
+
+SN  NW Age Hostname
+100 000014 ftSwarm100
+101 000012 ftSwarm101
+
+( 1) swarm communication: wifi
+( 2) swarm speed:         4
+( 3) create a new swarm
+( 4) join another swarm
+( 5) invite a controller to my swarm
+( 6) reject a controller from my swarm
+
+( 0) exit
+```` 
+In the Kelda mode, the Kelda shows all swarm members including herself. This list is stored in the Kelda's NVS storage. "NW Age" shows the time difference in ms, since the Kelda received the last status of a remote controller.
+
+Every controller sends its status every 25 ms. Since there could be dropped packets, everyting less than 100ms is "online".
+
+The Kelda's NW age value shows the elapsed time since the last reading of her sensors. 
+
+A swarm member shows less options:
+
+```
+***** swarm configuration *****
+
+ftSwarm101 is connected to swarm "mySwarm".
+Swarm PIN is 66.
+
+( 1) swarm communication: wifi
+( 2) swarm speed:         4
+( 3) create a new swarm
+( 4) join another swarm
+
+( 0) exit
 ```` 
 
-The example shows the Kelda menu.  
-
-**(1) Kelda** is used to set whether the controller is operated as a Kelda or as a swarm member. Please note that your control program or the Python integration must always run on the Kelda.
-
-**(2) swarm communication** sets the medium which the swarm uses to communicate.
+**swarm communication** sets the medium which the swarm uses to communicate.
 - **wifi**: all controllers use wifi.
 - **RS485**: all controllers user RS485. This option is available on ftSwarmRS only. A mixed mode wifi/RS485 isn't possible. 
 
-**(3) create a new swarm** is only available on your Kelda and creates a new swarm. The new swarm's name and PIN are requested. Subsequently, this controller is the first and only controller within the new swarm.
+**swarm speed** sets the communication speed in RS485 mode. 4 is the highest speed, allowing up to 32 controllers and a max. of 50 m cabling. If you're running into cable length problems, reduce the speed value step by step. 0 can drive up to 4.000m, but with a max. of 4 controllers.
 
-**(3) join another swarm** is available on swarm members und is used to join an existing swarm. Swarm's name and PIN are requested. Since the controller will try to connect to the swarm, the Kelda of the swarm must be online.
+**create a new swarm** is creates a new swarm and invokes Kelda mode at this controller . The new swarm's name and PIN are requested. Subsequently, this controller is the first and only controller within the new swarm.
 
-**(4) list swarm members** is only available on your Kelda and lists members of the swarm who are online.
+**join another swarm** is used to join an existing swarm. Swarm's name and PIN are requested. Since the controller will try to connect to the swarm, the Kelda of the swarm must be online. If you choose this option on a Kelda, it will destroy it's own swarm and join the new one.
 
-Each controller stores the swarm's name and PIN in its flash memory. The names of other controllers in the swarm are not stored, anyone who knows the name of the swarm and the PIN can join the swarm at any time. Therefore no option for leaving a swarm is necessary.
-{: .notice--info}
+**invite a controller to my swarm** asks another controller to join my swarm. The asked controller will accept the request, if the controller is not connected to other controllers in a swarm.
+
+**reject a controller from my swarm** will kick the listed controller out of my swarm.
 
 <hr>
 ### Alias Names Settings
@@ -155,7 +186,7 @@ The internal gyro of the ftSwarmRS uses its own I²C bus.
 **ftSwarmControl**: 
 The port can only be operated as an I²C bus. As the OLED display and the optional gyro are also connected to this bus, it can only be operated in master mode. In contrast to the other two controllers, both 3.3V and 5V sensors can be connected.
 
-**(1) Mode** defines the operating mode of the extension port.
+**Mode** defines the operating mode of the extension port.
 - **off** switches the port off.
 - **I2C master** switches the port as an I²C bus. The controller is the bus master. Use this option if you want to connect I²C sensors.
 - **I2C slave** also switches the port as an I²C bus. In this case, the controller is the slave. This function can be used, for example, to exchange data with a TXT controller.

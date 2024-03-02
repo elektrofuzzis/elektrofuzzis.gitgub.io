@@ -6,6 +6,25 @@ classes: wide
 sidebar:
     nav: gettingstarted-en
 ---
+### Version 0.6.0 02/2024
+
+The swarm creation protocol has been changed. Please create a new swarm after applying the update.
+
+Features:
+
+- Support for the new controller types ftSwarmXL, ftSwarmPwrDrive and ftSwarmDuino.
+- New sensor types FtSwarmFrequencyMeter and FtSwarmCounter
+- At the Kelda firmware you can now add a Swarm Member to the swarm.  
+- Servos can be used for remote control and event programming. 
+- The transmission speed can be reduced for models with long RS485 cable lengths.
+
+Bugfixes:
+
+- Stability improvements when starting a swarm.
+- Alias names of servos are saved correctly.
+
+Be sure to follow the upgrade instructions of version 0.5.0!
+
 ### Version 0.5.4 12/2023
 
 This version contains bugfixes when addressing remote IOs via alias names. Please note the upgrade instructions for version 0.5.0!

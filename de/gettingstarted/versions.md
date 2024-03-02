@@ -7,6 +7,25 @@ sidebar:
     nav: gettingstarted-de
 ---
 
+### Version 0.6.0 02/2024
+
+Das Protokoll zur Swarm-Bildung wurde geändert. Bitte erzeugen Sie nach dem Update einen neuen Swarm.
+
+Features:
+
+- Unterstützung der neuen Controllertypen ftSwarmXL, ftSwarmPwrDrive und ftSwarmDuino.
+- Neue Sensortypen FtSwarmFrequencyMeter und FtSwarmCounter
+- In der Firmware können nun auf der Kelda Swarm Member hinzugefügt werden.  
+- Servos können bei der Fernsteuerung und Eventprogrammierung verwendet werden. 
+- Für Modelle mit langer RS485-Kabellänge kann die Übertragungsgeschwindigkeit reduziert werden.
+
+Bugfixes:
+
+- Stabilitätsverbesserungen beim Start eines Swarms.
+- Alias Namen von Servos werden korrekt gespeichert. 
+
+Bitte beachten Sie die Upgrade-Anweisungen der Version 0.5.0!
+
 ### Version 0.5.4 12/2023
 
 Diese Version enthält Bugfixes beim ANsprechen von remote IOs über Alias Namen. Bitte beachten Sie die Upgrade-Anweisungen der Version 0.5.0!

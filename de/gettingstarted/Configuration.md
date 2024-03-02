@@ -24,16 +24,16 @@ jederzeit aufgerufen werden.
 Das **Main Menu** ist die oberste Ebene der Konfigurationsmenüs.  **(0) exit** beendet den Konfigurationsmodus, in der Standardfirmware bootet danach der Controller neu. Wurde das **Main Menu** mit **ftSwarm.setup();** aus einem Programm heraus aufgerufen, so werden nun die nächsten Kommandos im Programm ausgeführt.
 
 ```
-Main Menu
+***** Main Menu *****
 
-(1) wifi & Web UI
-(2) swarm configuration
-(3) alias names
-(4) factory reset
-(5) remoteControl
-(6) extention port
+( 1) wifi & Web UI
+( 2) swarm configuration
+( 3) alias names
+( 4) factory reset
+( 5) remoteControl
+( 6) extention port
 
-(0) exit
+( 0) exit
 ```
 
 Beim *ftSwarmControl* gibt es einen zusätzlichen Menüpunkt um den Displaytyp einzustellen und die Joysticks zu kalibrieren.
@@ -44,13 +44,16 @@ Beim *ftSwarmControl* gibt es einen zusätzlichen Menüpunkt um den Displaytyp e
 In diesem Bereich werden die WLAN-Einstellungen vorgenommen und die Statusseite der Controller konfiguriert.
 
 ```
-Wifi & WebUI
+***** Wifi & WebUI *****
 
-(1) wifi:           AP-Mode
-(2) SSID:           ftSwarm100
-(3) Password:       *****
-(4) Web UI:         on
-(5) ftPixels in UI: 2
+hostname:           ftSwarm100
+ip-address:         192.168.4.1
+
+( 1) wifi:           AP-Mode
+( 2) SSID:           ftSwarm100
+( 3) Password:       *****
+( 4) Web UI:         on
+( 5) ftPixels in UI: 2
 ```
 
 Um einen Swarm zu bilden, müssen die einzelnen Controller miteinander über WLAN oder RS485 kommunizieren. In der Regel kommunizieren sie über WLAN - nur die ftSwarmRS können zusätzlich kabelgebunden über RS485 kommunizieren.
@@ -86,33 +89,60 @@ Die letzten beiden Optionen legen das Verhalten der Statusseite fest.
 
 In diesem Menü wird der Swarm gebildet. Bevor Sie einen Swarm bilden können, müssen alle Controller untereinander kommunizieren können. Dazu müssen entweder alle Controller im gleichen WLAN angemeldet sein, oder über RS485 verbunden sein.
 
+Die angezeigten Informationen hängen vom Betriebsmodus des Controllers ab. Als Kelda sieht der Bildschirm folgendermaßen aus:
+
 ```
-swarm configuration
+***** swarm configuration *****
 
-This device is connected to swarm "mySwarm" with 1 member(s) online.
-Swarm PIN is 123.
-(1) Kelda:               this controller
-(2) swarm communication: wifi
-(3) create a new swarm
-(4) list swarm members
+ftSwarm100 is Kelda running swarm "mySwarm" using Pin 666:
+
+SN  NW Age Hostname
+100 000014 ftSwarm100
+101 000012 ftSwarm101
+
+( 1) swarm communication: wifi
+( 2) swarm speed:         4
+( 3) create a new swarm
+( 4) join another swarm
+( 5) invite a controller to my swarm
+( 6) reject a controller from my swarm
+
+( 0) exit
 ```` 
+In diesem Modus zeigt die Kelda alle Swarm Member einschließlich sich selbst an. Diese Liste der Teilnehmer im Swarm ist  im NVS-Speicher der Kelda gespeichert. "NW Age" zeigt die Zeitdifferenz in ms an, wann die Kelda die letzte Statusmeldung des Controllers erhalten hat.
 
-Das Beispiel zeigt das Menü der Kelda.  
+Jeder Controller sendet seinen Status alle 25 ms. Da es zu Paketverlusten kommen kann, sind alle Werte unter 100ms "online".
 
-**(1) Kelda** stellt ein, ob der Controller als Kelda oder als Swarm Member betrieben wird. Bitte beachten Sie, dass Ihr Steuerprogramm oder die Python-Integration immer auf der Kelda laufen müssen.
+Der NW-Age-Wert der Kelda zeigt die verstrichene Zeit seit dem letzten Auslesen ihrer Sensoren an. 
 
-**(2) swarm communication** stellt ein, über welches Medium die ftSwarm miteinander kommunizieren.
+Als Swarm Member stehen weniger Optionen zur Verfügung:
+
+```
+***** swarm configuration *****
+
+ftSwarm101 is connected to swarm "mySwarm".
+Swarm PIN is 66.
+
+( 1) swarm communication: wifi
+( 2) swarm speed:         4
+( 3) create a new swarm
+( 4) join another swarm
+
+( 0) exit
+```` 
+**swarm communication** stellt ein, über welches Medium die ftSwarm miteinander kommunizieren.
 - **wifi**: die Controller nutzen WLAN. 
 - **RS485**: die Controller nutzen die RS485-Schnittstelle. Diese Option steht nur am fTSwarmRS zur Verfügung. Ein Mixed-Mode mit WLAN und RS485 ist nicht möglich. 
 
-**(3) create a new swarm** ist nur auf der Kelda möglich und erzeugt einen neuen Swarm. Es werden der Name für den Swarm und die PIN abgefragt. Anschließend ist dieser Controller der erste und (noch) einzige Controller im Swarm.
+**swarm speed** stellt die Übertragungsrate im RS485-Modus ein. 4 ist die höchste Geschwindigkeit, die bis zu 32 Controller bei einer maximale Kabellänge von 50 m ermöglicht. Bei Problemen mit der Kabellänge reduzieren Sie sie Swarm Speed schrittweise. Bei einem Wert von 0 können Sie bis zu 4.000 m Kabellänge verwenden, sind aber auf 4 Controller beschränkt.
 
-**(3) join another swarm** gibt es nur auf swarm membern und fügt den Controller zu einem existierenden Swarm hinzu. Es werden der Name des Swarms und die PIN abgefragt. Der Controller versucht sich dann mit dem Swarm zu verbinden, dazu muss der Kelda Controller des Swarms online sein.
+**create a new swarm** erzegt einen neuen Schwarm und stellt den Kelda-Modus an diesem Controller ein. Der Name und die PIN des neuen Schwarms werden abgefragt. Anschließend ist dieser Controller der erste und einzige Controller innerhalb des neuen Schwarms.
 
-**(4) list swarm members** ist nur auf der Kelda möglich und listet alle Mitglieder des Swarms auf, die online sind.
+**join another swarm** fügt den Controller zu einem existierenden Swarm hinzu. Es werden der Name des Swarms und die PIN abgefragt. Der Controller versucht sich dann mit dem Swarm zu verbinden, dazu muss der Kelda Controller des Swarms online sein. War der Controller zuvor im Kelda-Modus wird er durch die Aktion zum Swarm Member.
 
-Jeder Controller hat den Namen des Swarms und die Swarm-PIN in seinem Flash-Speicher gespeichert. Die Namen der anderen Controller im Swarm werden nicht gespeichert, jeder der den Namen des Swarms und die PIN kennt kann jederzeit dem Swarm beitreten. Deshalb ist keine Option für das Verlassen eines Swarms notwendig.
-{: .notice--info}
+**invite a controller to my swarm** fügt einen anderen meinem Swarm hinzu. Der angefragte Controller nimmt die Anfrage an, solange er nicht mit anderen Controllern in einem Swarm verbunden ist.
+
+**reject a controller from my swarm** löscht den Controller aus meinem Swarm.
 
 <hr>
 ### Alias Names Settings
@@ -158,7 +188,7 @@ Der interne Gyro des ftSwarmRS verwendet einen eigenen I²C-Bus.
 Der Port kann nur als I²C-Bus betrieben werden. Da an diesem Bus auch das OLED-Display und der optionale Gyro angeschlossen sind, kann er nur im Master-Mode betrieben werden. Im Gegensatz zu den beiden anderen Controllern können sowohl 3.3V- als auch 5V-Sensoren angeschlossen werden.
 
 
-**(1) Mode** legt den Betriebsmodus des Extention Ports fest.
+**Mode** legt den Betriebsmodus des Extention Ports fest.
 - **off** schaltet den Port aus.
 - **I2C-Master** schaltet den Port als I²C-Bus. Der Controller ist Busmaster. Verwenden Sie diese Option, wenn Sie I²C-Sensoren anschließen wollen.
 - **I2C-Slave** schaltet den Port ebenfalls als I²C-Bus. Der Controller ist in diesem Fall Slave. Diese Funktion kann z.B. dazu verwendet werden um Daten mit einem TXT-Controller auszutauschen.
