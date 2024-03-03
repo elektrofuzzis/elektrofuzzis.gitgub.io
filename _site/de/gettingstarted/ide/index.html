@@ -304,7 +304,7 @@
   </li>
   <li>
     <p><a href="https://platformio.org">PlattformIO</a>
- ist ein Plugin für Standard IDEs wie <a href="https://code.visualstudio.com/">Visual Studio Code</a> zur Entwicklung von Embedded Systems. Das Einrichten von PlattformIO ist etwas komplizierter, die IDEs sind jedoch deutlich besser und das Compilieren der Software deutlich schneller. Die Benutzung von VSCode wird im <a href="/de/advanced/plattformIO">Advanced-Bereich</a> erklärt.</p>
+ ist ein Plugin für Standard IDEs wie <a href="https://code.visualstudio.com/">Visual Studio Code</a> zur Entwicklung von Embedded Systems. Das Einrichten von PlattformIO ist etwas komplizierter, die IDEs sind jedoch deutlich besser und das Compilieren der Software deutlich schneller. Die Benutzung von VSCode wird im <a href="/de/gettingstarted/plattformIO">Advanced-Bereich</a> erklärt.</p>
   </li>
 </ul>
 
@@ -338,9 +338,30 @@
   <li><em>FastLED by Daniel Garcia</em> Version 3.4.0 oder neuer</li>
 </ul>
 
-<p>Um die ftSwarm Bibliothek zu installieren, muss die neueste Version von ftswarm.zip von <a href="https://github.com/elektrofuzzis/ftSwarm/releases">github</a> geladen und über <em>Sketch\Bibliothek einbinden\ZIP Bibliothek hinzufügen</em> installiert werden.</p>
+<h3 id="4-die-ftswarm-bibliotek-installieren">4. Die ftSwarm Bibliotek installieren</h3>
 
-<h3 id="4-board-konfigurieren">4. Board konfigurieren</h3>
+<p>Die ftSwarm-Bibliothek muss je nach verwendeten Controller von <a href="https://github.com/elektrofuzzis/ftSwarm/releases">github</a> heruntergeladen werden:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img alt="ftSwarmRS" src="/assets/img/ftSwarmRS.png" width="100" /><br />ftSwarm-rs.zip</td>
+      <td><img alt="ftSwarmControl" src="/assets/img/ftSwarmControl.png" width="100" /><br />ftSwarm-control.zip</td>
+      <td><img alt="ftSwarmXL" src="/assets/img/ftSwarmXL.png" width="100" /><br />ftSwarm-xl.zip</td>
+      <td><img alt="ftSwarmJST" src="/assets/img/ftSwarm.png" width="100" /><br />ftSwarm-jst.zip</td>
+    </tr>
+    <tr>
+      <td><img alt="ftSwarmCAM" src="/assets/img/ftSwarmCAM.png" width="100" /><br />ftSwarm-cam.zip</td>
+      <td><img alt="ftSwarmPwrDrive" src="/assets/img/ftSwarmPwrDrive.png" width="100" /><br />ftSwarm-pwrdrive.zip</td>
+      <td><img alt="ftSwarmDuino" src="/assets/img/ftSwarmDuino.png" width="100" /><br />ftSwarm-duino.zip</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Installieren Sie das ZIP-File über <em>Sketch\Bibliothek einbinden\ZIP Bibliothek hinzufügen</em>. Die verschiedenen Bibliotheken können auch gleichzeitig installiert sein.</p>
+
+<h3 id="5-board-konfigurieren">5. Board konfigurieren</h3>
 
 <p>Nun muss noch das richtige Board unter <em>Werkzeuge</em> eingestellt werden:</p>
 
@@ -381,7 +402,7 @@
    </tr>
 </table>
 
-<h3 id="5-compile--upload">5. Compile &amp; Upload:</h3>
+<h3 id="6-compile--upload">6. Compile &amp; Upload:</h3>
 
 <p>Arduino Programme werden Sketch genannt und als <em>.ino</em> Dateien gespeichert. Es kann in einem Verzeichnis immer nur ein Sketch gespeichert werden, da der Verzeichnisname identisch zum Sketchnamen sein muss.</p>
 

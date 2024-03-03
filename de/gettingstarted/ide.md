@@ -13,7 +13,7 @@ Für die Programmierung der ftSwarm-Controller in c++ gibt es die beiden Möglic
    ist die verbreiteste IDE für DIY Projekte. 2005 wurde sie in einem Projekt zur Entwicklung eines Open-Source-Mikrocontroller-Boards entwickelt, heute unterstützt die Plattform alle gängigen Mikrocontroller. 
 
 - [PlattformIO](https://platformio.org)
-   ist ein Plugin für Standard IDEs wie [Visual Studio Code](https://code.visualstudio.com/) zur Entwicklung von Embedded Systems. Das Einrichten von PlattformIO ist etwas komplizierter, die IDEs sind jedoch deutlich besser und das Compilieren der Software deutlich schneller. Die Benutzung von VSCode wird im [Advanced-Bereich](/de/advanced/plattformIO) erklärt.
+   ist ein Plugin für Standard IDEs wie [Visual Studio Code](https://code.visualstudio.com/) zur Entwicklung von Embedded Systems. Das Einrichten von PlattformIO ist etwas komplizierter, die IDEs sind jedoch deutlich besser und das Compilieren der Software deutlich schneller. Die Benutzung von VSCode wird im [Advanced-Bereich](/de/gettingstarted/plattformIO) erklärt.
 
 Die Arduino IDE gibt es in zwei Versionen. Unterstützt werden 1.8.19 oder die jeweils neueste 2.x Version. Version 1.8.19 ist auf älteren PCs schneller.
 
@@ -41,9 +41,17 @@ Unsere ftSwarm Firmware benötigt einige Drittbibliotheken. Diese werden über *
 - *Adafruit SSD1306* Version 2.5.3 oder neuer
 - *FastLED by Daniel Garcia* Version 3.4.0 oder neuer
 
-Um die ftSwarm Bibliothek zu installieren, muss die neueste Version von ftswarm.zip von <a href="https://github.com/elektrofuzzis/ftSwarm/releases">github</a> geladen und über *Sketch\Bibliothek einbinden\ZIP Bibliothek hinzufügen* installiert werden.
+### 4. Die ftSwarm Bibliotek installieren
 
-### 4. Board konfigurieren
+Die ftSwarm-Bibliothek muss je nach verwendeten Controller von <a href="https://github.com/elektrofuzzis/ftSwarm/releases">github</a> heruntergeladen werden:
+
+|:---:|:---:|:---:|:---:|
+| <img alt="ftSwarmRS" src="/assets/img/ftSwarmRS.png" width="100"><br>ftSwarm-rs.zip | <img alt="ftSwarmControl" src="/assets/img/ftSwarmControl.png" width="100"><br>ftSwarm-control.zip | <img alt="ftSwarmXL" src="/assets/img/ftSwarmXL.png" width="100"><br>ftSwarm-xl.zip | <img alt="ftSwarmJST" src="/assets/img/ftSwarm.png" width="100"><br>ftSwarm-jst.zip | 
+| <img alt="ftSwarmCAM" src="/assets/img/ftSwarmCAM.png" width="100"><br>ftSwarm-cam.zip| <img alt="ftSwarmPwrDrive" src="/assets/img/ftSwarmPwrDrive.png" width="100"><br>ftSwarm-pwrdrive.zip| <img alt="ftSwarmDuino" src="/assets/img/ftSwarmDuino.png" width="100"><br>ftSwarm-duino.zip| |
+
+Installieren Sie das ZIP-File über *Sketch\Bibliothek einbinden\ZIP Bibliothek hinzufügen*. Die verschiedenen Bibliotheken können auch gleichzeitig installiert sein.
+
+### 5. Board konfigurieren
 
 Nun muss noch das richtige Board unter *Werkzeuge* eingestellt werden:
 
@@ -84,7 +92,7 @@ Nun muss noch das richtige Board unter *Werkzeuge* eingestellt werden:
    </tr>
 </table>
  
-### 5. Compile & Upload:
+### 6. Compile & Upload:
 
 Arduino Programme werden Sketch genannt und als *.ino* Dateien gespeichert. Es kann in einem Verzeichnis immer nur ein Sketch gespeichert werden, da der Verzeichnisname identisch zum Sketchnamen sein muss.
 

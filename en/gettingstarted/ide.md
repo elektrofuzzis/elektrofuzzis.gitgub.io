@@ -14,58 +14,95 @@ There are different platforms and IDEs to write your C++ code. If you are a begi
    today the platform supports all common types of microcontrollers. The Arduino environment is an IDE with integrated framework for embedded systems.
 
 2. [PlattformIO](https://platformio.org)
-   is a framework to develop embedded systems, too. This framework is not part of an IDE like Arduino and you could choose among different editors/IDEs. In the first time, PlatformIO is a bit more complicated than Arduino IDE, but it has many advantages. See [PlattformIO & VSCode](/en/advanced/PlatformIO.md) in advanced for more information.
+   is a framework to develop embedded systems, too. This framework is not part of an IDE like Arduino and you could choose among different editors/IDEs. In the first time, PlatformIO is a bit more complicated than Arduino IDE, but it has many advantages. See [PlattformIO & VSCode](/en/gettingstarted/PlatformIO.md) in advanced for more information.
 
-3. [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) is the core framework for ESP-microcontrollers, 
-   powered by *espressif*. This framework is under the hood on Arduino and PlatformIO. Today, our firmware uses some 3rd party libraries from the 
-   Arduino/PlatformIO community. So it's easier to work with Arduino or Platform. If you like, you could spend some time on ESP-IDF as well.
+The are two Arduino IDE versions available. Supported versions are 1.8.19 or the latest 2.x version. Version 1.8.19 is faster on older PCs.
 
-### Arduino IDE Installation
+There are several necessary steps to installation install your environment. The instructions refer to version 2.x of the IDE. The configuration steps in the old version are the same, the menu navigation is slightly different.
 
-Please use at least version 1.8.19 or the newest 2.x version.
+### 1. Download IDE
 
-To install and configure your Arduino IDE, please use the following steps: 
+Download and install Arduino IDE from [arduino.cc](https://www.arduino.cc/en/software).
 
-1. Download and install the latest version of Arduino IDE from [arduino.cc](https://www.arduino.cc/en/software).
+### 2. Add Boardverwalter-URLs
 
-2. Start arduino ide, select **File/Preferences**. In the preferences dialog, you need to add at **Additional Board Manager URLs** the following URL :
-<br>
-**https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json**
+Open *File/Preferences* in your Arduino IDE.
 
+Please add at *additional boards manager URLs*:
+   - https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+   - https://raw.githubusercontent.com/harbaum/ftduino/master/package_ftduino_index.json
 
-3. Now open **Tools/Boards Manager** and install **esp32 by espressif systems** You need at least version 2.02. Check Boards Manager URL above, if only 1.x versions are listed.
+Please goto *Tools/Board/Boards Manaager* and install the newest version of *esp32 by espressif systems*. If you just see 1.x-version please check the added URLs above.
 
-4. Our ftSwarm firmware and library has some dependencies. Please install the following libraries using **Tools\Manage Libraries**:
-    - **Adafruit GFX Library**, at least version 1.10.12
- 	 - **Adafruit SSD1306**, at least version 2.5.3
-    - **FastLED** by Daniel Garcia, at least version 3.4.0
-	
-5. Install the **ftSwarm** library. Download latest ftswarm.zip from [github](https://github.com/elektrofuzzis/ftSwarm/releases). 
-   Use **Sketch\Include Library\Add .ZIP Library** to add the downloaded library.
+### 3. Install Libraries
 
-6. Now you need to set the boards parameters in **Tools**.
+You ftSwarm Firmware needs some additional 3rd-party-libraries. You could install them using *Tools\Manage libraries":
+
+- *Adafruit GFX Library* Version 1.10.12 or newer
+- *Adafruit SSD1306* Version 2.5.3 or newer
+- *FastLED by Daniel Garcia* Version 3.4.0 or newer
+
+### 4. Install ftSwarm Libraries
+
+Dependend on your ftSwarm Hardware, you need to download the belonging library at <a href="https://github.com/elektrofuzzis/ftSwarm/releases">github</a>:
+
+|:---:|:---:|:---:|:---:|
+| <img alt="ftSwarmRS" src="/assets/img/ftSwarmRS.png" width="100"><br>ftSwarm-rs.zip | <img alt="ftSwarmControl" src="/assets/img/ftSwarmControl.png" width="100"><br>ftSwarm-control.zip | <img alt="ftSwarmXL" src="/assets/img/ftSwarmXL.png" width="100"><br>ftSwarm-xl.zip | <img alt="ftSwarmJST" src="/assets/img/ftSwarm.png" width="100"><br>ftSwarm-jst.zip | 
+| <img alt="ftSwarmCAM" src="/assets/img/ftSwarmCAM.png" width="100"><br>ftSwarm-cam.zip| <img alt="ftSwarmPwrDrive" src="/assets/img/ftSwarmPwrDrive.png" width="100"><br>ftSwarm-pwrdrive.zip| <img alt="ftSwarmDuino" src="/assets/img/ftSwarmDuino.png" width="100"><br>ftSwarm-duino.zip| |
+
+ZIP-FIles are installed via *Sketch\Include Library\Add .ZIP Library*. You could install different ftSwarm libraries at the same time.
+
+### 5. Board COnfiguration
+
+Please set the correct board settings in *Tools*:
 
 <table>
-   <tr><td>Option</td><td>ftSwarm</td><td>ftSwarmRS</td><td>ftSwarmControl</td></tr>
-   <tr><td>Tools\Board\ESP32 Arduino</td><td>ESP32 Dev Module</td><td>ESP32S3 Dev Module</td><td>ESP32 Dev Module</td></tr>
-   <tr><td>Tools\PSRAM</td><td>Enabled</td><td>Enabled</td><td>Enabled</td></tr>
-   <tr><td>Tools\Core Debug Level:</td><td>none</td><td>none</td><td>none</td></tr>
-   <tr><td>Tools\Arduino Runs On:</td><td>core 0</td><td>core 0</td><td>core 0</td></tr>
-   <tr><td>Tools\Events Run On:</td><td>core 1</td><td>core 1</td><td>core 1</td></tr>
-   <tr><td>Tools\Port:</td><td>select COM-Port</td><td>select COM-Port</td><td>select COM-Port</td></tr>
+   <tr>
+      <td>Controller</td>
+      <td>ftSwarm<br>ftSwarmControl<br>ftSwarmCAM</td>
+      <td>ftSwarmRS<br>ftSwarmPwrDrive<br>ftSwarmDuino</td>
+   </tr>
+   <tr>
+      <td>Tools\Board\ESP32 Arduino</td>
+      <td>ESP32 Dev Module</td>
+      <td>ESP32S3 Dev Module</td>
+   </tr>
+   <tr>
+      <td>Tools\PSRAM</td>
+      <td>Enabled</td><td>Enabled</td>
+   </tr>
+   <tr>
+      <td>Tools\Core Debug Level:</td>
+      <td>none</td>
+      <td>none</td>
+   </tr>
+   <tr>
+      <td>Tools\Arduino Runs On:</td>
+      <td>core 0</td>
+      <td>core 0</td>
+   </tr>
+   <tr>
+      <td>Tools\Events Run On:</td>
+      <td>core 1</td>
+      <td>core 1</td>
+   </tr>
+   <tr>
+      <td>Tools\Port:</td>
+      <td>virtuellen COM-Port auswählen</td>
+      <td>virtuellen COM-Port auswählen</td>
+   </tr>
 </table>
-
  
-### Writing and uploading code
+### 6. Compile & Upload:
 
-Arduino code is a sketch and stored as **.ino** files in a folder with the same name.
+Arduino programs are called sketches and are saved as *.ino* files. Only one sketch can be saved in a directory at a time, as the directory name must be identical to the sketch name.
 
 <style>
 img { vertical-align: middle;important! }
 </style>
 
-- ![build](/assets/img/arduino_compile.png) compiles your software.
-- ![upload](/assets/img/arduino_upload.png) uploads/flashes your software.
-- ![serial](/assets/img/arduino_serial.png) opens the serial monitor.
+- ![build](/assets/img/arduino_compile.png) compiles your ketch.
+- ![upload](/assets/img/arduino_upload.png) flashes the sketch at your controller.
+- ![serial](/assets/img/arduino_serial.png) starts a serial console..
 
-Examples could be accessed using **File/Examples/Examples From Custom Libraries/ftSwarm**
+Checkout the tutorial's examples at *File/Examples/ftSwarm*.
