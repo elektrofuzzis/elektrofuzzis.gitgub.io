@@ -72,7 +72,8 @@ Some controllers have an RS485 connection to map Swarm communication via cable a
     <div><img class="zoom" src="/assets/img/ftSwarmDuinoPinout.png"></div>
     <div>
       <p class="pdetail">
-        The controller is plugged into the I²C bus of the ftPwrDive and then provides the motor outputs of the ftDuino as M1 to M4 and the inputs as A1 to A8 in the Swarm.<br><br>For the 9V power supply, it is sufficient to connect the <span class="plus">red 9V terminal</span> to the adjacent 9V output of the ftDuino. The GND/minus connection is made automatically via the I²C connector.
+        The controller is plugged into the I²C bus of the ftPwrDive and then provides the motor outputs of the ftDuino as M1 to M4 and the inputs as A1 to A8 in the Swarm.<br><br>For the 9V power supply, it is sufficient to connect the <span class="plus">red 9V terminal</span> to the adjacent 9V output of the ftDuino. The GND/minus connection is made automatically via the I²C connector.<br><br>
+        Additionally, you need to flash the sketch ftDuino.ino on your ftDuino. Download ftDuino.zip from the release page at github.
       </p>
     </div>
   </div>
