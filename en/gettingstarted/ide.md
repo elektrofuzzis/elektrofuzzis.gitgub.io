@@ -41,6 +41,7 @@ You ftSwarm Firmware needs some additional 3rd-party-libraries. You could instal
 - *Adafruit GFX Library* Version 1.10.12 or newer
 - *Adafruit SSD1306* Version 2.5.3 or newer
 - *FastLED by Daniel Garcia* Version 3.4.0 or newer
+- *STM32duino LSM6DSR by SRA* Version 2.1.0 or neuer
 
 ### 4. Install ftSwarm Libraries
 
@@ -52,7 +53,7 @@ Dependend on your ftSwarm Hardware, you need to download the belonging library a
 
 ZIP-FIles are installed via *Sketch\Include Library\Add .ZIP Library*. You could install different ftSwarm libraries at the same time.
 
-### 5. Board COnfiguration
+### 5. Board Configuration
 
 Please set the correct board settings in *Tools*:
 

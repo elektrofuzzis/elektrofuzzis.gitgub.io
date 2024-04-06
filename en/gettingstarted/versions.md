@@ -6,6 +6,13 @@ classes: wide
 sidebar:
     nav: gettingstarted-en
 ---
+
+### Version 0.6.1 04/2024
+
+Bugfixes:
+- Servo instabilites fixed
+- I2C frequency error fixed
+
 ### Version 0.6.0 02/2024
 
 The swarm creation protocol has been changed. Please create a new swarm after applying the update.

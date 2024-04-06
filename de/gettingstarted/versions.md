@@ -7,6 +7,12 @@ sidebar:
     nav: gettingstarted-de
 ---
 
+### Version 0.6.1 04/2024
+
+Bugfixes:
+- Instabilitäten beim Ansteuern von Servos.
+- Beim I2C-Slavemode wird die Busfrequenz auf 400kHz gesetzt. 
+
 ### Version 0.6.0 02/2024
 
 Das Protokoll zur Swarm-Bildung wurde geändert. Bitte erzeugen Sie nach dem Update einen neuen Swarm.

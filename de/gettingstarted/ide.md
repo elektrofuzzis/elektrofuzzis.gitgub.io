@@ -40,6 +40,7 @@ Unsere ftSwarm Firmware benötigt einige Drittbibliotheken. Diese werden über *
 - *Adafruit GFX Library* Version 1.10.12 oder neuer
 - *Adafruit SSD1306* Version 2.5.3 oder neuer
 - *FastLED by Daniel Garcia* Version 3.4.0 oder neuer
+- *STM32duino LSM6DSR by SRA* Version 2.1.0 oder neuer
 
 ### 4. Die ftSwarm Bibliotek installieren
 
