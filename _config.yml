@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : The ftSwarm Project
 description              : #"An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://elektrofuzzis.github.io
 baseurl                  : /
 repository               : elektrofuzzis/ftSwarm
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -186,6 +186,8 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  - jekyll.bat
+  - gitpush.bat
 keep_files:
   - .git
   - .svn
