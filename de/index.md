@@ -13,7 +13,7 @@ Ursprünglich enstand das Projekt als möglichst kleine *fischertechnik*-Control
 
 <div class="flex-container">
     <div>
-        <div><a class="linkfree" href="products/ftSwarm"><img src="/assets/img/ftSwarmRS.svg" width="200"></a></div>
+        <div><a class="linkfree" href="products/ftSwarm"><img src="/assets/img/ftSwarmRS.png" width="200"></a></div>
         <div><p>ftSwarmRS</p></div>
         <div>
             <p class="pdetail">
