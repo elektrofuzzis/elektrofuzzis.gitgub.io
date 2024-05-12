@@ -16,26 +16,33 @@ Dieses Manual erklärt die grundlegende Benutzung und Programmierung der ftSwarm
 
 
 2. Programmierung in C++
-- [Installation der IDE](../ide)
-- [Das erste Programm auf einem ftSwarm Controller](../MotorSwitch)
-- [Das Kelda Prinzip](../kelda)
-- [Der erste Schwarm](../MotorSwitchSwarm)
-- [Aliasnamen machen das Programm lesbarer](../MotorSwitchAlias)
-- [Buttons, Switches und Toggles](../switches)
-- [Eine Fernbedienung ohne eine Zeile Code](../RemoteControl)
-- [Einfache Programmierung durch Events](../EventControlled)
-- [RGB LEDs & ftPixel](../FtSwarmPixel)
-- [OLED Display](../FtSwarmOLED)
+- [Installation der IDE](../programming/ide)
+- [Das erste Programm auf einem ftSwarm Controller](../programming/MotorSwitch)
+- [Das Kelda Prinzip](../programming/kelda)
+- [Der erste Schwarm](../programming/MotorSwitchSwarm)
+- [Aliasnamen machen das Programm lesbarer](../programming/MotorSwitchAlias)
+- [Buttons, Switches und Toggles](../programming/switches)
+- [Eine Fernbedienung ohne eine Zeile Code](../programming/RemoteControl)
+- [Einfache Programmierung durch Events](../programming/EventControlled)
+- [RGB LEDs & ftPixel](../programming/FtSwarmPixel)
+- [OLED Display](../programming/FtSwarmOLED)
 
+3. [Den ftSwarm über RS485 verbinden](../rs485/rs485)
 
-3. Firmware & Versionen
+4. Extension Port
+- [Einführung](../extensionPort/index)
+- [I²C Breakout Boards](../extensionPort/I2CMaster)
+- [I²C TX-/TXT-Kommunikation](../extensionPort/I2CSlave)
+- [Gyro](../extensionPort/gyro)
+- [Motorausgänge](../extensionPort/outputs)
+
+5. Firmware & Versionen
+- [Konfiguration komplett](../Configuration)
 - [Firmware & Updates](../firmware)
 - [Versionen](../versions)
 
 4. Advanced
-- [Konfiguration komplett](../Configuration)
 - [Programmierung mit PlatformIO & VSCode](../PlatformIO)
-- [Den Swarm über RS485 verbinden](../rs485)
 - [Programme auf dem ftSwarm debuggen](../debugging)
 
 ### Einsatzgebiet & Gewährleistung

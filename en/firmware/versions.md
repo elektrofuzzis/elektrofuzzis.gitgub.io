@@ -7,10 +7,21 @@ sidebar:
     nav: manual-en
 ---
 
+### Version 0.6.2 05/2024
+
+Features:
+- I2C-Communication with TXT-Controllers
+- Firmware/Swarm Communication: Invite Controller
+- Firmware/Swarm Communication: Reject Controller
+- ftSwarmFrequencyMeter & ftSwarmCounter could be used as remote sensors as well.
+
+Bugfixes:
+- Using analogous sensors, the controller rebooted spontaneously.
+
 ### Version 0.6.1 04/2024
 
 Bugfixes:
-- Servo instabilites fixed
+- Servo instabilities fixed
 - I2C frequency error fixed
 
 ### Version 0.6.0 02/2024

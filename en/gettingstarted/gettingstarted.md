@@ -17,24 +17,32 @@ This manual explains the basic use and programming of the ftSwarm controller. We
 
 
 2. Programming in C++
-- [Run your first program on a singular controller](../MotorSwitch)
-- [Understand the kelda principle to run a swarm](../kelda)
-- [The first swarm](../MotorSwitchSwarm)
-- [Use alias names to structure your code](../MotorSwitchAlias)
-- [How to use buttons, switches and toggles](../switches)
-- [Remote control without a line of code](../RemoteControl)
-- [Use events to simplfy your code](../EventControlled)
-- [RGB LEDs & ftPixel](../FtSwarmPixel)
-- [OLED Display](../FtSwarmOLED)
+- [Run your first program on a singular controller](../programming/MotorSwitch)
+- [Understand the kelda principle to run a swarm](../programming/kelda)
+- [The first swarm](../programming/MotorSwitchSwarm)
+- [Use alias names to structure your code](../programming/MotorSwitchAlias)
+- [How to use buttons, switches and toggles](../programming/switches)
+- [Remote control without a line of code](../programming/RemoteControl)
+- [Use events to simplfy your code](../programming/EventControlled)
+- [RGB LEDs & ftPixel](../programming/tSwarmPixel)
+- [OLED Display](../programming/FtSwarmOLED)
 
-3. Firmware & Versions
+3. [Connect your Swarm using RS485](../rs485/rs485)
+
+4. Extension Port
+- [Overview](../extensionPort/index)
+- [I²C Breakout Boards](../extensionPort/I2CMaster)
+- [I²C TX-/TXT-Communication](../extensionPort/I2CSlave)
+- [Gyro](../extensionPort/gyro)
+- [Motor Outputs](../extensionPort/outputs)
+
+5. Firmware & Versions
+- [The complete configuration](../Configuration)
 - [Firmware & Updates](../firmware)
 - [Versions](../versions)
 
 4. Advanced
-- [The complete configuration](../Configuration)
 - [Using PlatformIO & VSCode](../PlatformIO)
-- [Connect your swarm using RS485](../rs485)
 - [Debug your code](../debugging)
 
 The tutorial is not intended to explain everything in detail. If you like to have a deep dive into ftSwarm's commands & features please checkout the [API](../cpp-api/index.md) documentation.
