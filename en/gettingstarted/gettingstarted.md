@@ -37,13 +37,13 @@ This manual explains the basic use and programming of the ftSwarm controller. We
 - [Motor Outputs](../extensionPort/outputs)
 
 5. Firmware & Versions
-- [The complete configuration](../Configuration)
-- [Firmware & Updates](../firmware)
-- [Versions](../versions)
+- [The complete configuration](../firmware/Configuration)
+- [Firmware & Updates](../firmware/firmware)
+- [Versions](../firmware/versions)
 
 4. Advanced
-- [Using PlatformIO & VSCode](../PlatformIO)
-- [Debug your code](../debugging)
+- [Using PlatformIO & VSCode](../advanced/PlatformIO)
+- [Debug your code](../advanced/debugging)
 
 The tutorial is not intended to explain everything in detail. If you like to have a deep dive into ftSwarm's commands & features please checkout the [API](../cpp-api/index.md) documentation.
 

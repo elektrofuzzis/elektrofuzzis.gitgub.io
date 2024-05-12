@@ -37,13 +37,13 @@ Dieses Manual erklärt die grundlegende Benutzung und Programmierung der ftSwarm
 - [Motorausgänge](../extensionPort/outputs)
 
 5. Firmware & Versionen
-- [Konfiguration komplett](../Configuration)
-- [Firmware & Updates](../firmware)
-- [Versionen](../versions)
+- [Konfiguration komplett](../firmware/Configuration)
+- [Firmware & Updates](../firmware/firmware)
+- [Versionen](../firmware/versions)
 
 4. Advanced
-- [Programmierung mit PlatformIO & VSCode](../PlatformIO)
-- [Programme auf dem ftSwarm debuggen](../debugging)
+- [Programmierung mit PlatformIO & VSCode](../advanced/PlatformIO)
+- [Programme auf dem ftSwarm debuggen](../advanced/debugging)
 
 ### Einsatzgebiet & Gewährleistung
 
