@@ -4,7 +4,7 @@ Lang:  de
 layout: category
 classes: wide
 sidebar:
-    nav: gettingstarted-de
+    nav: manual-de
 ---
 
 Damit die einzelnen ftSwarm-Controller als Schwarm agieren können, müssen sie untereinander kommunizieren. Dies findet in der Regel über WLAN statt, der ftSwarmRS kann auch über RS485 kommunizieren. Über das WLAN kann zusätzlich die Statusseite des Controllers aufgerufen werden. Hier wird der Pegel der Eingänge angezeigt; Motoren, Servos und LEDs können manuell gesteuert werden.

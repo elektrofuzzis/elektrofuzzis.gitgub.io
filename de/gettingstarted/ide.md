@@ -4,7 +4,7 @@ layout: category
 lang: de
 classes: wide
 sidebar:
-    nav: gettingstarted-de
+    nav: manual-de
 ---
 
 Für die Programmierung der ftSwarm-Controller in c++ gibt es die beiden Möglichkeiten Arduino und PlattformIO. Für Anfänger ist die Arduino-IDE am besten: einfach in der Installation und Bedienung, sowie eine sehr große Internet Community.

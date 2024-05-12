@@ -13,7 +13,7 @@ Dieser Controller ist der etwas leistungsfähigere Nachfolger des ftSwarm und ft
 
 |---------------|------|
 | | |
-| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmRSPinout.png" width="250"> |
+| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmRSPinout.svg" width="50%"> |
 | **CPU**             | esp32-S3 |
 | **Speicher**        | 2 MB RAM, 4MB Flash |
 | **Anschlüsse**      | Schraubklemmen |

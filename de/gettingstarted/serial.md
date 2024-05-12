@@ -4,7 +4,7 @@ layout: category
 lang: de
 classes: wide
 sidebar:
-    nav: gettingstarted-de
+    nav: manual-de
 ---
 
 Um ftSwarm-Applikationen auf den Controller zu laden, muss er über USB an einen PC angeschlossen werden.

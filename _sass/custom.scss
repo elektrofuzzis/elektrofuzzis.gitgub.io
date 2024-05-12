@@ -96,6 +96,7 @@ h4 {
 	text-align: center;
 	margin: 5px;
 	border: solid lightgray;
+  a::before{background: none;}
 }
 
 .gallerytext {
@@ -301,4 +302,11 @@ details p {
 .pdetail {
 	font-size: 0.5em;
 	text-align:justify;
+}
+.linkfree:before {
+  background: none;
+}
+
+.centershock {
+	text-align: center;
 }

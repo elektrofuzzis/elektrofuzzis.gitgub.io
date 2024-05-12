@@ -13,7 +13,7 @@ Ursprünglich enstand das Projekt als möglichst kleine *fischertechnik*-Control
 
 <div class="flex-container">
     <div>
-        <div><img src="/assets/img/ftSwarmRS.png" width="200"></div>
+        <div><a class="linkfree" href="products/ftSwarm"><img src="/assets/img/ftSwarmRS.svg" width="200"></a></div>
         <div><p>ftSwarmRS</p></div>
         <div>
             <p class="pdetail">
@@ -22,7 +22,7 @@ Ursprünglich enstand das Projekt als möglichst kleine *fischertechnik*-Control
         </div>
     </div>
     <div>
-        <div><img src="/assets/img/ftSwarmXL.png" width="200"></div>
+        <div><a class="linkfree" href="products/ftSwarmXL"><img src="/assets/img/ftSwarmXL.png" width="200"></a></div>
         <div><p>ftSwarmXL</p></div>
         <div>
             <p class="pdetail">
@@ -31,7 +31,7 @@ Ursprünglich enstand das Projekt als möglichst kleine *fischertechnik*-Control
         </div>
     </div>
     <div>
-        <div><img src="/assets/img/ftSwarmCAM.png" width="200"></div>
+        <div><img class="linkfree" src="/assets/img/ftSwarmCAM.png" width="200"></div>
         <div><p>ftSwarmCAM</p></div>
         <div>
             <p class="pdetail">
@@ -40,7 +40,7 @@ Ursprünglich enstand das Projekt als möglichst kleine *fischertechnik*-Control
         </div>
     </div>
     <div>
-        <div><img src="/assets/img/ftSwarmControl.png" width="200"></div>
+        <div><a class="linkfree" href="products/ftSwarmControl"><img src="/assets/img/ftSwarmControl.png" width="200"></a></div>
         <div><p>ftSwarmControl</p></div>
         <div>
             <p class="pdetail">
@@ -49,7 +49,7 @@ Ursprünglich enstand das Projekt als möglichst kleine *fischertechnik*-Control
         </div>
     </div>
     <div>
-        <div><img src="/assets/img/ftSwarmPwrDrive.png" width="200"></div>
+        <div><a class="linkfree" href="products/ftSwarmPwrDrive"><img src="/assets/img/ftSwarmPwrDrive.png" width="200"></a></div>
         <div><p>ftSwarmPwrDrive</p></div>
         <div>
             <p class="pdetail">
@@ -58,7 +58,7 @@ Ursprünglich enstand das Projekt als möglichst kleine *fischertechnik*-Control
         </div>
     </div>
     <div>
-        <div><img src="/assets/img/ftSwarmDuino.png" width="200"></div>
+        <div><a class="linkfree" href="products/ftSwarmDuino"><img src="/assets/img/ftSwarmDuino.png" width="200"></a></div>
         <div><p>ftSwarmDuino</p></div>
         <div>
             <p class="pdetail">

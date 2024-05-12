@@ -13,7 +13,7 @@ Dabei wird der eigentliche ftSwarmPwrdrive- bzw. ftSwarmDuino-Controller auf die
 
 |---------------|------|------|
 | | **ftSwarmDuino** |
-| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmDuinoPinout.png" width="250"> |
+| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmDuinoPinout.svg" width="50%"> |
 | **CPU**             | esp32-S3 |
 | **Speicher**        | 2 MB RAM, 4MB Flash |
 | **Anschlüsse**      | Schraubklemmen (ftSwarmDuino)<br>4mm Bananenbuchsen (über ftDuino-Controller) |

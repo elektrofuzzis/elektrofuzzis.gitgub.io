@@ -32,7 +32,7 @@ products-de:
       - title: "ftSwarmDuino"
         url: /de/products/ftSwarmDuino
 
-gettingstarted-en:
+manual-en:
   - title: "Manual"
   - title: "Gettting started"
     children:
@@ -47,41 +47,53 @@ gettingstarted-en:
   - title: "Programming"
     children:
       - title: "My First Application"
-        url: /en/gettingstarted/MotorSwitch
+        url: /en/programming/MotorSwitch
       - title: "The Kelda Principle"
-        url: /en/gettingstarted/kelda
+        url: /en/programming/kelda
       - title: "A first Swarm"
-        url: /en/gettingstarted/MotorSwitchSwarm
+        url: /en/programming/MotorSwitchSwarm
       - title: "Alias Names"
-        url: /en/gettingstarted/MotorSwitchAlias
+        url: /en/programming/MotorSwitchAlias
       - title: "Switches & Buttons"
-        url: /en/gettingstarted/switches
+        url: /en/programming/switches
       - title: "Remote Control"
-        url: /en/gettingstarted/RemoteControl
+        url: /en/programming/RemoteControl
       - title: "Events"
-        url: /en/gettingstarted/EventControlled
+        url: /en/programming/EventControlled
       - title: "RGB LEDs & FtSwarmPixel"
-        url: /en/gettingstarted/FtSwarmPixel
+        url: /en/programming/FtSwarmPixel
       - title: "OLED Display"
-        url: /en/gettingstarted/FtSwarmOLED
+        url: /en/programming/FtSwarmOLED
+  - title: "RS485"
+    url: /en/rs485/rs485
+  - title: "Extension Port"
+    children:
+      - title: "Overview"
+        url: /en/extensionPort/index
+      - title: "I²C Breakout-Boards"
+        url: /en/extensionPort/I2CMaster
+      - title: "I²C TX-/TXT Communication"
+        url: /en/extensionPort/I2CSlave
+      - title: "Gyro"
+        url: /en/extensionPort/gyro
+      - title: "Motor Outputs"
+        url: /en/extensionPort/outputs
   - title: "Firmware"
     children:
+      - title: "Konfiguration"
+        url: /en/firmware/Configuration
       - title: "Firmware & Updates"
-        url: /en/gettingstarted/firmware
-      - title: "Version history"
-        url: /en/gettingstarted/versions
+        url: /en/firmware/firmware
+      - title: "Versionen"
+        url: /en/firmware/versions
   - title: "Advanced"
     children:
-      - title: "Configuration"
-        url: /en/gettingstarted/Configuration
       - title: "PlatformIO & VSCode"
-        url: /en/gettingstarted/PlatformIO
-      - title: "RS485"
-        url: /en/gettingstarted/rs485
+        url: /en/advanced/PlatformIO
       - title: "Debugging"
-        url: /en/gettingstarted/debugging
+        url: /en/advanced/debugging
 
-gettingstarted-de:
+manual-de:
   - title: "Manual"
   - title: "Inbetriebnahme"
     children:
@@ -96,39 +108,51 @@ gettingstarted-de:
   - title: "Programmierung"
     children:
       - title: "Das erste Programm"
-        url: /de/gettingstarted/MotorSwitch
+        url: /de/programming/MotorSwitch
       - title: "Das Kelda Prinzip"
-        url: /de/gettingstarted/kelda
+        url: /de/programming/kelda
       - title: "Ein erster Schwarm"
-        url: /de/gettingstarted/MotorSwitchSwarm
+        url: /de/programming/MotorSwitchSwarm
       - title: "Alias Namen"
-        url: /de/gettingstarted/MotorSwitchAlias
+        url: /de/programming/MotorSwitchAlias
       - title: "Switches & Buttons"
-        url: /de/gettingstarted/switches
+        url: /de/programming/switches
       - title: "Fernbedienung"
-        url: /de/gettingstarted/RemoteControl
+        url: /de/programming/RemoteControl
       - title: "Events"
-        url: /de/gettingstarted/EventControlled
+        url: /de/programming/EventControlled
       - title: "RGB LEDs & FtSwarmPixel"
-        url: /de/gettingstarted/FtSwarmPixel
+        url: /de/programming/FtSwarmPixel
       - title: "OLED Display"
-        url: /de/gettingstarted/FtSwarmOLED
+        url: /de/programming/FtSwarmOLED
+  - title: "RS485"
+    url: /de/rs485/rs485
+  - title: "Extension Port"
+    children:
+      - title: "Einführung"
+        url: /de/extensionPort/index
+      - title: "I²C Breakout-Boards"
+        url: /de/extensionPort/I2CMaster
+      - title: "I²C TX-/TXT Kommunikation"
+        url: /de/extensionPort/I2CSlave
+      - title: "Gyro"
+        url: /de/extensionPort/gyro
+      - title: "Motorausgänge"
+        url: /de/extensionPort/outputs
   - title: "Firmware"
     children:
+      - title: "Konfiguration"
+        url: /de/firmware/Configuration
       - title: "Firmware & Updates"
-        url: /de/gettingstarted/firmware
+        url: /de/firmware/firmware
       - title: "Versionen"
-        url: /de/gettingstarted/versions
+        url: /de/firmware/versions
   - title: "Advanced"
     children:
-      - title: "Konfiguration"
-        url: /de/gettingstarted/Configuration
       - title: "PlatformIO & VSCode"
-        url: /de/gettingstarted/PlatformIO
-      - title: "RS485"
-        url: /de/gettingstarted/rs485
+        url: /de/advanced/PlatformIO
       - title: "Debugging"
-        url: /de/gettingstarted/debugging
+        url: /de/advanced/debugging
 
 cppapi-en:
   - title: "C++ API"

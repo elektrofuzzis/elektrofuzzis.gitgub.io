@@ -4,7 +4,7 @@ lang:  en
 classes: wide
 layout: category
 sidebar:
-    nav: gettingstarted-en
+    nav: manual-en
 ---
 
 To get several ftSwarm controllers to act as a swarm, they must communicate with each other. This usually takes place via wifi, the ftSwarmRS is able to communicate via RS485, too. Additionally the status page of the controller can be accessed via wifi. Here the the input signals are shown; motors, servos and LEDs can be controlled manually.

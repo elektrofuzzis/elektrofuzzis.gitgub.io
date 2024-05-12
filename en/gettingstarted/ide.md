@@ -4,7 +4,7 @@ layout: category
 lang: en
 classes: wide
 sidebar:
-    nav: gettingstarted-en
+    nav: manual-en
 ---
 
 There are different platforms and IDEs to write your C++ code. If you are a beginner please use the Arduino IDE as described below.

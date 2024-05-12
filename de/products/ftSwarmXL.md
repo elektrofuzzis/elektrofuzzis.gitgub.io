@@ -13,7 +13,7 @@ Dieser Controller wurde für die echt großen Modelle designed. Alle Anschlüsse
 
 |---------------|------|
 | | |
-| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmXLPinout.png" width="250"> |
+| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmXLPinout.svg" width="50%"> |
 | **CPU**             | esp32-S3 |
 | **Speicher**        | 2 MB RAM, 4MB Flash |
 | **Anschlüsse**      | Schraubklemmen |

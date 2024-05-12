@@ -15,7 +15,7 @@ Die Ein- und Ausgänge sind gegen Verpolung und Überspannung geschützt. Ein Ve
 
 |---------------|------|
 | | |
-| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmJSTPinout.png" width="250"> |
+| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmJSTPinout.svg" width="50%"> |
 | **CPU**             | esp32-Wrover                                      | 
 | **Speicher**        | 2 MB RAM, 4MB Flash                               |
 | **Anschlüsse**      | JST                                               | 

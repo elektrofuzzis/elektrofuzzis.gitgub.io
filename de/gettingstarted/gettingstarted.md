@@ -4,7 +4,7 @@ Lang:  de
 layout: category
 classes: wide
 sidebar:
-    nav: gettingstarted-de
+    nav: manual-de
 ---
 
 Dieses Manual erklärt die grundlegende Benutzung und Programmierung der ftSwarm-Controller. Wir empfehlen deshalb, zunächst das Manual Kapitel für Kapitel zu lesen und die Beispiele nachzustellen. In der [API-Referenz](../cpp-api/index) werden die verschiedenen Klassen im Detail sowie das Anschlussschema der verschiedenen Sensoren und Aktoren erklärt.

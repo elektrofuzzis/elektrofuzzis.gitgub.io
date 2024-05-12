@@ -4,7 +4,7 @@ layout: category
 lang: en
 classes: wide
 sidebar:
-    nav: gettingstarted-en
+    nav: manual-en
 ---
 Each controller has a USB port which you can use to flash the firmware or your control program. This is described in detail on the next page.
 

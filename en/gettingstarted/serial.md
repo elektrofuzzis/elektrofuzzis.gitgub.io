@@ -4,7 +4,7 @@ layout: category
 lang: en
 classes: wide
 sidebar:
-    nav: gettingstarted-en
+    nav: manual-en
 ---
 
 Writing ftSwarm applications, you need to connect your ftSwarm controller to your PC to upload your program. 

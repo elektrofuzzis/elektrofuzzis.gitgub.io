@@ -4,7 +4,7 @@ layout: category
 lang: de
 classes: wide
 sidebar:
-    nav: gettingstarted-de
+    nav: manual-de
 ---
 Jeder Controller hat einen USB-Anschluß, über den Sie die Firmware oder Ihr Steuerprogramm flashen können. Dies wird auf der nächsten Seite im Detail beschieben.
 
