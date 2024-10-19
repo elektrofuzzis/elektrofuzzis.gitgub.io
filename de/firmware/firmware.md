@@ -11,7 +11,7 @@ Für einen funktionierenden Swarm muss auf allen Swarm Membern und der Kelda die
 
 In der Dokumentation zu den ftSwarm Controllern wird häufig auf "die Firmware" verwiesen. Technisch gesehen ist "die Firmware" nur ein kurzes Programm, das einen Swarm Member startet und dabei die aktuelle ftSwarm-Bibliothek verwendet.
 
-Unter [Versionen](https://github.com/elektrofuzzis/ftSwarm/releases) finden Sie eine Übersicht der Änderungen in den jeweligen Versionen.
+Unter [Versionen](../versions) finden Sie eine Übersicht der Änderungen in den jeweligen Versionen.
 
 ### Arduino IDE
 

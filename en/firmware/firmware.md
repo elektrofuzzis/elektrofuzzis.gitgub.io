@@ -11,7 +11,7 @@ For a functioning Swarm, the same software version must be used on all Swarm mem
 
 The documentation often refers to "the firmware". Technically speaking, "the firmware" is just a short program that starts a Swarm member and uses the current ftSwarm library.
 
-Under [Versions](https://github.com/elektrofuzzis/ftSwarm/releases) you will find an overview of the changes in the respective versions.
+Under [Versions](../versions) you will find an overview of the changes in the respective versions.
 
 ### Arduino IDE
 
