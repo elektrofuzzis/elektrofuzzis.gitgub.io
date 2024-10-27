@@ -27,6 +27,9 @@ gallery:
  - url: "/de/cpp-api/FtSwarmFrequencyMeter/"
    image_path: "/assets/img/switches/frequency.png"
    title: "Frequenzmessung"
+ - url: "/de/cpp-api/FtSwarmRotaryEncoder/"
+   image_path: "/assets/img/switches/rotary.png"
+   title: "Drehgeber"
 ---
 Digitale Sensoren sind Schalter und kennen nur zwei Zustände: "ein" und "aus".
 

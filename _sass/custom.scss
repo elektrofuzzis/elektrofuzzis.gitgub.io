@@ -1,5 +1,6 @@
 p {
 	font-size: 0.8em;
+  text-align: justify;
 }
 
 li {
@@ -111,13 +112,15 @@ h4 {
 }
 
 .apileft {
-	width: 80%;
+	width: 90%;
 	font-size: 0.8em;
+  text-align: justify;
 }
 
 .apiright {
-	width: 20%;
-	font-size: 0.5em;
+	width: 10%;
+  margin-left: 10px;
+  font-size: 0.5em;
 	text-align: center;
 	transform: translate(0,-50px);
 }
@@ -273,13 +276,25 @@ details p {
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-  
+ 
 .flex-container > div {
 	width: 250px;
 	margin: 10px;
 	text-align: center;
 }
-  
+
+.table-2-col {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.table-2-col > div {
+  width: 45%;
+	margin: 10px;
+	text-align: center;
+}
+
 .zoom {
 	transition: transform .2s; /* Animation */
 	margin: 0 auto;
@@ -300,9 +315,10 @@ details p {
 }
 
 .pdetail {
-	font-size: 0.5em;
+	font-size: 0.6em;
 	text-align:justify;
 }
+
 .linkfree:before {
   background: none;
 }

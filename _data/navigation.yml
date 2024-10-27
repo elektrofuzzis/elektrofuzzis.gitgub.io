@@ -191,6 +191,8 @@ cppapi-en:
         url: /en/cpp-api/FtSwarmCounter/
       - title: "Frequency"
         url: /en/cpp-api/FtSwarmFrequencyMeter/
+      - title: "Rotary"
+        url: /en/cpp-api/FtSwarmRotaryEncoder/
   - title: "LEDs, Lamps & Displays"
     children:
       - title: "Overview"
@@ -267,6 +269,8 @@ cppapi-de:
         url: /de/cpp-api/FtSwarmCounter/
       - title: "Frequenzmeter"
         url: /de/cpp-api/FtSwarmFrequencyMeter/
+      - title: "Drehgeber"
+        url: /de/cpp-api/FtSwarmRotaryEncoder/
   - title: "LEDs, Lampen & Displays"
     children:
       - title: "Übersicht"

@@ -27,6 +27,9 @@ gallery:
  - url: "/de/cpp-api/FtSwarmFrequencyMeter/"
    image_path: "/assets/img/switches/frequency.png"
    title: "Frequency"
+ - url: "/de/cpp-api/FtSwarmRotaryEncoder/"
+   image_path: "/assets/img/switches/rotary.png"
+   title: "Rotary Encoder"
 ---
 Digital sensors are switches, they only know two values: on and off.
 

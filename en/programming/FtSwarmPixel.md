@@ -61,8 +61,8 @@ The firmware uses internally the FastLED library. The import **#include "FastLED
 To set the LEDs, we use the commands **setColor** and **setBrightness**. setColor expects a uint32_t as color [0..0xFFFFFF] and setBrightness needs a uint8_t. 
 255 is maximum Power, using 0 sets the LED off. 
 
-Known Issue: Due to a bug in the FastLED library, your couldn't set the brightness of an led individually. A setBrightness command sets the brightness of all leds
+Due to a bug in the FastLED library, your couldn't set the brightness of an led individually. A setBrightness command sets the brightness of all leds
 {: .notice--info}
 
-Need To Know: Keep in mind, RGB LEDs need a lot of power. Setting a led to CRGB::White and maximum brightness, this LED has a power consumption of 60mA. Two LEDs with maximum power will need about the same power as the ESP32 Chip with wifi. Reducing the brigthness to a value between 16 and 64, the power consumption will be reduced to 6%..25%.
+Keep in mind, RGB LEDs need a lot of power. Setting a led to CRGB::White and maximum brightness, this LED has a power consumption of 60mA. Two LEDs with maximum power will need about the same power as the ESP32 Chip with wifi. Reducing the brigthness to a value between 16 and 64, the power consumption will be reduced to 6%..25%.
 {: .notice--info}

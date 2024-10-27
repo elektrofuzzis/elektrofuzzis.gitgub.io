@@ -46,6 +46,9 @@ digital:
  - url: "/de/cpp-api/FtSwarmFrequencyMeter/"
    image_path: "/assets/img/switches/frequency.png"
    title: "Frequency"
+ - url: "/de/cpp-api/FtSwarmRotaryEncoder/"
+   image_path: "/assets/img/switches/rotary.png"
+   title: "Rotary Encoder"
 led:
  - url: "/en/cpp-api/FtSwarmLamp/"
    image_path: "/assets/img/LampLedDisplay/led.png"
