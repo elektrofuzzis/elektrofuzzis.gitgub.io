@@ -7,7 +7,7 @@ sidebar:
     nav: manual-en
 ---
 
-This manual explains the basic use and programming of the ftSwarm controller. We therefore recommend that you first read the manual chapter by chapter and reproduce the examples. The [API reference](../cpp-api/index) explains the various classes in detail as well as the connection diagram for the various sensors and actuators.
+This manual explains the basic use and programming of the ftSwarm controller. We therefore recommend that you first read the manual chapter by chapter and reproduce the examples. The [API reference](../../cpp-api/index) explains the various classes in detail as well as the connection diagram for the various sensors and actuators.
 
 1. Getting started
 - [Learn about the connectors of the ftSwarm family.](../pinout)
@@ -17,35 +17,34 @@ This manual explains the basic use and programming of the ftSwarm controller. We
 
 
 2. Programming in C++
-- [Run your first program on a singular controller](../programming/MotorSwitch)
-- [Understand the kelda principle to run a swarm](../programming/kelda)
-- [The first swarm](../programming/MotorSwitchSwarm)
-- [Use alias names to structure your code](../programming/MotorSwitchAlias)
-- [How to use buttons, switches and toggles](../programming/switches)
-- [Remote control without a line of code](../programming/RemoteControl)
-- [Use events to simplfy your code](../programming/EventControlled)
-- [RGB LEDs & ftPixel](../programming/tSwarmPixel)
-- [OLED Display](../programming/FtSwarmOLED)
+- [Run your first program on a singular controller](../../programming/MotorSwitch)
+- [Understand the kelda principle to run a swarm](../../programming/kelda)
+- [The first swarm](../../programming/MotorSwitchSwarm)
+- [Use alias names to structure your code](../../programming/MotorSwitchAlias)
+- [How to use buttons, switches and toggles](../../programming/switches)
+- [Remote control without a line of code](../../programming/RemoteControl)
+- [Use events to simplfy your code](../../programming/EventControlled)
+- [RGB LEDs & ftPixel](../../programming/tSwarmPixel)
+- [OLED Display](../../programming/FtSwarmOLED)
 
-3. [Connect your Swarm using RS485](../rs485/rs485)
+3. [Connect your Swarm using RS485](../../rs485/rs485)
 
 4. Extension Port
-- [Overview](../extensionPort/index)
-- [I²C Breakout Boards](../extensionPort/I2CMaster)
-- [I²C TX-/TXT-Communication](../extensionPort/I2CSlave)
-- [Gyro](../extensionPort/gyro)
-- [Motor Outputs](../extensionPort/outputs)
+- [Overview](../../extensionPort/index)
+- [I²C Breakout Boards](../../extensionPort/I2CMaster)
+- [I²C TX-/TXT-Communication](../../extensionPort/I2CSlave)
+- [Gyro](../../extensionPort/gyro)
+- [Motor Outputs](../../extensionPort/outputs)
 
 5. Firmware & Versions
-- [The complete configuration](../firmware/Configuration)
-- [Firmware & Updates](../firmware/firmware)
-- [Versions](../firmware/versions)
+- [The complete configuration](../../firmware/Configuration)
+- [Firmware & Updates](../../firmware/firmware)
+- [Versions](../../firmware/versions)
 
 4. Advanced
-- [Using PlatformIO & VSCode](../advanced/PlatformIO)
-- [Debug your code](../advanced/debugging)
+- [Using PlatformIO & VSCode](../../advanced/PlatformIO)
+- [Debug your code](../../advanced/debugging)
 
-The tutorial is not intended to explain everything in detail. If you like to have a deep dive into ftSwarm's commands & features please checkout the [API](../cpp-api/index.md) documentation.
 
 ### Intended Use & Warranty
 

@@ -283,6 +283,23 @@ details p {
 	text-align: center;
 }
 
+.headline {
+  text-align: center;
+  font-weight: bold;
+}
+
+.table-3-col {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+ 
+.table-3-col > div {
+	width: 30%;
+	margin: 10px;
+	text-align: center;
+}
+
 .table-2-col {
 	display: flex;
 	flex-wrap: wrap;
