@@ -32,7 +32,7 @@ board = esp32-s3-devkitc-1
 board_build.mcu = esp32s3
 
 lib_deps =
-    ftswarm-rs=symlink://../ftswarm-rs
+    elektrofuzzis/ftSwarm-rs
 
 board_upload.flash_size = 4MB
 framework = arduino
@@ -40,8 +40,6 @@ framework = arduino
 build_flags =
     -DARDUINO_EVENT_RUNNING_CORE=0
     -DARDUINO_RUNNING_CORE=1
-    -DBOARD_HAS_PSRAM
-    -mfix-esp32-psram-cache-issue
     -DCORE_DEBUG_LEVEL=1
 
 monitor_filters = esp32_exception_decoder
@@ -50,10 +48,114 @@ upload_speed = 921600
 board_build.partitions = no_ota.csv
 ```
 
-**ftSwarm**
+
+**ftSwarmControl:**
 
 ```ini
-[env:esp32dev]
+[env:firmware-control]
+platform = espressif32
+board = esp32dev
+board_build.mcu = esp32
+framework = arduino
+lib_deps = 
+	elektrofuzzis/ftSwarm-control
+
+build_flags = 
+	-DARDUINO_EVENT_RUNNING_CORE=1 
+	-DARDUINO_RUNNING_CORE=0
+	-DBOARD_HAS_PSRAM
+	-mfix-esp32-psram-cache-issue
+	-DCORE_DEBUG_LEVEL=0
+
+monitor_filters = esp32_exception_decoder
+monitor_speed = 115200
+upload_speed = 921600
+board_build.partitions = no_ota.csv
+```
+
+
+**ftSwarmDuino:**
+
+```ini
+[env:firmware-duino]
+platform =espressif32
+board = esp32-s3-devkitc-1
+board_build.mcu = esp32s3
+
+lib_deps =
+    elektrofuzzis/ftSwarm-duino
+
+board_upload.flash_size = 4MB
+framework = arduino
+
+build_flags =
+    -DARDUINO_EVENT_RUNNING_CORE=0
+    -DARDUINO_RUNNING_CORE=1
+    -DCORE_DEBUG_LEVEL=1
+
+monitor_filters = esp32_exception_decoder
+monitor_speed = 115200
+upload_speed = 921600
+board_build.partitions = no_ota.csv
+```
+
+
+**ftSwarmPwrDrive:**
+
+```ini
+[env:firmware-pwrdrive]
+platform =espressif32
+board = esp32-s3-devkitc-1
+board_build.mcu = esp32s3
+
+lib_deps =
+    elektrofuzzis/ftSwarm-pwrdrive
+
+board_upload.flash_size = 4MB
+framework = arduino
+
+build_flags =
+    -DARDUINO_EVENT_RUNNING_CORE=0
+    -DARDUINO_RUNNING_CORE=1
+    -DCORE_DEBUG_LEVEL=1
+
+monitor_filters = esp32_exception_decoder
+monitor_speed = 115200
+upload_speed = 921600
+board_build.partitions = no_ota.csv
+```
+
+
+**ftSwarmXL:**
+
+```ini
+[env:firmware-xl]
+platform =espressif32
+board = esp32-s3-devkitc-1
+board_build.mcu = esp32s3
+
+lib_deps =
+    elektrofuzzis/ftSwarm-xl
+
+board_upload.flash_size = 4MB
+framework = arduino
+
+build_flags =
+    -DARDUINO_EVENT_RUNNING_CORE=0
+    -DARDUINO_RUNNING_CORE=1
+    -DCORE_DEBUG_LEVEL=1
+
+monitor_filters = esp32_exception_decoder
+monitor_speed = 115200
+upload_speed = 921600
+board_build.partitions = no_ota.csv
+```
+
+
+**ftSwarm:**
+
+```ini
+[env:firmware-jst]
 platform = espressif32
 board = esp32dev
 board_build.mcu = esp32
@@ -74,29 +176,6 @@ upload_speed = 921600
 board_build.partitions = no_ota.csv
 ```
 
-**ftSwarmControl**
-
-```ini
-[env:esp32dev]
-platform = espressif32
-board = esp32dev
-board_build.mcu = esp32
-framework = arduino
-lib_deps = 
-	elektrofuzzis/ftSwarm-control
-
-build_flags = 
-	-DARDUINO_EVENT_RUNNING_CORE=1 
-	-DARDUINO_RUNNING_CORE=0
-	-DBOARD_HAS_PSRAM
-	-mfix-esp32-psram-cache-issue
-	-DCORE_DEBUG_LEVEL=0
-
-monitor_filters = esp32_exception_decoder
-monitor_speed = 115200
-upload_speed = 921600
-board_build.partitions = no_ota.csv
-```
 
 ### Programme schreiben
 

@@ -348,7 +348,7 @@ Framework: <strong>Arduino Framework</strong></p>
 <span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32s3</span>
 
 <span class="py">lib_deps</span> <span class="p">=</span>
-    <span class="py">ftswarm-rs</span><span class="p">=</span><span class="s">symlink://../ftswarm-rs</span>
+    <span class="err">elektrofuzzis/ftSwarm-rs</span>
 
 <span class="py">board_upload.flash_size</span> <span class="p">=</span> <span class="s">4MB</span>
 <span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
@@ -356,8 +356,6 @@ Framework: <strong>Arduino Framework</strong></p>
 <span class="py">build_flags</span> <span class="p">=</span>
     <span class="py">-DARDUINO_EVENT_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
     <span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">1</span>
-    <span class="err">-DBOARD_HAS_PSRAM</span>
-    <span class="err">-mfix-esp32-psram-cache-issue</span>
     <span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">1</span>
 
 <span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
@@ -366,15 +364,15 @@ Framework: <strong>Arduino Framework</strong></p>
 <span class="py">board_build.partitions</span> <span class="p">=</span> <span class="s">no_ota.csv</span>
 </code></pre></div></div>
 
-<p><strong>ftSwarm</strong></p>
+<p><strong>ftSwarmControl:</strong></p>
 
-<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:esp32dev]</span>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:firmware-control]</span>
 <span class="py">platform</span> <span class="p">=</span> <span class="s">espressif32</span>
 <span class="py">board</span> <span class="p">=</span> <span class="s">esp32dev</span>
 <span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32</span>
 <span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
 <span class="py">lib_deps</span> <span class="p">=</span> 
-	<span class="s">elektrofuzzis/ftSwarm-jst</span>
+	<span class="s">elektrofuzzis/ftSwarm-control</span>
 
 <span class="py">build_flags</span> <span class="p">=</span> 
 	<span class="s">-DARDUINO_EVENT_RUNNING_CORE=1 </span>
@@ -389,15 +387,87 @@ Framework: <strong>Arduino Framework</strong></p>
 <span class="py">board_build.partitions</span> <span class="p">=</span> <span class="s">no_ota.csv</span>
 </code></pre></div></div>
 
-<p><strong>ftSwarmControl</strong></p>
+<p><strong>ftSwarmDuino:</strong></p>
 
-<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:esp32dev]</span>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:firmware-duino]</span>
+<span class="py">platform</span> <span class="p">=</span><span class="s">espressif32</span>
+<span class="py">board</span> <span class="p">=</span> <span class="s">esp32-s3-devkitc-1</span>
+<span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32s3</span>
+
+<span class="py">lib_deps</span> <span class="p">=</span>
+    <span class="err">elektrofuzzis/ftSwarm-duino</span>
+
+<span class="py">board_upload.flash_size</span> <span class="p">=</span> <span class="s">4MB</span>
+<span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
+
+<span class="py">build_flags</span> <span class="p">=</span>
+    <span class="py">-DARDUINO_EVENT_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
+    <span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">1</span>
+    <span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">1</span>
+
+<span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
+<span class="py">monitor_speed</span> <span class="p">=</span> <span class="s">115200</span>
+<span class="py">upload_speed</span> <span class="p">=</span> <span class="s">921600</span>
+<span class="py">board_build.partitions</span> <span class="p">=</span> <span class="s">no_ota.csv</span>
+</code></pre></div></div>
+
+<p><strong>ftSwarmPwrDrive:</strong></p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:firmware-pwrdrive]</span>
+<span class="py">platform</span> <span class="p">=</span><span class="s">espressif32</span>
+<span class="py">board</span> <span class="p">=</span> <span class="s">esp32-s3-devkitc-1</span>
+<span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32s3</span>
+
+<span class="py">lib_deps</span> <span class="p">=</span>
+    <span class="err">elektrofuzzis/ftSwarm-pwrdrive</span>
+
+<span class="py">board_upload.flash_size</span> <span class="p">=</span> <span class="s">4MB</span>
+<span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
+
+<span class="py">build_flags</span> <span class="p">=</span>
+    <span class="py">-DARDUINO_EVENT_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
+    <span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">1</span>
+    <span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">1</span>
+
+<span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
+<span class="py">monitor_speed</span> <span class="p">=</span> <span class="s">115200</span>
+<span class="py">upload_speed</span> <span class="p">=</span> <span class="s">921600</span>
+<span class="py">board_build.partitions</span> <span class="p">=</span> <span class="s">no_ota.csv</span>
+</code></pre></div></div>
+
+<p><strong>ftSwarmXL:</strong></p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:firmware-xl]</span>
+<span class="py">platform</span> <span class="p">=</span><span class="s">espressif32</span>
+<span class="py">board</span> <span class="p">=</span> <span class="s">esp32-s3-devkitc-1</span>
+<span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32s3</span>
+
+<span class="py">lib_deps</span> <span class="p">=</span>
+    <span class="err">elektrofuzzis/ftSwarm-xl</span>
+
+<span class="py">board_upload.flash_size</span> <span class="p">=</span> <span class="s">4MB</span>
+<span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
+
+<span class="py">build_flags</span> <span class="p">=</span>
+    <span class="py">-DARDUINO_EVENT_RUNNING_CORE</span><span class="p">=</span><span class="s">0</span>
+    <span class="py">-DARDUINO_RUNNING_CORE</span><span class="p">=</span><span class="s">1</span>
+    <span class="py">-DCORE_DEBUG_LEVEL</span><span class="p">=</span><span class="s">1</span>
+
+<span class="py">monitor_filters</span> <span class="p">=</span> <span class="s">esp32_exception_decoder</span>
+<span class="py">monitor_speed</span> <span class="p">=</span> <span class="s">115200</span>
+<span class="py">upload_speed</span> <span class="p">=</span> <span class="s">921600</span>
+<span class="py">board_build.partitions</span> <span class="p">=</span> <span class="s">no_ota.csv</span>
+</code></pre></div></div>
+
+<p><strong>ftSwarm:</strong></p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[env:firmware-jst]</span>
 <span class="py">platform</span> <span class="p">=</span> <span class="s">espressif32</span>
 <span class="py">board</span> <span class="p">=</span> <span class="s">esp32dev</span>
 <span class="py">board_build.mcu</span> <span class="p">=</span> <span class="s">esp32</span>
 <span class="py">framework</span> <span class="p">=</span> <span class="s">arduino</span>
 <span class="py">lib_deps</span> <span class="p">=</span> 
-	<span class="s">elektrofuzzis/ftSwarm-control</span>
+	<span class="s">elektrofuzzis/ftSwarm-jst</span>
 
 <span class="py">build_flags</span> <span class="p">=</span> 
 	<span class="s">-DARDUINO_EVENT_RUNNING_CORE=1 </span>
